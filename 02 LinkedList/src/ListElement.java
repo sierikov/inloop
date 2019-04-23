@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 class ListElement {
 
 
@@ -5,11 +7,17 @@ class ListElement {
     private ListElement next;
 
     public String getContent() {
-        return content;
+        return this.content.toString();
     }
 
     public void setContent(String content) {
-        this.content = content;
+        if (content.isEmpty()) {
+            throw new IllegalArgumentException("Illegal argument value");
+        }
+        else if (content == null){
+            throw new NullPointerException("The argument 'content' cannot be empty!");
+        }
+        else this.content = content;
     }
 
     public ListElement getNext() {
