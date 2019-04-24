@@ -9,10 +9,13 @@ class List {
     public void append(String data) {
 
         // Initialize ListElement only incase of 1st element
-        if (head == null) { head = new ListElement(data); }
+        if (this.head == null) {
+            this.head = new ListElement(data);
+            return;
+        }
 
         ListElement tempElement = new ListElement(data);
-        ListElement currElement = head;
+        ListElement currElement = this.head;
 
         if (currElement != null) {
 
@@ -99,8 +102,8 @@ class List {
     public String toString() {
         StringBuilder output = new StringBuilder();
 
-        if (head != null) {
-            ListElement currElement = head.getNext();
+        if (this.head != null) {
+            ListElement currElement = this.head.getNext();
             while (currElement != null) {
                 output.append("[").append(currElement.getContent()).append("]");
                 currElement = currElement.getNext();
