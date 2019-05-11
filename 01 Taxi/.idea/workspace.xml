@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3814a98-37b1-4b92-bed3-79e037cf7823" name="Default Changelist" comment="" />
+    <list default="true" id="d3814a98-37b1-4b92-bed3-79e037cf7823" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../06 String Processing/src/Leet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06 String Processing/src/LeetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/LibraryEmptyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/LibraryFilledTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02 LinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02 LinkedList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04 Library/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04 Library/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04 Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04 Library/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Taxi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
+            <state>
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -35,11 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TaxiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -72,6 +79,9 @@
       <replace>passengers</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -93,13 +103,13 @@
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,6 +126,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -130,6 +141,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -159,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TaxiTest (2)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="01 Taxi" />
@@ -230,11 +242,9 @@
       <item itemvalue="JUnit.TaxiTest" />
       <item itemvalue="JUnit.TaxiTest (1)" />
       <item itemvalue="JUnit.TaxiTest.testHuman" />
-      <item itemvalue="JUnit.TaxiTest (2)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TaxiTest (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TaxiTest.testHuman" />
         <item itemvalue="JUnit.TaxiTest (1)" />
@@ -254,6 +264,7 @@
       <updated>1554835751490</updated>
       <workItem from="1554835753703" duration="3109000" />
       <workItem from="1554874699382" duration="6028000" />
+      <workItem from="1556872156687" duration="128000" />
     </task>
     <servers />
   </component>
@@ -275,13 +286,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9137000" />
+    <option name="totallyTimeSpent" value="9265000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15601704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -318,13 +329,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HumanTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/TaxiTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -334,21 +338,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Taxi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
+        <state>
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TaxiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="96">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
