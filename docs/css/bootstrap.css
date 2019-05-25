@@ -1,0 +1,42 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1060px
+}
+
+.cols {
+	position: relative
+}
+
+.cols:after {
+	content: '';
+	display: block;
+	clear: both
+}
+
+.cols .col.col-lg {
+	float: left;
+	width: 75%
+}
+
+.cols .col.col-sm {
+	float: left;
+	width: 25%
+}
+
+.centrize {
+	display: table!important;
+	table-layout: fixed!important;
+	height: 100%!important;
+	position: relative!important
+}
+
+.vertical-center {
+	display: table-cell!important;
+	vertical-align: middle!important
+}
+
+.clear {
+	clear: both
+}
