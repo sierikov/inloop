@@ -38,11 +38,8 @@ public class MyMatrix<T> implements Matrix<T> {
 
     @Override
     public int getDistinctObjectCount() {
-        ArrayList<Integer> listOne = columnList;
-        ArrayList<Integer> listTwo = rowList;
-
-        ArrayList<Integer> uniq = listTwo.stream()
-                .filter(num -> !listOne.contains(num))
+        ArrayList<Integer> uniq = rowList.stream()
+                .filter(num -> !columnList.contains(num))
                 .collect(Collectors.toCollection(ArrayList::new));
 
         return uniq.isEmpty() ? 0 : uniq.size() + 1;
