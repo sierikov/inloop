@@ -169,6 +169,28 @@ header .head-top .menu-btn {
 	height: 20px
 }
 
+header.active{
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+header.active .head-top .top-menu ul li {
+	display: block;
+	margin: 30px 0;
+}
+
+header.active .head-top .top-menu {
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	height: auto;
+	text-align: center;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
 header .head-top .menu-btn:after,header .head-top .menu-btn:before {
 	content: '';
 	position: absolute;

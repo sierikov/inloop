@@ -1,3 +1,9 @@
+@media (max-width: 960px){
+	.section {
+		padding:0 40px 120px
+	}
+}
+
 
 @media (max-width: 840px) {
 	.container {
@@ -20,6 +26,21 @@
 		width:15px
 	}
 
+	/* Menu */
+	header .head-top .menu-btn {
+		display:block
+	}
+
+	header .head-top .top-menu {
+		opacity:0;
+		visibility: hidden;
+		height: 0;
+		transition: opacity .3s ease .5s;
+		-moz-transition: opacity .3s ease .5s;
+		-webkit-transition: opacity .3s ease .5s;
+		-o-transition: opacity .3s ease .5s
+	}
+
 	/* Bootstrap */
 	.cols .col.col-sm {
 		width:100%
@@ -27,6 +48,17 @@
 
 	.cols .col.col-lg {
 		width:100%
+	}
+
+	/* Footer */
+
+	footer .soc {
+		float:none;
+		text-align: center
+	}
+
+	footer .soc a {
+		margin: 0 6px
 	}
 
 }
