@@ -27,6 +27,14 @@
 	}
 
 	/* Menu */
+	header  .head-top a.btn {
+		display: none;
+	}
+
+	header.active .head-top a.btn {
+		display: block;
+	}
+
 	header .head-top .menu-btn {
 		display:block
 	}
@@ -51,6 +59,9 @@
 	}
 
 	/* Footer */
+	footer {
+		padding: 15px 37px 10px;
+	}
 
 	footer .soc {
 		float:none;
