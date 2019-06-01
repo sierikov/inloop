@@ -259,7 +259,6 @@ header .head-top .top-menu ul li a {
 	cursor: pointer;
 }
 
-
 header .head-top .top-menu ul li a.lnk {
 	display: block;
 }
@@ -284,30 +283,43 @@ header .head-top .top-menu ul li.active a {
 	-webkit-transition: all .6s ease 0s;
 	-o-transition: all .6s ease 0s
 }
-
 .section .content {
 	position: relative
 }
-
 .section .content .title {
 	position: relative;
 	margin-bottom: 40px
 }
-
+.section .content .title .title_inner {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+	line-height: 18px;
+	font-size: 13px;
+	color: #141414;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+	box-shadow: inset 0 -6px 0 #f26b38;
+	-moz-box-shadow: inset 0 -6px 0 #f26b38;
+	-webkit-box-shadow: inset 0 -6px 0 #f26b38;
+}
 .section.started {
 	text-align: center;
 	padding: 0;
 	margin: 0;
 	position: relative
 }
-
 .section.started .started-content {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
 	position: relative
 }
-
 .section.started .started-content .h-title {
 	font-size: 68px;
 	font-family: 'Roboto Mono', monospace;
@@ -317,13 +329,11 @@ header .head-top .top-menu ul li.active a {
 	letter-spacing: .04em;
 	margin: 10px 0 5px
 }
-
 .section.started .started-content .h-subtitle,
 .section.started .started-content .typed-bread,
 .section.started .started-content .typed-subtitle {
 	font-size: 13px
 }
-
 .section.started .mouse_btn {
 	font-size: 24px;
 	color: #f26b38;
@@ -335,23 +345,39 @@ header .head-top .top-menu ul li.active a {
 	bottom: 80px;
 	margin-left: -10px
 }
-
 .section.started .mouse_btn .ion {
 	position: relative;
 	top: 0;
 	animation: mouse-anim 1s ease-out 0s infinite
 }
-
 .section.about .image {
 	float: left
 }
-
 .section.about .image img {
 	width: 100px;
 	height: 100px;
 	border-radius: 100px;
 	-moz-border-radius: 100px;
 	-webkit-border-radius: 100px;
+}
+.section.works .filters {
+	margin-bottom: 30px
+}
+.section.works .filters input {
+	display: none
+}
+.section.works .filters label {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 25px;
+	font-size: 13px;
+	color: #363636;
+	cursor: pointer;
+	position: relative;
+	padding-bottom: 0
+}
+.section.works .filters label.glitch-effect {
+	color: #f26b38;
 }
 
 .full-width {
@@ -383,23 +409,55 @@ footer .copy {
 	color: #999
 }
 
+footer .soc {
+	float: right
+}
+
+footer .soc a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 12px
+}
+
+footer .soc a .ion {
+	font-size: 17px;
+	color: #363636;
+	transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s
+}
+
+footer .soc a:hover .ion {
+	color: #f26b38
+}
+
 /* Box Items */
+.box-items {
+	position: relative;
+	overflow: hidden;
+	margin-left: -3%
+}
+.box-items .box-item {
+	width: 30.33333%;
+	margin: 0 0 3% 3%;
+	position: relative;
+	overflow: hidden;
+	text-align: center
+}
 .box-items .box-item .image {
 	position: relative
 }
-
 .box-items .box-item .image a {
 	display: block;
 	font-size: 0
 }
-
 .box-items .box-item .image a img {
 	width: 100%;
 	height: auto;
 	position: relative;
 	top: 0
 }
-
 .box-items .box-item .image .info {
 	text-align: center;
 	width: 100%;
@@ -419,11 +477,16 @@ footer .copy {
 	-moz-transform: scale(.5, .5);
 	-o-transform: scale(.5, .5)
 }
-
+.box-items .box-item:hover .image .info {
+	opacity: .94;
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-o-transform: scale(1,1);
+}
 .box-items .box-item .image .info .centrize {
 	background: #f26b38;
 }
-
 .box-items .box-item .image .info .ion {
 	color: #fff;
 	font-size: 38px;
@@ -439,7 +502,6 @@ footer .copy {
 	position: relative;
 	padding: 15px 45px 5px
 }
-
 .box-items .box-item .desc .name {
 	height: 40px;
 	display: block;
@@ -452,6 +514,21 @@ footer .copy {
 	-webkit-transition: all .3s ease 0s;
 	-o-transition: all .3s ease 0s
 }
+.box-items .box-item:hover .desc .name {
+	color: #f26b38;
+}
+.date {
+	margin: 0 0 10px;
+	display: inline-block;
+	padding: 0 5px;
+	height: 20px;
+	line-height: 18px;
+	font-weight: 500;
+	font-size: 11px;
+	color: #f26b38;
+	border: 1px solid #f26b38;
+}
+
 
 /* Category / Filter text */
 .category {
@@ -466,3 +543,4 @@ footer .copy {
 	-webkit-box-shadow: inset 0 -6px 0 #ede574;
 	-khtml-box-shadow: inset 0 -6px 0 #ede574
 }
+

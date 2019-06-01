@@ -1,5 +1,5 @@
 $(function () {
-
+    'use strict';
     /* Validate commect form */
     $("#comment_form").validate({
         rules: {
@@ -58,4 +58,4 @@ $(function () {
             });
         }
     });
-};
+});
