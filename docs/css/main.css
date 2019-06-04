@@ -145,21 +145,21 @@ a:hover {
 header {
 	position: fixed;
 	left: 0;
-	top: 30px;
+	top: 14px;
 	width: 100%;
 	z-index: 100;
 	text-align: right;
-	background: #fff;
+	background: white;
 	opacity: 1;
 	visibility: visible;
 	transition: all .6s ease 0s;
 	-moz-transition: all .6s ease 0s;
 	-webkit-transition: all .6s ease 0s;
-	-o-transition: all .6s ease 0s
+	-o-transition: all .6s ease 0s;
 }
 
 header .head-top {
-	padding: 30px 65px 15px
+	padding: 25px 65px 25px;
 }
 
 header .head-top .menu-btn {
