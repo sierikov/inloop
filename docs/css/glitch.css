@@ -21,14 +21,14 @@
 	.glitch-effect:after {
 		left: 2px;
 		text-shadow: -1px 0 #f26b38;
-		animation: glitch-1 5s infinite linear alternate-reverse
+		animation: glitch-1 9s infinite linear alternate-reverse;
 	}
 
 	.glitch-effect-white:before,
 	.glitch-effect:before {
 		left: -2px;
 		text-shadow: 2px 0 #f26b38;
-		animation: glitch-2 5s infinite linear alternate-reverse
+		animation: glitch-2 9s infinite linear alternate-reverse;
 	}
 
 	@keyframes glitch-2 {

@@ -145,7 +145,7 @@ a:hover {
 header {
 	position: fixed;
 	left: 0;
-	top: 14px;
+	top: 30px;
 	width: 100%;
 	z-index: 100;
 	text-align: right;
@@ -159,7 +159,7 @@ header {
 }
 
 header .head-top {
-	padding: 25px 65px 25px;
+	padding: 30px 65px 30px;
 }
 
 header .head-top .menu-btn {
@@ -196,6 +196,10 @@ header.active .menu-btn span {
 header.active .head-top .top-menu ul li {
 	display: block;
 	margin: 30px 0;
+}
+
+header.active .head-top .top-menu ul li a.btn {
+	display: block;
 }
 
 header.active .head-top .top-menu {
@@ -250,7 +254,7 @@ header .head-top .top-menu ul li {
 	transition: color .3s ease 0s;
 	-moz-transition: color .3s ease 0s;
 	-webkit-transition: color .3s ease 0s;
-	-o-transition: color .3s ease 0s
+	-o-transition: color .3s ease 0s;
 }
 
 header .head-top .top-menu ul li a {
@@ -264,7 +268,8 @@ header .head-top .top-menu ul li a.lnk {
 }
 
 header .head-top .top-menu ul li a.btn {
-	margin-top: 0
+	margin-top: 0;
+	/* display: block; */
 }
 
 header .head-top .top-menu ul li.active a {
