@@ -1,0 +1,4 @@
+enum DiscountType {
+    PERCENTAGEDISCOUNT,
+    ABSOLUTEDISCOUNT
+}
