@@ -1,18 +1,25 @@
+import java.util.ArrayList;
+
+import java.util.List;
+import java.util.Objects;
+
 public abstract class ComplexPricing implements ISalePricing {
-    private ISalePricing pricing;
+    private List<ISalePricing> pricings = new ArrayList<>();
 
-    public ComplexPricing(){ }
+    public ComplexPricing( ISalePricing pricing){
 
-    public ComplexPricing(ISalePricing pricing) {
-        this.pricing = pricing;
     }
 
-    public ISalePricing getPricings() {
-        return pricing;
+    protected ComplexPricing() {
     }
 
-    public void add(ISalePricing pricing){
+    public void add(ISalePricing pricing) {
+        Objects.requireNonNull(pricing);
+        pricings.add(pricing);
+    }
 
+    public List<ISalePricing> getPricings() {
+        return pricings;
     }
 
     @Override

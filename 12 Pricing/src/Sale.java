@@ -12,7 +12,16 @@ public class Sale {
         this.pricing = pricing;
     }
 
-    public static ISalePricing createPricing(DiscountType discountType, double percentage, long discount, long threshold){
+    public static ISalePricing createPricing(DiscountType discountType,
+                                             double percentage,
+                                             long discount,
+                                             long threshold){
+        switch (discountType){
+            case ABSOLUTEDISCOUNT:
+                return new AbsoluteDiscountPricing(discount, threshold);
+            case PERCENTAGEDISCOUNT:
+                return new PercentageDiscountPricing(percentage);
+        }
         return null;
     }
 
@@ -26,6 +35,6 @@ public class Sale {
     }
 
     public long getTotal(){
-        return pricing.getTotal();
+        return pricing.getTotal(this);
     }
 }
