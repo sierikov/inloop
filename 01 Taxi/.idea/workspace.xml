@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3814a98-37b1-4b92-bed3-79e037cf7823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../06 String Processing/src/Leet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06 String Processing/src/LeetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/LibraryEmptyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07 LibrarIM/src/LibraryFilledTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/src/Flooring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/src/Material.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/src/Paint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/src/RenovationObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/src/StructuredObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/src/Surface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/tests/FlooringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/tests/MaterialTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/tests/PaintTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/tests/RenovationObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/tests/StructuredObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../14 Renovation Project/tests/SurfaceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 LinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02 LinkedList/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04 Library/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04 Library/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../04 Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../04 Library/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/01 Taxi/META-INF/01 Taxi.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/01 Taxi/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/01 Taxi/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -36,17 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Taxi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-228">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TaxiTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -86,7 +89,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/HumanTest.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Human.java" />
         <option value="$PROJECT_DIR$/src/TaxiTest.java" />
         <option value="$PROJECT_DIR$/tests/TaxiTest.java" />
@@ -96,6 +98,8 @@
         <option value="$PROJECT_DIR$/src/main/TaxiTest.java" />
         <option value="$PROJECT_DIR$/src/main/Taxi.java" />
         <option value="$PROJECT_DIR$/src/Taxi.java" />
+        <option value="$PROJECT_DIR$/src/Animal.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -136,7 +140,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554882148450" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560270253306" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -265,6 +269,7 @@
       <workItem from="1554835753703" duration="3109000" />
       <workItem from="1554874699382" duration="6028000" />
       <workItem from="1556872156687" duration="128000" />
+      <workItem from="1560269685085" duration="586000" />
     </task>
     <servers />
   </component>
@@ -286,13 +291,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9265000" />
+    <option name="totallyTimeSpent" value="9851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15601704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15761448" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,7 +306,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32923833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3802817" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992629" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,6 +317,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32923833" />
+      <window_info anchor="right" id="Codota" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -329,20 +335,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HumanTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/TaxiTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Taxi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -353,7 +345,36 @@
     <entry file="file://$PROJECT_DIR$/src/TaxiTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Taxi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#82#83#0" expanded="true" />
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>
