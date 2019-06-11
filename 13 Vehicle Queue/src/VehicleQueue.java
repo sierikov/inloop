@@ -1,75 +1,93 @@
-import java.util.LinkedList;
-import java.util.Objects;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
 public class VehicleQueue implements Observer {
+    private final Queue<Vehicle> queue = new LinkedList<>();
+
+    private Integer iTime;
     private double entryDelay;
     private double exitDelay;
-    private int trafficLightRate;
+
     private boolean greenLight = false;
+    private int trafficLightRate;
+
     private VehicleGenerator generator;
-    private LinkedList<Vehicle> queue = new LinkedList<>();
 
-    VehicleQueue(double entryDelay, double exitDelay, int trafficLightRate, VehicleGenerator generator) {
+    public VehicleQueue(double entryDelay, double exitDelay, int trafficLightRate, VehicleGenerator generator) {
         Objects.requireNonNull(generator);
-        if (trafficLightRate <= 0 || entryDelay <= 0 || exitDelay <= 0)
-            throw new IllegalArgumentException("");
-
-        this.generator = generator;
+        if (trafficLightRate <= 0 || entryDelay <= 0d || exitDelay <= 0d) throw new IllegalArgumentException();
         this.exitDelay = exitDelay;
         this.entryDelay = entryDelay;
+        this.generator = generator;
         this.trafficLightRate = trafficLightRate;
     }
 
     public void enter() {
-        Vehicle ve = generator.createVehicle();
-        queue.add(ve);
+        queue.add(generator.createVehicle());
     }
 
     public void leave() {
-        if (!queue.isEmpty()) queue.removeFirst();
+        queue.poll();
     }
-
-    public double getLength() {
-        double length = 0;
-        for (Vehicle v : queue) {
-            length = length + v.getLength();
-        }
-        return length;
-    }
-
 
     public int getSize() {
         return queue.size();
     }
 
+    public double getLength() {
+        return queue.stream()
+                .map(Vehicle::getLength)
+                .reduce(0.0, Double::sum);
+    }
+
+    private boolean isGreenLight(int time) { return this.getPhaseTime(time) >= trafficLightRate; }
+
+    private boolean isSwitched(int time) { return time != 0 && (!isGreenLight(time) && isGreenLight(time - 1)); }
+
+    private void switchLight() {
+        if (this.getPhaseTime() % trafficLightRate == 0)
+            greenLight = !greenLight;
+    }
+
+    private int getPhaseTime(){ return  this.getPhaseTime(this.iTime); }
+    private int getPhaseTime(int time){ return time % (trafficLightRate * 2); }
+
     @Override
-    public void update(Observable o, Object curT) {
-        int currentTime = (int) curT;
-        this.greenLight = this.checkGreenLight(currentTime);
-        if (currentTime == 1) {
-            entryDelay = 1;
-        }
+    public void update(Observable observable, Object timeObject) {
+        this.setTime(timeObject);
 
-        for (int i = 0; i < Math.floor(entryDelay / entryDelay); i++) {
-            this.enter();
-        }
-        for (int i = 0; i < Math.floor(entryDelay / exitDelay); i++) {
-            this.leave();
-        }
-        entryDelay = entryDelay % exitDelay;
-        entryDelay++;
-        if (greenLight) {
-            exitDelay++;
-        } else {
-            exitDelay = 0;
-        }
+        this.switchLight();
+
+        double toEnter = amountToEnter();
+        for (int i = 0; i < toEnter; i++) this.enter();
+
+        double toLeave = amountToLeave();
+        for (int i = 0; i < toLeave; i++) this.leave();
+
     }
 
-    private boolean checkGreenLight(int currentTime) {
-        double greenCycle = 2 * this.trafficLightRate;
-        double currentCycle = currentTime % greenCycle;
-        return currentCycle >= trafficLightRate;
+    private void setTime(Object timeObject) { this.iTime = (Integer) timeObject; }
+    private Integer getTime(){ return this.iTime; }
+
+    private double amountToEnter() {
+        int time = this.getTime();
+        return vehiclesToEnterAbsolute(time) - vehiclesToEnterAbsolute(time - 1);
     }
+
+    private double vehiclesToEnterAbsolute(double second) { return Math.floor(second / entryDelay); }
+
+    private double vehiclesToLeaveAbsolute(double time) {
+        if (time < trafficLightRate) return 0.0;
+        time %= trafficLightRate;
+        return Math.floor(time / exitDelay);
+    }
+
+    private double amountToLeave() {
+        int timeInt = this.getTime();
+        int phaseTime = this.getPhaseTime();
+        if (isSwitched(timeInt)) {
+            double lastExit = Math.round(exitDelay * vehiclesToLeaveAbsolute(timeInt - 1));
+            return Math.floor((trafficLightRate - lastExit) / exitDelay);
+        } else return vehiclesToLeaveAbsolute(phaseTime) - vehiclesToLeaveAbsolute(phaseTime - 1);
+    }
+
 }
