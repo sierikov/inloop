@@ -1,11 +1,7 @@
 import java.util.Map;
 
-public class RenovationObject {
-    public double getPrice(){
-        return 0;
-    }
+public abstract class RenovationObject {
+    public abstract double getPrice();
 
-    public Map<String, Integer> addMaterialReq(Map<String, Integer> materials){
-        return null;
-    }
+    public abstract Map<String, Integer> addMaterialReq(Map<String, Integer> materials);
 }

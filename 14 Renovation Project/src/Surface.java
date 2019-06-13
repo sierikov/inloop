@@ -1,4 +1,6 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import java.util.Map;
+import java.util.Objects;
+import java.util.TreeMap;
 
 public class Surface extends RenovationObject {
     private double length;
@@ -6,16 +8,17 @@ public class Surface extends RenovationObject {
     private Material selectedMaterial;
 
     public Surface (double length, double width){
-        this.length = length;
-        this.width = width;
+        this.length = Validator.checkParam(length);
+        this.width = Validator.checkParam(width);
     }
 
     public void setMaterial (Material newMaterial){
+        Objects.requireNonNull(newMaterial);
         this.selectedMaterial = newMaterial;
     }
 
     public double getArea(){
-        return this.length * this.width;
+        return this.getLength() * this.getWidth();
     }
 
     public double getLength() {
@@ -27,9 +30,31 @@ public class Surface extends RenovationObject {
     }
 
     public double getPrice(){
-        throw  new NotImplementedException();
+        return this.selectedMaterial.getPriceOfASurface(this);
     }
 
+    @Override
+    public Map<String, Integer> addMaterialReq(Map<String, Integer> materialsOld) {
+        Validator.checkParam(materialsOld);
+        Objects.requireNonNull(this.selectedMaterial);
+
+
+        Map<String, Integer> materials = new TreeMap<>(materialsOld);
+
+
+        int materialAmountCurr  = this.selectedMaterial.getMaterialReq(this);
+        String materialName     = this.selectedMaterial.getName();
+
+        if (materials.containsKey(materialName)){
+            int materialAmountOld  = materials.get(materialName);
+            materials.replace(materialName, materialAmountCurr + materialAmountOld);
+        }
+        else {
+            materials.put(materialName, materialAmountCurr);
+        }
+
+        return materials;
+    }
 
 
 }
