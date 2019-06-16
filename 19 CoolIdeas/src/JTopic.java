@@ -15,4 +15,19 @@ public class JTopic extends JContent {
         return "Topic: " + super.getTitle() + '\n' +
                 super.getDescription();
     }
+
+    public void setTitle(String title) {
+        super.setTitle(title);
+        this.not();
+    }
+
+    public void setDescription(String description) {
+        super.setDescription(description);
+        this.not();
+    }
+
+    private void not() {
+        setChanged();
+        notifyObservers(this);
+    }
 }

@@ -1,4 +1,6 @@
-public abstract class JContent {
+import java.util.Observable;
+
+public abstract class JContent extends Observable {
     private String title;
     private String description;
 
