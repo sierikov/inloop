@@ -19,8 +19,8 @@ public class JIdeaPool {
         Objects.requireNonNull(topic);
         // TODO: Refactor it later (never)
         boolean ideaFound = false;
-        Set<JIdea> setOfIdeas = this.pool.get(topic);
         if (this.pool.containsKey(topic)) {
+            Set<JIdea> setOfIdeas = this.pool.get(topic);
             for (JIdea i : setOfIdeas) {
                 if (i.getTitle().equals(idea.getTitle())) {
                     ideaFound = true;
@@ -28,18 +28,18 @@ public class JIdeaPool {
                 }
             }
             if (!ideaFound) setOfIdeas.add(idea);
-        } else {
-            for (JTopic currTopic : this.pool.keySet()) {
-                for (JIdea currIdea : this.pool.get(currTopic)) {
-                    if (idea.getTitle().equals(currIdea.getTitle()) && idea != currIdea) {
+        }
+        else {
+            Collection<Set<JIdea>> ideas = pool.values();
+            for (Set<JIdea> set : ideas){
+                for (JIdea i : set){
+                    if (idea.getTitle().equals(i.getTitle()) && idea != i) {
                         ideaFound = true;
                         break;
                     }
                 }
             }
-
             if (!ideaFound) {
-
                 Set<JIdea> newIdeaSet = new HashSet<>();
                 newIdeaSet.add(idea);
                 this.pool.put(topic, newIdeaSet);
@@ -92,7 +92,7 @@ public class JIdeaPool {
         this.remove(JIdea::isReleased);
     }
 
-    public void remove(Predicate<JIdea> predicate){
+    private void remove(Predicate<JIdea> predicate){
         Collection<Set<JIdea>> ideas = pool.values();
         for (Set<JIdea> setOfIdeas : ideas) {
             Iterator<JIdea> iterator = setOfIdeas.iterator();

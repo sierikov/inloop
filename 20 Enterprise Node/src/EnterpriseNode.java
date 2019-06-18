@@ -1,0 +1,3 @@
+interface EnterpriseNode {
+    String getName();
+}
