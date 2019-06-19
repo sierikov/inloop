@@ -95,6 +95,11 @@ ol{
 	list-style-type: decimal-leading-zero;
 }
 
+img {
+	width: 100%;
+	height: 5em;
+}
+
 a {
 	color: #363636;
 	text-decoration: none;
@@ -170,7 +175,12 @@ pre{
 .btn.fill, .btn:hover, a.btn.fill, a.btn:hover {
 	color: #fff;
 	background: #f26b38;
-	border: 1px solid #f26b38
+	border: 1px solid #f26b38;
+}
+
+.task_buttons {
+	text-align: center;
+	margin-top: 70px;
 }
 
 /* Preload */
@@ -388,7 +398,8 @@ header .head-top .top-menu ul li.active a {
 	text-align: center;
 	padding: 0;
 	margin: 0;
-	position: relative
+	background-size: cover;
+	position: relative;
 }
 .section.started .started-content {
 	display: inline-block;

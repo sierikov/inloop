@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c6beb6-ef3b-4ac1-9ef3-45b9e86d9238" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tasks/basic/java_and_functions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/basic/assets/Linked_List_intro.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/basic/linked_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/basic/tests/Linked_List_tests.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions.html" beforeDir="false" afterPath="$PROJECT_DIR$/patterns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/lessons/classes_and_objects.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/lessons/tests/._Taxi_tests.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/lessons/tests/Taxi_tests.zip" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/tests/Taxi_tests.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/java_and_functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/java_and_functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/tests/._Java_and_Functions_tests.zip" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/assets/._Linked_List_intro.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,29 +34,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="17" />
-          <entry key="html" value="7" />
+          <entry key="css" value="18" />
+          <entry key="html" value="8" />
           <entry key="js" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="17" />
-          <entry key="HTML" value="7" />
+          <entry key="CSS" value="18" />
+          <entry key="HTML" value="8" />
           <entry key="JavaScript" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1170" />
-          <entry key="html" value="1799" />
+          <entry key="css" value="1239" />
+          <entry key="html" value="2010" />
           <entry key="js" value="214" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1170" />
-          <entry key="HTML" value="1799" />
+          <entry key="CSS" value="1239" />
+          <entry key="HTML" value="2010" />
           <entry key="JavaScript" value="214" />
         </counts>
       </usages-collector>
@@ -64,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="135" column="89" lean-forward="true" selection-start-line="135" selection-start-column="89" selection-end-line="135" selection-end-column="89" />
+            <state relative-caret-position="241">
+              <caret line="153" column="85" selection-start-line="153" selection-start-column="85" selection-end-line="153" selection-end-column="85" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#link#0;n#head#0;n#html#0;n#!!top" />
@@ -85,13 +88,10 @@
                 <element signature="n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#a#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -145,17 +145,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/basic/java_and_functions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="143" column="56" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+            <state relative-caret-position="660">
+              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/tasks/basic/linked_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="85" selection-start-line="85" selection-end-line="93" selection-end-column="11" />
+            <state relative-caret-position="337">
+              <caret line="205" column="10" lean-forward="true" selection-start-line="205" selection-start-column="10" selection-end-line="205" selection-end-column="36" />
+              <folding>
+                <element signature="e#2817#2824#0" expanded="true" />
+                <element signature="e#3618#3625#0" expanded="true" />
+                <element signature="e#4488#4495#0" expanded="true" />
+                <element signature="e#5455#5462#0" expanded="true" />
+                <element signature="e#5619#5626#0" expanded="true" />
+                <element signature="e#7884#7890#0" expanded="true" />
+                <element signature="e#7929#7935#0" expanded="true" />
+                <element signature="e#8404#8411#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,20 +173,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tasks/basic/classes_and_objects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="230" column="43" selection-start-line="230" selection-start-column="43" selection-end-line="230" selection-end-column="43" />
+            <state relative-caret-position="634">
+              <caret line="236" column="10" selection-start-line="236" selection-start-column="10" selection-end-line="236" selection-end-column="10" />
               <folding>
                 <element signature="n#link#0;n#head#0;n#html#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/validator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -214,8 +215,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+            <state relative-caret-position="476">
+              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="183" selection-end-column="1" />
               <folding>
                 <element signature="e#24#100#0" />
                 <element signature="e#119#190#0" />
@@ -224,6 +225,15 @@
                 <element signature="e#378#429#0" />
                 <element signature="e#454#519#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="142" column="3" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -257,7 +267,6 @@
       <find>header .head-top { 	padding: 30px 65px 15px }</find>
       <find>@media</find>
       <find>display: block;     margin: 30px 0;</find>
-      <find>btn</find>
       <find>body.lo</find>
       <find>header.active</find>
       <find>head</find>
@@ -276,6 +285,7 @@
       <find>men</find>
       <find>str</find>
       <find>ul</find>
+      <find>btn</find>
     </findStrings>
     <replaceStrings>
       <replace>Patterns</replace>
@@ -306,12 +316,13 @@
         <option value="$PROJECT_DIR$/js/imagesloaded.pkgd.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="$PROJECT_DIR$/js/masonry.pkgd.js" />
         <option value="$PROJECT_DIR$/css/highlight.css" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/tasks/lessons/classes_and_objects.html" />
         <option value="$PROJECT_DIR$/tasks.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/tasks/basic/linked_list.html" />
+        <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="$PROJECT_DIR$/tasks/basic/java_and_functions.html" />
         <option value="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" />
       </list>
@@ -327,8 +338,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1680" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -413,18 +425,18 @@
       <workItem from="1559414769136" duration="1000" />
       <workItem from="1559827594456" duration="2087000" />
       <workItem from="1560888394904" duration="9114000" />
-      <workItem from="1560930731439" duration="1379000" />
+      <workItem from="1560930731439" duration="4481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34747000" />
+    <option name="totallyTimeSpent" value="37849000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1680" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30972818" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23056443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -530,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3216">
-          <caret line="134" column="3" selection-start-line="134" selection-start-column="3" selection-end-line="134" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/masonry.pkgd.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59328">
@@ -590,21 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
-          <folding>
-            <element signature="e#24#100#0" />
-            <element signature="e#119#190#0" />
-            <element signature="e#213#263#0" />
-            <element signature="e#289#354#0" />
-            <element signature="e#378#429#0" />
-            <element signature="e#454#519#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/masonry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -614,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="135" column="89" lean-forward="true" selection-start-line="135" selection-start-column="89" selection-end-line="135" selection-end-column="89" />
+        <state relative-caret-position="241">
+          <caret line="153" column="85" selection-start-line="153" selection-start-column="85" selection-end-line="153" selection-end-column="85" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#link#0;n#head#0;n#html#0;n#!!top" />
@@ -635,13 +625,10 @@
             <element signature="n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#a#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -691,17 +678,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="183" selection-end-column="1" />
+          <folding>
+            <element signature="e#24#100#0" />
+            <element signature="e#119#190#0" />
+            <element signature="e#213#263#0" />
+            <element signature="e#289#354#0" />
+            <element signature="e#378#429#0" />
+            <element signature="e#454#519#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="142" column="3" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/basic/linked_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="205" column="10" lean-forward="true" selection-start-line="205" selection-start-column="10" selection-end-line="205" selection-end-column="36" />
+          <folding>
+            <element signature="e#2817#2824#0" expanded="true" />
+            <element signature="e#3618#3625#0" expanded="true" />
+            <element signature="e#4488#4495#0" expanded="true" />
+            <element signature="e#5455#5462#0" expanded="true" />
+            <element signature="e#5619#5626#0" expanded="true" />
+            <element signature="e#7884#7890#0" expanded="true" />
+            <element signature="e#7929#7935#0" expanded="true" />
+            <element signature="e#8404#8411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/basic/java_and_functions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="143" column="56" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+        <state relative-caret-position="660">
+          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tasks/basic/classes_and_objects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="230" column="43" selection-start-line="230" selection-start-column="43" selection-end-line="230" selection-end-column="43" />
+        <state relative-caret-position="634">
+          <caret line="236" column="10" selection-start-line="236" selection-start-column="10" selection-end-line="236" selection-end-column="10" />
           <folding>
             <element signature="n#link#0;n#head#0;n#html#0;n#!!top" />
           </folding>

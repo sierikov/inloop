@@ -26,7 +26,7 @@ body .section, body footer, body header {
 
 body.loaded .section, body.loaded footer, body.loaded header {
 	opacity: 1;
-	visibility: visible
+	visibility: visible;
 }
 
 ol,ul {
