@@ -43,6 +43,19 @@
 	height: 100%;
 }
 
+/* TABLES */
+
+tbody {
+	font-size: 16px;
+}
+
+th {
+	text-decoration: underline;
+	color: #f26b38;
+}
+
+
+
 /* TYPE */
 h1,h2,h3,h4,h5,h6 {
 	font-weight: 500;
@@ -110,6 +123,22 @@ a {
 a:hover {
 	text-decoration: none;
 	color: #f26b38
+}
+
+a.context-link {
+	border-bottom: 1px black dashed;
+	transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s
+}
+
+a.context-link:hover {
+	border-bottom: 1px #f26b38 dashed;
+	transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s
 }
 
 code {
@@ -359,7 +388,7 @@ header .head-top .top-menu ul li.active a {
 	vertical-align: middle;
 	text-align: center;
 	position: relative;
-	line-height: 18px;
+	line-height: 30px;
 	font-size: 23px;
 	padding: 10px;
 	color: #fff;

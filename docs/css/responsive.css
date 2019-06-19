@@ -172,3 +172,13 @@
 	}
 }
 
+@media (max-width: 320px) {
+	code{
+		font-size: 100%;
+	}
+
+	ol code {
+		font-size: 90%;
+	}
+}
+
