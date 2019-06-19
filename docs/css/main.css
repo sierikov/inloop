@@ -78,6 +78,7 @@ h6 {
 p {
 	font-size: 16px;
 	line-height: 23px;
+	text-align: justify;
 	padding: 0;
 	margin: 15px 0;
 }
@@ -122,9 +123,10 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 
 pre{
 	border: none !important;
-	border-left: 5px solid #f8b59d !important;
+	border-left: 5px solid #f26b38 !important;
 	padding: 10px !important;
 	margin-top: 0px;
+	margin-left: 2px;
 	font-size: 18px;
 	overflow-x: auto;
 }
@@ -138,7 +140,7 @@ pre{
 }
 
 .title_inner.code {
-	/* margin-bottom: -18px; */
+	margin-left: 2px;
 	font-size: 14px !important;
 	text-transform: none !important;
 }
@@ -350,8 +352,8 @@ header .head-top .top-menu ul li.active a {
 	line-height: 18px;
 	font-size: 23px;
 	padding: 10px;
-	color: #141414;
-	background: rgba(242, 107, 56, 0.5);
+	color: #fff;
+	background: rgb(242, 107, 56);
 	text-transform: uppercase;
 	/* letter-spacing: -0.96em; */
 	transition: all .3s ease 0s;
