@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Java and Functions</title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../../css/general.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link rel="stylesheet" href="../../css/glitch.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../../img/logo/favicon.png">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../../index.html" class="lnk">Home</a></li>
+					<li class="active">
+						<a href="../../tasks.html" class="lnk">Tasks</a>
+					</li>
+					<li><a href="" class="lnk">Patterns</a></li>
+					<li><a href="" class="btn">Challenges</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">Basic</div>
+						<div class="h-title blog_title">Java<br>and<br>Functions</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../../index.html">Inloop</a> /
+								<a href="../../tasks.html">Tasks</a> /
+								<a href="#">Classes and objects</a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">Java and Functions</div>
+					</div>
+					<p>
+						Write a program which calculates the factorial of a given number. Call your class <code>Functions</code>
+						(filename <code>Functions.java</code>) and create and implement the function
+					</p>
+					<p>To solve this task follow the instructions given in the task description.</p>
+
+					<pre class="prettyprint lang-java">public static int factorial(int n) {
+    // insert your implementation here
+}</pre>
+					<p>which calculates the factorial of <code>n</code>. Mind that the method must be <code>static</code>!</p>
+					<p>Add a main method to <code>Functions</code> and use it to calculate the factorial of 5. Print the result to
+						the console.</p>
+					<p>The output should look like the following:</p>
+					<pre>The factorial of 5 is 120.</pre>
+					<div class="title">
+						<div class="title_inner">Hints</div>
+					</div>
+					<p>
+						The method <code>public static void main(String... args)</code> is the starting point of every Java
+						program. So create the <code>Functions.main(String... args)</code> method with the given method parameters.
+						You have to call <code>Functions.factorial(int n)</code> inside this method to start the calculation.
+					</p>
+					<p>
+						You can output the value of any variable of a primitive data type (bool, int, double etc.) or any String
+						variable to the console with <code>System.out.println(x)</code>.
+					</p>
+					<p>
+						Functions in Java are used and implemented the same way as in other programming languages or as they are
+						known from mathematics. They can look like the following:
+					</p>
+					<pre class="prettyprint lang-java">public static float myFunction(int x, String text)
+{
+    return 1.0;
+}</pre>
+
+					<p>
+						Usually, functions have a return type (they return a specific value after successful execution). The
+						function above returns a floating point (type <code>float</code>) number.
+					</p>
+					<p>Functions take a specific number of arguments (called <em>parameters</em>). It is possible that a function
+						does not take any argument at all. Our example above takes an integer number (type <code>int</code>) and a
+						<code>String</code> object as arguments. Additionaly, our function has the keyword <code>static</code>,
+						which means that this function belongs to the class itself rather than an instance (object) of the class.
+					</p>
+					<a href="./tests/Java_and_Functions_tests.zip" target="_blank" class="btn fill" data-text="Go to the Solution">Go to the
+						Solution</a>
+					<a href="./tests/Java_and_Functions_tests.zip" class="btn" data-text="Download JUnit tests">Download JUnit
+						tests</a>
+				</div>
+
+
+				<div class="clear"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="soc">
+			<a target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter"></span></a>
+			<a target="_blank" href="https://github.com/"><span class="ion ion-social-github"></span></a>
+			<a target="_blank" href="https://www.instagram.com/"><span class="ion ion-android-mail"></span></a>
+		</div>
+		<div class="copy">© 2019 ArtemSer. Content: TU Dresden.</div>
+		<div class="clr"></div>
+	</footer>
+
+	<!-- Lines -->
+	<div class="line top"></div>
+	<div class="line bottom"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/typed.js"></script>
+
+<!-- Vendor -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>
