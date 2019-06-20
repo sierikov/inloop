@@ -110,7 +110,7 @@ ol{
 
 img {
 	width: 100%;
-	height: 5em;
+	/* height: 5em; */
 }
 
 a {
@@ -246,7 +246,7 @@ header {
 }
 
 header .head-top {
-	padding: 30px 65px 30px;
+	padding: 30px 65px 15px;
 }
 
 header .head-top .menu-btn {
@@ -392,7 +392,7 @@ header .head-top .top-menu ul li.active a {
 	font-size: 23px;
 	padding: 10px;
 	color: #fff;
-	background: rgb(242, 107, 56);
+	background: #f26b38;
 	text-transform: uppercase;
 	/* letter-spacing: -0.96em; */
 	transition: all .3s ease 0s;
@@ -636,11 +636,11 @@ footer .soc a:hover .ion {
 .date {
 	margin: 0 0 10px;
 	display: inline-block;
-	padding: 0 5px;
-	height: 20px;
-	line-height: 18px;
+	padding: 0px 10px;
+	height: 25px;
+	line-height: 22px;
 	font-weight: 500;
-	font-size: 11px;
+	font-size: 16px;
 	color: #f26b38;
 	border: 1px solid #f26b38;
 }

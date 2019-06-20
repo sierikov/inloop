@@ -1,5 +1,9 @@
+package enterprise_node;
+
 public class Holding extends AbstractUnit {
-    Holding(String name) {
+
+    public Holding(String name) {
         super(name);
     }
+
 }

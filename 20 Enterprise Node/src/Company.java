@@ -1,5 +1,7 @@
+package enterprise_node;
+
 public class Company extends AbstractUnit {
-    Company(String name) {
+    public Company(String name) {
         super(name);
     }
 }

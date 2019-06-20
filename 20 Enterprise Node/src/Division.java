@@ -1,5 +1,7 @@
+package enterprise_node;
+
 public class Division extends AbstractUnit {
-    Division(String name) {
+    public Division(String name) {
         super(name);
     }
 }

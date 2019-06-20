@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Collection I (Lists) </title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../../css/general.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link rel="stylesheet" href="../../css/glitch.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../../img/logo/favicon.png">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../../index.html" class="lnk">Home</a></li>
+					<li class="active">
+						<a href="../../tasks.html" class="lnk">Tasks</a>
+					</li>
+					<li><a href="" class="lnk">Patterns</a></li>
+					<li><a href="" class="btn">Challenges</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">Lesson</div>
+						<div class="h-title blog_title">Library with Lists</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../../index.html">Inloop</a> /
+								<a href="../../tasks.html">Tasks</a> /
+								<a href="#">Library with Lists</a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">Collections I</div>
+					</div>
+					<p>
+						Until now, arrays have been the data structure of choice when we had to manage several objects of the same
+						type. The purpose of this task is to change this circumstance. The Java API provides more elaborate data
+						structures than arrays. In this task, we want to use collections from the Java collection framework (JCF) to
+						implement a simple library program.
+					</p>
+					<p>The following design model shows where to include these new structures.</p>
+					
+					<p><img src="./assets/Library_Lists.svg" alt=""></p>
+
+					<div class="title">
+						<div class="title_inner">Task</div>
+					</div>
+					<p>Implement the classes in the model above with the following constraints!</p>
+					<ol>
+						<li>Use the <code>List</code> interface to manage the <code>Book</code> objects!</li>
+						<li>As concrete <code>List</code> type, use either <code>ArrayList</code> or <code>LinkedList</code>! Write the code in such a way that you have to make as few changes as possible when it comes to switching the list type! Think of polymorphism to reach this goal!</li>
+						<li>Use the static method <code>Collections.binarySearch()</code> to implement <code>Library.searchForISBN()</code>!</li>
+						<li>Think about the advantages of an implementation with lists over an implementation with arrays!</li>
+					</ol>
+
+					<div class="title">
+						<div class="title_inner">Hints</div>
+					</div>
+					<p>
+						The class <code>Collections</code> and the interface <code>Comparable</code> are part of the Java API. For
+						more information about them, consult the
+						<a class="context-link" href="https://docs.oracle.com/en/java/javase/11/docs/api/">
+							Java API documentation</a>.
+					</p>
+					<div class="task_buttons">
+						<a href="#" target="_blank" class="btn fill" data-text="Go to the Solution">
+							Go to the Solution
+						</a>
+						<a href="./tests/Basic_Library_tests.zip" class="btn" data-text="Download JUnit tests">
+							Download JUnit tests
+						</a>
+					</div>
+					</div>
+				</div>
+
+
+				<div class="clear"></div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="soc">
+			<a target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter"></span></a>
+			<a target="_blank" href="https://github.com/"><span class="ion ion-social-github"></span></a>
+			<a target="_blank" href="https://www.instagram.com/"><span class="ion ion-android-mail"></span></a>
+		</div>
+		<div class="copy">© 2019 ArtemSer. Content: TU Dresden.</div>
+		<div class="clr"></div>
+	</footer>
+
+	<!-- Lines -->
+	<div class="line top"></div>
+	<div class="line bottom"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/typed.js"></script>
+
+<!-- Vendor -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>

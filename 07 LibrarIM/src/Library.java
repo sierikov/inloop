@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class Library {
+    public List<Book> getStock() {
+        return stock;
+    }
+
     private List<Book> stock = new ArrayList<>();
     private List<Book> found = new ArrayList<>();
 
@@ -9,6 +13,7 @@ public class Library {
     }
 
     public void sortedInsertion(Book newBook) {
+        Objects.requireNonNull(newBook);
         for (int i = 0; i < this.stock.size(); i++) {
             Book b = this.stock.get(i);
             if (b.compareTo(newBook) >= 0) {
@@ -23,7 +28,8 @@ public class Library {
     public List<Book> searchForAuthor(String author) {
         this.found.clear();
         for (Book book : stock) {
-            if (book.getAuthor().equals(author)) found.add(book);
+            if (book.getAuthor().equals(author))
+                found.add(book);
         }
         return found;
     }
