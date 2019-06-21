@@ -1,33 +1,36 @@
-package enterprise_node;
+
 
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class StaffMemberIterator implements EnterpriseNodeIterator {
 
     private TreeSet<StaffMember> allMembers;
-    private Iterator<StaffMember> it;
+    private Iterator<StaffMember> iterator;
 
     public StaffMemberIterator(Set<StaffMember> directSubordinates) {
-        AbstractEnterpriseUnit.notNull(directSubordinates);
+        Objects.requireNonNull(directSubordinates);
         this.allMembers = new TreeSet<>();
         directSubordinates.forEach(this::findSubordinatesRecursively);
-        this.it = allMembers.iterator();
+        this.iterator = allMembers.iterator();
     }
 
-    private void findSubordinatesRecursively(StaffMember m) {
-        this.allMembers.add(m);
-        m.getDirectSubordinates().forEach(this::findSubordinatesRecursively);
+    private void findSubordinatesRecursively(StaffMember member) {
+        this.allMembers.add(member);
+        member
+                .getDirectSubordinates()
+                .forEach(this::findSubordinatesRecursively);
     }
 
     @Override
     public boolean hasNext() {
-        return it.hasNext();
+        return iterator.hasNext();
     }
 
     @Override
     public StaffMember next() {
-        return it.next();
+        return iterator.next();
     }
 }

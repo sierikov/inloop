@@ -1,8 +1,5 @@
-package enterprise_node;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class StaffMember implements EnterpriseNode, Comparable<StaffMember> {
@@ -12,26 +9,28 @@ public class StaffMember implements EnterpriseNode, Comparable<StaffMember> {
     private Set<StaffMember> directSubordinates;
 
     public StaffMember(String name, String job) {
-        AbstractEnterpriseUnit.notNull(name, job);
-        AbstractEnterpriseUnit.notEmpty(name, job);
         this.directSubordinates = new HashSet<>();
-        this.name = name;
-        this.job = job;
+        this.name = Validator.checkParam(name);
+        this.job = Validator.checkParam(job);
     }
 
-    public boolean addDirectSubordinate(StaffMember m) {
-        AbstractEnterpriseUnit.notNull(m);
-        if (this.directSubordinates.contains(m)) {
-            return false;
-        } else {
-            this.directSubordinates.add(m);
-            return true;
-        }
+    String getJob() {
+        return job;
     }
 
-    public boolean removeDirectSubordinate(StaffMember m) {
-        AbstractEnterpriseUnit.notNull(m);
-        return this.directSubordinates.remove(m);
+    boolean addDirectSubordinate(StaffMember member) {
+        Objects.requireNonNull(member);
+        if (this.directSubordinates.contains(member)) return false;
+        else return this.directSubordinates.add(member);
+    }
+
+    boolean removeDirectSubordinate(StaffMember member) {
+        Objects.requireNonNull(member);
+        return this.directSubordinates.remove(member);
+    }
+
+    Set<StaffMember> getDirectSubordinates() {
+        return directSubordinates;
     }
 
     @Override
@@ -39,17 +38,10 @@ public class StaffMember implements EnterpriseNode, Comparable<StaffMember> {
         return this.name;
     }
 
-    public String getJob() {
-        return job;
-    }
-
     @Override
-    public int compareTo(@NotNull StaffMember o) {
-        return this.name.compareTo(o.getName());
-    }
-
-    public Set<StaffMember> getDirectSubordinates() {
-        return directSubordinates;
+    public int compareTo(StaffMember member) {
+        Objects.requireNonNull(member);
+        return this.name.compareTo(member.getName());
     }
 
     @Override

@@ -1,31 +1,31 @@
-package enterprise_node;
+
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class Team extends AbstractEnterpriseUnit {
+class Team extends AbstractEnterpriseUnit {
 
     private StaffMember teamLeader;
 
-    public Team(String name, StaffMember teamLeader) {
+    Team(String name, StaffMember teamLeader) {
         super(name);
-        AbstractEnterpriseUnit.notNull(teamLeader);
-        this.teamLeader = teamLeader;
+        this.teamLeader = Objects.requireNonNull(teamLeader);
     }
 
-    public List<StaffMember> getTeamMembers() {
+    StaffMember getTeamLeader() {
+        return teamLeader;
+    }
+
+    List<StaffMember> getTeamMembers() {
         List<StaffMember> members = new ArrayList<>();
         members.add(teamLeader);
-        var it = new StaffMemberIterator(this.teamLeader.getDirectSubordinates());
-        while(it.hasNext()){
-            members.add(it.next());
+        StaffMemberIterator memberIterator = new StaffMemberIterator(this.teamLeader.getDirectSubordinates());
+        while(memberIterator.hasNext()){
+            members.add(memberIterator.next());
         }
         members.sort(StaffMember::compareTo);
         return members;
 
-    }
-
-    public StaffMember getTeamLeader() {
-        return teamLeader;
     }
 }

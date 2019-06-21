@@ -1,12 +1,16 @@
-public abstract class AbstractEnterpriseUnit implements EnterpriseNode {
+public class Person {
     private String name;
 
-    AbstractEnterpriseUnit(String name) {
+    Person(String name){
         this.name = Validator.checkParam(name);
     }
 
-    @Override
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
     }
 }
