@@ -117,12 +117,20 @@ a {
 	color: #363636;
 	text-decoration: none;
 	opacity: 1;
-	outline: 0
+	transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+	outline: 0;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #f26b38
+	color: #f26b38;
+	transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-webkit-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
 }
 
 a.context-link {
@@ -160,6 +168,7 @@ pre{
 	border-left: 5px solid #f26b38 !important;
 	padding: 10px !important;
 	margin-top: 0px;
+	line-height: 1.5;
 	margin-left: 2px;
 	font-size: 18px;
 	overflow-x: auto;
@@ -202,7 +211,7 @@ pre{
 }
 
 .btn.fill, .btn:hover, a.btn.fill, a.btn:hover {
-	color: #fff;
+	color: #fff !important;
 	background: #f26b38;
 	border: 1px solid #f26b38;
 }
@@ -359,8 +368,13 @@ header .head-top .top-menu ul li a.btn {
 	/* display: block; */
 }
 
-header .head-top .top-menu ul li.active a {
-	color: #f26b38
+header .head-top .top-menu ul li.active a,
+header .head-top .top-menu ul li.active a.btn{
+	 color: #f26b38;
+ }
+
+header .head-top .top-menu ul li.active a.btn {
+	border-color: #f26b38;
 }
 
 /* Section */

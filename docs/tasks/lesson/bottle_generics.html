@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Generics (Bottle) </title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../../css/general.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link rel="stylesheet" href="../../css/glitch.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../../img/logo/favicon.ico">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../../index.html" class="lnk">Home</a></li>
+					<li><a href="#" class="lnk">About</a></li>
+					<li><a href="#" class="lnk">Patterns</a></li>
+					<li class="active"><a href="../../tasks.html" class="btn">Tasks</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">Lesson</div>
+						<div class="h-title blog_title">Bottle</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../../index.html">Inloop</a> /
+								<a href="../../tasks.html">Tasks</a> /
+								<a href="#">Bottle</a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">Bottle</div>
+					</div>
+					<p>This task is based on chapter three of the book <em>Fortgeschrittene Programmierung mit Java 5</em> (dPunkt-Verlag, 2005) by Johannes Nowak.</p>
+					<p>
+						There are different kinds of drinks: beer, red wine, white wine and many more. Drinks are filled into
+						bottles. Later on, these are emptied. This is modeled in the following class diagram. Additionally, every
+						drink should have its own kind of bottle (beer bottle, red wine bottle, white wine bottle etc.).
+					</p>
+					
+					<p>
+						<a href="./assets/Bottle_simple.svg" target="_blank">
+							<img src="./assets/Bottle_simple.svg" alt="">
+						</a>
+					</p>
+					<p>You can open image (click on it) to copy text from the image. </p>
+					<div class="title">
+						<div class="title_inner">Useful Generics</div>
+					</div>
+					<p>
+						Your task is to implement classes for drinks and bottles. If you would try it without generics, you would
+						run into a problem: How do you know the specific subtype of a <code>Drink</code> object returned by the
+						method <code>Bottle.empty()</code>?
+					</p>
+					<pre class="prettyprint lang-java">Bottle bottle = new Bottle();
+bottle.fill(new WhiteWine(&quot;Burgunder&quot;));
+Beer beer = (Beer) bottle.empty();  // ClassCastException!</pre>
+					<p>
+						The shown snippet compiles successfully, but when you run it, the program crashes with a <code>ClassCastException</code>.
+						What happened?
+					</p>
+					<p>
+						The <code>Bottle.empty()</code> method is declared to return objects of type <code>Drink</code> – but we
+						want to assign the returned object to a variable of type <code>Beer</code>. For this reason, we need to <em>cast</em>
+						the returned object. Because a <code>Bottle</code> may also contain an object of type <code>RedWine</code>
+						or <code>WhiteWine</code> instead of <code>Beer</code>, the cast operation can fail. It is not possible to
+						cast objects of these three <code>Drink</code> subtypes into one of the other types. Unfortunately, the
+						compiler cannot detect this wrong cast and the program will crash at runtime.
+					</p>
+					<p>
+						To solve this problem, you could use the <code>instanceof</code> operator and check what the dynamic type of
+						a <code>Bottle</code>&lsquo;s <code>content</code> is. But this is cumbersome even for our small example:
+					</p>
+					<pre class="prettyprint lang-java">Drink drink = bottle.empty();
+if (drink instanceof Beer) {
+    Beer beer = (Beer) drink;
+    // work with the Beer object
+} else if (drink instanceof WhiteWine) {
+    WhiteWine whiteWine = (WhiteWine) drink;
+    // work with the WhiteWine object
+} // and so on …</pre>
+					<p>
+						As you can see, it requires a lot of repeating, uninteresting boilerplate code every time we want to work
+						with the object returned by <code>Bottle.empty()</code>.
+					</p>
+					<p>
+						Another solution would be to build separate class hierarchies: one bottle class for each class of drinks
+						(<code>BeerBottle</code>, <code>WhiteWineBottle</code>, …). This way we lose some flexibility and it quickly
+						leads to large hierarchies when we want to support additional types of drinks (and bottles).
+					</p>
+					<p>
+						We highly recommend trying out both solutions before you start with the actual task!
+					</p>
+					<p>Generics help to avoid errors that can be detected at compile time, while leaving the general structure
+						intact. The following class diagram illustrates how it could look like with a <em>generic</em> bottle class:
+					</p>
+					<p>
+						<a href="./assets/Bottle_generics.svg" target="_blank">
+							<img src="./assets/Bottle_generics.svg" alt="">
+						</a>
+					</p>
+					<p>You can open image (click on it) to copy text from the image. </p>
+					<p>Before you begin to write the code, make sure that you understand all the elements in the above diagram.</p>
+					<div class="title">
+						<div class="title_inner">Task</div>
+					</div>
+					<p>
+						Implement a generic bottle class and the classes for the drinks above! The methods <code>fill()</code> and
+						<code>empty()</code> of the class <code>Bottle</code> should throw an <code>IllegalStateException</code> if
+						called at a point where the <code>Bottle</code> object is in an invalid state to perform the respective
+						operation.
+					</p>
+					<div class="task_buttons">
+						<a href="#" target="_blank" class="btn fill" data-text="Go to the Solution">
+							Go to the Solution
+						</a>
+						<a href="./tests/Generics_tests.zip" class="btn" data-text="Download JUnit tests">
+							Download JUnit tests
+						</a>
+					</div>
+					</div>
+				</div>
+
+
+				<div class="clear"></div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="soc">
+			<a target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter"></span></a>
+			<a target="_blank" href="https://github.com/"><span class="ion ion-social-github"></span></a>
+			<a target="_blank" href="https://www.instagram.com/"><span class="ion ion-android-mail"></span></a>
+		</div>
+		<div class="copy">© 2019 ArtemSer. Content: TU Dresden.</div>
+		<div class="clr"></div>
+	</footer>
+
+	<!-- Lines -->
+	<div class="line top"></div>
+	<div class="line bottom"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/typed.js"></script>
+
+<!-- Vendor -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>
