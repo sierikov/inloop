@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Collection II (Sets) </title>
+	<title>Inloop | Predicate Iterator</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">Lesson</div>
-						<div class="h-title blog_title">Middle Age Kingdom</div>
+						<div class="date">WS 2003/04</div>
+						<div class="h-title blog_title">Predicate Iterator</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Middle Age Kingdom</a>
+								<a href="#">Predicate Iterator</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,20 +91,56 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Inheritance</div>
+						<div class="title_inner">Predicate</div>
 					</div>
 					<p>
-						Finance and taxation in a middle age kingdom is going to be computerised. The different population groups
-						are modeled by the following class hierarchy.
-					</p>
-					
+						A <code>PredicateIterator&lt;T&gt;</code> iterates over the elements of an arbitrary data iterable
+						structure and provides only those elements which satisfy a certain predicate (while skipping all of the
+						other elements).<br>
 					<p>
-						<a href="./assets/Middle_Age.svg" target="_blank">
-							<img class="mh-4" src="./assets/Middle_Age.svg" alt="">
-						</a>
+						Given is the description of a design model which uses the iterator design pattern (see the class diagram
+						below):
 					</p>
-					<p>You can open image (click on it) to copy text from the image. </p>
-
+					<p>
+						The constructor of <code>PredicateIterator&lt;T&gt;</code> expects the following arguments:
+					</p>
+					<ol>
+						<li>
+							<code>iter</code>, a <code>java.util.Iterator&lt;T&gt;</code> for the actual data</li>
+						<li>
+							a description of the predicate consisting of
+							<ol>
+								<li><code>pred</code>, a <code>Predicate&lt;T&gt;</code> object that determines what kind of predicate
+									to use
+								</li>
+								<li><code>argument</code>, an object of type <code>T</code> that serves as value for the predicate</li>
+							</ol>
+						</li>
+					</ol>
+					<p>
+						The method <code>predicate()</code> of the generic interface <code>Predicate&lt;T&gt;</code> checks whether
+						an object <code>element</code> satisfies the predicate with the value <code>argument</code> (both are of
+						type <code>T</code>). It returns <code>true</code> or <code>false</code> accordingly.
+					</p>
+					<p>
+						The design model contains three classes which are implementations of the interface
+						<code>Predicate&lt;T&gt;</code> for the application to <code>String</code> objects. Note that
+						<code>element</code> and <code>argument</code> are of type <code>T extends String</code>.
+					</p>
+					<ol>
+						<li>
+							<code>PredicateStartsWith</code> checks if <code>element</code> starts with the value
+							<code>argument</code>.
+						</li>
+						<li>
+							<code>PredicateEndsWith</code> checks if <code>element</code> ends with the value <code>argument</code>.
+						</li>
+						<li>
+							<code>PredicateLength</code> checks if <code>element</code> has the length <code>argument</code> (since
+							<code>argument</code> is of type <br> <code>T extends <strong>String</strong></code>,
+							use <code>Integer.parseInt()</code> to get an <code>int</code> for the length check).
+						</li>
+					</ol>
 					<p>
 						The attribute <code>income</code> is used for the respective inhabitant&rsquo;s actual annual income in
 						Taler.
@@ -130,26 +166,48 @@
 						much easier.
 					</p>
 					<div class="title">
-						<div class="title_inner">Task</div>
+						<div class="title_inner">Diagram</div>
 					</div>
 					<p>
-						Implement the class hierarchy! At first think about how to implement the methods of the class
-						<code>Inhabitant</code>.
-						What methods should be overwritten by subclasses? How to complete the class diagram above?
+						<a href="./assets/Predicate_Iterator.svg" target="_blank">
+							<img class="" src="./assets/Predicate_Iterator.svg" alt="">
+						</a>
+					</p>
+					<p>You can open image (click on it) to copy text from the image. </p>
+					<div class="title">
+						<div class="title_inner">Task</div>
+					</div>
+					<p>Implement the given design model!</p>
+					<div class="title">
+						<div class="title_inner">Hints</div>
+					</div>
+					<ol>
+						<li>
+							Some of the attributes required to implement an <code>Iterator</code> are not revealed in the class
+							diagram.
+						</li>
+						<li>
+							Because we don&rsquo;t want to implement <code>PredicateIterator.remove()</code> in this exercise, it
+							should just throw an <code>UnsupportedOperationException</code>.
+						</li>
+					</ol>
+					<p>
+						<span class="pattern ion ion-ios-cog"></span>
+						Patterns: <a href="../../patterns/iterator.html" class="context-link">Iterator</a>
 					</p>
 					<div class="task_buttons">
 						<a href="#" target="_blank" class="btn fill" data-text="Go to the Solution">
 							Go to the Solution
 						</a>
-						<a href="./tests/Middle_Age.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Predicate_Iterator_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
-					</div>
 				</div>
+			</div>
 
 
-				<div class="clear"></div>
+			<div class="clear"></div>
 		</div>
 
 	</div>
@@ -171,7 +229,6 @@
 	<div class="line right"></div>
 
 </div>
-
 
 
 <script src="../../js/jquery.min.js"></script>

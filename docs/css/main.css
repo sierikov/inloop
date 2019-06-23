@@ -104,6 +104,7 @@ strong {
 
 ol{
 	margin-left: 40px;
+	margin-top: 15px;
 	font-size: 16px;
 	list-style-type: decimal-leading-zero;
 }
@@ -177,8 +178,23 @@ pre{
 	margin-bottom: 10px !important;
 }
 
+.mh-4, .mh-5{
+	max-width: 100%;
+	width: auto;
+}
+
 .mh-4{
 	max-height: 410px;
+	/* position: sticky; */
+}
+
+.mh-5{
+	max-height: 940px;
+	/* position: sticky; */
+}
+
+.center{
+	text-align: center;
 }
 
 .title.code {
@@ -216,6 +232,7 @@ pre{
 .btn.fill, .btn:hover, a.btn.fill, a.btn:hover {
 	color: #fff !important;
 	background: #f26b38;
+	/* width: 100%; */
 	border: 1px solid #f26b38;
 }
 
@@ -237,7 +254,8 @@ pre{
 
 .preloader .load, .preloader .typed-cursor, .preloader .typed-load {
 	color: #f26b38;
-	font-size: 12px
+	font-size: 12px;
+	text-align: center;
 }
 
 /* Header */
@@ -421,6 +439,11 @@ header .head-top .top-menu ul li.active a.btn {
 	/* -webkit-box-shadow: inset 0 -6px 0 #fee9be; */
 }
 
+.title_inner span.ion {
+	font-size: 32px;
+	vertical-align: text-top;
+}
+
 .section .content .title .title_inner_main{
 	display: inline-block;
 	vertical-align: middle;
@@ -516,6 +539,13 @@ header .head-top .top-menu ul li.active a.btn {
 .full-width {
 	max-width: 100%!important;
 	width: 100%!important
+}
+
+.pattern{
+	font-size: 32px;
+	vertical-align: middle;
+	color: #f26b38;
+	margin-bottom: 3px;
 }
 
 /* Footer */

@@ -146,6 +146,14 @@
 
 @media (max-width: 480px) {
 
+	header .head-top .top-menu ul li {
+		display: none;
+	}
+
+	.task_buttons a.btn {
+		width: 80%;
+	}
+
 	/* section */
 	.section.about {
 		text-align:center
