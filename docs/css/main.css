@@ -110,7 +110,6 @@ ol{
 
 img {
 	width: 100%;
-	/* height: 5em; */
 }
 
 a {
@@ -176,6 +175,10 @@ pre{
 
 .mb-10{
 	margin-bottom: 10px !important;
+}
+
+.mh-4{
+	max-height: 410px;
 }
 
 .title.code {
