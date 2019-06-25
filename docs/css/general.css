@@ -21,7 +21,7 @@ body {
 
 body .section, body footer, body header {
 	opacity: 0;
-	visibility: hidden
+	visibility: hidden;
 }
 
 body.loaded .section, body.loaded footer, body.loaded header {

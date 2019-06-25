@@ -50,8 +50,10 @@ tbody {
 }
 
 th {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 	color: #f26b38;
+	/* border-right: 1px solid black; */
+	/* border-left: 1px solid black; */
 }
 
 
@@ -189,7 +191,7 @@ pre{
 }
 
 .mh-5{
-	max-height: 940px;
+	max-height: 800px;
 	/* position: sticky; */
 }
 
@@ -680,6 +682,7 @@ footer .soc a:hover .ion {
 .box-items .box-item:hover .desc .name {
 	color: #f26b38;
 }
+
 .date {
 	margin: 0 0 10px;
 	display: inline-block;
@@ -706,4 +709,3 @@ footer .soc a:hover .ion {
 	-webkit-box-shadow: inset 0 -6px 0 #ede574;
 	-khtml-box-shadow: inset 0 -6px 0 #ede574
 }
-

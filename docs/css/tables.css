@@ -1,0 +1,103 @@
+.container-table100 {
+	width: 100%;
+	min-height: 100vh;
+	background: #d1d1d1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 33px 30px
+}
+
+.table100.main {
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: visible;
+	max-height: 543px;
+	border-spacing: 2px;
+}
+
+.wrap-table100 {
+	width: 1300px
+}
+
+table {
+	max-width: 100%;
+	/* overflow-x: hidden; */
+	background-color: #fff;
+}
+
+th, td {
+	font-weight: unset;
+	padding-right: 10px
+}
+
+.basic-col {
+	width: 20%;
+}
+
+.basic-col.first-col {
+	width: 265px;
+}
+
+.row100.head th {
+	padding: 10px 20px;
+}
+
+.row100 td {
+	padding: 10px;
+}
+
+.table100 tr:nth-child(1) th {
+	border-top: 0;
+	position: sticky;
+	top: 2px;
+	z-index: 10;
+}
+
+.table100.main td {
+	font-family: "Ubuntu Mono", monospace;
+	font-size: 14px;
+	text-align: center;
+	color: #141414;
+	line-height: 1.4;
+}
+
+.table100.main th {
+	font-family: "Ubuntu Mono", monospace;
+	color: #fff;
+	font-size: 16px;
+	/* border-top: 0px; */
+	line-height: 1.4;
+	text-transform: uppercase;
+	background-color: #f26b38;
+}
+
+.table100.main .row100.highlight {
+	background: #0803;
+}
+
+.table100.main .row100 {
+	background: whitesmoke;
+}
+
+.table100.main .row100:hover {
+	background-color: #f26b3833;
+}
+
+.table100.main .hov-column-ver1 {
+	background-color: #f2f2f2
+}
+
+.table100.main .hov-column-head-ver1 {
+	background-color: #484848 !important
+}
+
+.table100.main .row100 td:hover {
+	background-color: #f26b38;
+	color: #fff;
+}
