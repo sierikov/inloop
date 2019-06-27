@@ -44,11 +44,11 @@ th, td {
 	width: 265px;
 }
 
-.row100.head th {
+.basic-row.head th {
 	padding: 10px 20px;
 }
 
-.row100 td {
+.basic-row td {
 	padding: 10px;
 }
 
@@ -77,15 +77,15 @@ th, td {
 	background-color: #f26b38;
 }
 
-.table100.main .row100.highlight {
+.table100.main .basic-row.highlight {
 	background: #0803;
 }
 
-.table100.main .row100 {
+.table100.main .basic-row {
 	background: whitesmoke;
 }
 
-.table100.main .row100:hover {
+.table100.main .basic-row:hover {
 	background-color: #f26b3833;
 }
 
@@ -97,7 +97,7 @@ th, td {
 	background-color: #484848 !important
 }
 
-.table100.main .row100 td:hover {
+.table100.main .basic-row td:hover {
 	background-color: #f26b38;
 	color: #fff;
 }
