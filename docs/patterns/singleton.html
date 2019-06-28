@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Singleton</title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../css/general.css"/>
+	<link rel="stylesheet" href="../css/main.css"/>
+	<link rel="stylesheet" href="../css/glitch.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<link rel="stylesheet" href="../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../img/logo/favicon.ico">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../index.html" class="lnk">Home</a></li>
+					<li><a href="#" class="lnk">About</a></li>
+					<li class="active"><a href="../patterns.html" class="lnk">Patterns</a></li>
+					<li><a href="../tasks.html" class="btn">Tasks</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">Pattern</div>
+						<div class="h-title blog_title">Singleton</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../index.html">Inloop</a> /
+								<a href="../patterns.html">Patterns</a> /
+								<a href="#">Singleton</a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">
+							<span class="ion ion-coffee"></span>
+							Intent
+						</div>
+					</div>
+					<p>
+						<b>Singleton</b> is a creational design pattern that lets you ensure that a class has only one instance,
+						while providing a global access point to this instance.
+					</p>
+					<p class="center">
+						<img class="mh-4" src="../img/patterns/singleton/singleton.png" alt="">
+					</p>
+
+					<div class="title">
+						<div class="title_inner">
+							<span class="ion ion-close-circled"></span>
+							Problem
+						</div>
+					</div>
+					<p>The Singleton pattern solves two problems at the same time, violating the <em>Single Responsibility Principle</em>:</p>
+					<ol>
+						<li>
+							<p>
+								<strong>Ensure that a class has just a single instance</strong>. Why would anyone want to control how
+								many instances a class has? The most common reason for this is to control access to some shared
+								resource—for example, a database or a file.
+							</p>
+							<p>
+								Here’s how it works: imagine that you created an object, but after a while decided to create a new one.
+								Instead of receiving a fresh object, you’ll get the one you already created.
+							</p>
+							<p>
+								Note that this behavior is impossible to implement with a regular constructor since a constructor call
+								<strong>must</strong> always return a new object by design.
+							</p>
+							<p>Clients may not even realize that they’re working with the same object all the time.</p>
+						</li>
+						<li>
+							<p>
+								<strong>Provide a global access point to that instance</strong>. Remember those global variables that
+								you (all right, me) used to store some essential objects? While they’re very handy, they’re also very
+								unsafe since any code can potentially overwrite the contents of those variables and crash the app.
+							</p>
+							<p>
+								Just like a global variable, the Singleton pattern lets you access some object from anywhere in the
+								program. However, it also protects that instance from being overwritten by other code.
+							</p>
+							<p>
+								There’s another side to this problem: you don’t want the code that solves problem #1 to be scattered all
+								over your program. It’s much better to have it within one class, especially if the rest of your code
+								already depends on it.
+							</p>
+						</li>
+					</ol>
+					<p>
+						Nowadays, the Singleton pattern has become so popular that people may call something a <em>singleton</em>
+						even if it solves just one of the listed problems.
+					</p>
+					<div class="title">
+						<div class="title_inner">
+							<span class="ion ion-checkmark-circled"></span>
+							Solution
+						</div>
+					</div>
+					<p>All implementations of the Singleton have these two steps in common:</p>
+					<ol>
+						<li>
+							Make the default constructor private, to prevent other objects from using the <code>new</code> operator
+							with the Singleton class.
+						</li>
+						<li>
+							Create a static creation method that acts as a constructor. Under the hood, this method calls the private
+							constructor to create an object and saves it in a static field. All following calls to this method return
+							the cached object.
+						</li>
+					</ol>
+					<p>
+						If your code has access to the Singleton class, then it’s able to call the Singleton’s static method. So
+						whenever that method is called, the same object is always returned.
+					</p>
+					<div class="title">
+						<div class="title_inner">
+							<span class="ion ion-android-globe"></span>
+							Real World Example
+						</div>
+					</div>
+					<p class="center">
+						<img class="mh-5" src="https://images.unsplash.com/photo-1548542071-30f789851985?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+					</p>
+					<p>
+						The government is an excellent example of the Singleton pattern. A country can have only one official
+						government. Regardless of the personal identities of the individuals who form governments, the title, “The
+						Government of X”, is a global point of access that identifies the group of people in charge.
+					</p>
+					<div class="title">
+						<div class="title_inner">
+							<span class="ion ion-levels"></span>
+							Structure
+						</div>
+					</div>
+					<p class="center">
+						<img class="mh-5" src="./assets/singleton/singleton.svg" alt="">
+					</p>
+					<ol>
+						<li>
+							<p>
+								The <strong>Singleton</strong> class declares the static method <code>getInstance</code> that returns
+								the same instance of its own class.
+							</p>
+							<p>
+								The Singleton’s constructor should be hidden from the client code. Calling the <code>getInstance</code>
+								method should be the only way of getting the Singleton object.
+							</p>
+						</li>
+					</ol>
+					<div class="title">
+						<div class="title_inner">
+							<span class="ion ion-android-bulb"></span>
+							Applicability
+						</div>
+					</div>
+					<ol>
+						<li>
+							Use the Singleton pattern when a class in your program should have just a single instance available to all
+							clients; for example, a single database object shared by different parts of the program.
+						</li>
+						<li>
+							The Singleton pattern disables all other means of creating objects of a class except for the special
+							creation method. This method either creates a new object or returns an existing one if it has already been
+							created.
+						</li>
+						<li>
+							Use the Singleton pattern when you need stricter control over global variables.
+						</li>
+						<li>
+							Unlike global variables, the Singleton pattern guarantees that there’s just one instance of a class.
+							Nothing, except for the Singleton class itself, can replace the cached instance.
+						</li>
+					</ol>
+					<p>
+						Note that you can always adjust this limitation and allow creating any number of Singleton instances. The
+						only piece of code that needs changing is the body of the <code>getInstance</code> method.
+					</p>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="soc">
+			<a target="_blank" href="https://twitter.com/"><span class="ion ion-social-twitter"></span></a>
+			<a target="_blank" href="https://github.com/"><span class="ion ion-social-github"></span></a>
+			<a target="_blank" href="https://www.instagram.com/"><span class="ion ion-android-mail"></span></a>
+		</div>
+		<div class="copy">© 2019 ArtemSer. Content: Refactoring.</div>
+		<div class="clr"></div>
+	</footer>
+
+	<!-- Lines -->
+	<div class="line top"></div>
+	<div class="line bottom"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/typed.js"></script>
+
+<!-- Vendor -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>
