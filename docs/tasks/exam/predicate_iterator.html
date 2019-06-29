@@ -141,30 +141,6 @@
 							use <code>Integer.parseInt()</code> to get an <code>int</code> for the length check).
 						</li>
 					</ol>
-					<p>
-						The attribute <code>income</code> is used for the respective inhabitant&rsquo;s actual annual income in
-						Taler.
-						The methods <code>taxableIncome()</code> and <code>tax()</code> should provide the correct values for each
-						of the kingdom&rsquo;s inhabitants according to the following royal instructions:
-					</p>
-					<ol>
-						<li>
-							As long as this law does not state something else, every inhabitant has to pay taxes for his whole
-							annual income.
-						</li>
-						<li>
-							Every inhabitant has to pay 10% of his taxable income as taxes. The tax value is rounded down to an
-							integer with 1 Taler being the absolute minimum.
-						</li>
-						<li>The king does not pay any taxes at all.</li>
-						<li>Members of the nobility pay at least 20 Taler taxes.</li>
-						<li>12 Taler of a serf&rsquo;s income are tax-free.</li>
-					</ol>
-					<p>
-						The tax calculation rules are expected to change annually. Because of that, royal instruction number 2
-						should be implemented at only one point of the class hierarchy. That way, adjusting the code to new rules is
-						much easier.
-					</p>
 					<div class="title">
 						<div class="title_inner">Diagram</div>
 					</div>
