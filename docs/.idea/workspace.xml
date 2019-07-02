@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c6beb6-ef3b-4ac1-9ef3-45b9e86d9238" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patterns.html" beforeDir="false" afterPath="$PROJECT_DIR$/patterns.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patterns/iterator.html" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/iterator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patterns/singleton.html" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/singleton.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/java_and_functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/java_and_functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/linked_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/linked_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/basic/string_processing.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/basic/string_processing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/exam/predicate_iterator.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/exam/predicate_iterator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/exam/renovation_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/exam/renovation_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/exam/vehicle_queue.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/exam/vehicle_queue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/lesson/basic_library.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/lesson/basic_library.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/lesson/bottle_generics.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/lesson/bottle_generics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/lesson/library_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/lesson/library_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/lesson/library_sets.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/lesson/library_sets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/lesson/middle_age.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/lesson/middle_age.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +46,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="CNAME~ee7ff1a7f1c6c70f471130a56a99cf07536ea708" value="1" />
           <entry key="css" value="23" />
-          <entry key="html" value="39" />
+          <entry key="html" value="51" />
           <entry key="ico" value="1" />
           <entry key="js" value="16" />
           <entry key="png" value="1" />
@@ -43,16 +58,17 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="23" />
-          <entry key="HTML" value="39" />
+          <entry key="HTML" value="51" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="16" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="SVG" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1658" />
-          <entry key="html" value="5229" />
+          <entry key="html" value="5281" />
           <entry key="js" value="214" />
           <entry key="svg" value="18" />
         </counts>
@@ -60,7 +76,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1658" />
-          <entry key="HTML" value="5229" />
+          <entry key="HTML" value="5281" />
           <entry key="JavaScript" value="214" />
           <entry key="SVG" value="18" />
         </counts>
@@ -72,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/exam/vehicle_queue.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6318">
-              <caret line="481" column="28" selection-start-line="481" selection-start-column="28" selection-end-line="481" selection-end-column="28" />
+            <state relative-caret-position="295">
+              <caret line="501" column="110" selection-start-line="501" selection-start-column="110" selection-end-line="501" selection-end-column="110" />
               <folding>
                 <element signature="n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#tr#18;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -93,22 +109,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/patterns.html">
+        <entry file="file://$PROJECT_DIR$/tasks/lesson/basic_library.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="119" column="82" selection-start-line="119" selection-start-column="82" selection-end-line="119" selection-end-column="82" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="321">
+              <caret line="274" column="110" selection-start-line="274" selection-start-column="110" selection-end-line="274" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/lesson/bottle_generics.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="195" column="110" selection-start-line="195" selection-start-column="110" selection-end-line="195" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/lesson/library_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="154" column="110" selection-start-line="154" selection-start-column="110" selection-end-line="154" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/lesson/library_sets.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="167" column="110" selection-start-line="167" selection-start-column="110" selection-end-line="167" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/patterns/singleton.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="254" column="16" lean-forward="true" selection-start-line="254" selection-start-column="16" selection-end-line="254" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/lesson/middle_age.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="160" column="110" selection-start-line="160" selection-start-column="110" selection-end-line="160" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/patterns/iterator.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="289" column="110" selection-start-line="289" selection-start-column="110" selection-end-line="289" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/exam/renovation_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="183" column="85" lean-forward="true" selection-start-line="183" selection-start-column="85" selection-end-line="183" selection-end-column="85" />
+            <state relative-caret-position="341">
+              <caret line="200" column="110" selection-start-line="200" selection-start-column="110" selection-end-line="200" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -116,136 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/exam/predicate_iterator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="295" column="46" selection-start-line="295" selection-start-column="46" selection-end-line="295" selection-end-column="46" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="n#link#0;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#ul#0;n#div#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#4;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#6;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#8;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#9;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#a#0;n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#a#0;n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks/basic/linked_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4602">
-              <caret line="177" column="7" selection-start-line="175" selection-start-column="10" selection-end-line="177" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/patterns/singleton.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5694">
-              <caret line="219" column="16" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="16" />
+            <state relative-caret-position="295">
+              <caret line="194" column="110" selection-start-line="194" selection-start-column="110" selection-end-line="194" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -262,9 +201,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>2016</find>
-      <find>men</find>
-      <find>str</find>
       <find>ul</find>
       <find>btn</find>
       <find>th</find>
@@ -291,15 +227,18 @@
       <find>hi</find>
       <find>7</find>
       <find>Solution</find>
+      <find>\&lt;a target\=\&quot;_blank\&quot; href\=\&quot;https\:\/\/twitter\.com\/\&quot;\&gt;\&lt;span class\=\&quot;ion ion\-social\-twitter\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n\	\	\	\&lt;a target\=\&quot;_blank\&quot; href\=\&quot;https\:\/\/github\.com\/\&quot;\&gt;\&lt;span class\=\&quot;ion ion\-social\-github\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n\	\	\	\&lt;a target\=\&quot;_blank\&quot; href\=\&quot;https\:\/\/www\.instagram\.com\/\&quot;\&gt;\&lt;span class\=\&quot;ion ion\-android\-mail\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;</find>
+      <find>&lt;a target=&quot;_blank&quot; href=&quot;https://twitter.com/&quot;&gt;&lt;span class=&quot;ion ion-social-twitter&quot;&gt;&lt;/span&gt;&lt;/a&gt;</find>
       <find>itt</find>
+      <find>&lt;div class=&quot;soc&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>Patterns</replace>
       <replace>favicon.svg</replace>
       <replace>favicon.ico</replace>
-      <replace />
       <replace>l&quot;&gt;</replace>
       <replace>Docs</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -330,30 +269,30 @@
         <option value="$PROJECT_DIR$/css/highlight.css" />
         <option value="$PROJECT_DIR$/tasks/lessons/classes_and_objects.html" />
         <option value="$PROJECT_DIR$/tasks/basic/assets/Linked_List_intro.svg" />
-        <option value="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" />
-        <option value="$PROJECT_DIR$/tasks/basic/linked_list.html" />
-        <option value="$PROJECT_DIR$/tasks/basic/string_processing.html" />
         <option value="$PROJECT_DIR$/tasks/lesson/assets/Library_Lists.svg" />
-        <option value="$PROJECT_DIR$/tasks/lesson/library_sets.html" />
-        <option value="$PROJECT_DIR$/tasks/lesson/basic_library.html" />
-        <option value="$PROJECT_DIR$/tasks/lesson/bottle_generics.html" />
-        <option value="$PROJECT_DIR$/tasks/lesson/middle_age.html" />
         <option value="$PROJECT_DIR$/img/logo/favicon.svg" />
         <option value="$PROJECT_DIR$/tasks/exam/middle_age.html" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
-        <option value="$PROJECT_DIR$/tasks/lesson/library_list.html" />
-        <option value="$PROJECT_DIR$/tasks/basic/java_and_functions.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/patterns/predicate_iterator.html" />
-        <option value="$PROJECT_DIR$/patterns/iterator.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/tables.css" />
-        <option value="$PROJECT_DIR$/patterns/singleton.html" />
-        <option value="$PROJECT_DIR$/tasks/exam/vehicle_queue.html" />
-        <option value="$PROJECT_DIR$/tasks/exam/renovation_project.html" />
-        <option value="$PROJECT_DIR$/tasks/exam/predicate_iterator.html" />
-        <option value="$PROJECT_DIR$/tasks.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/patterns.html" />
+        <option value="$PROJECT_DIR$/tasks.html" />
+        <option value="$PROJECT_DIR$/tasks/basic/classes_and_objects.html" />
+        <option value="$PROJECT_DIR$/tasks/basic/java_and_functions.html" />
+        <option value="$PROJECT_DIR$/tasks/basic/linked_list.html" />
+        <option value="$PROJECT_DIR$/tasks/basic/string_processing.html" />
+        <option value="$PROJECT_DIR$/tasks/exam/predicate_iterator.html" />
+        <option value="$PROJECT_DIR$/tasks/exam/renovation_project.html" />
+        <option value="$PROJECT_DIR$/tasks/exam/vehicle_queue.html" />
+        <option value="$PROJECT_DIR$/tasks/lesson/basic_library.html" />
+        <option value="$PROJECT_DIR$/tasks/lesson/bottle_generics.html" />
+        <option value="$PROJECT_DIR$/tasks/lesson/library_list.html" />
+        <option value="$PROJECT_DIR$/tasks/lesson/library_sets.html" />
+        <option value="$PROJECT_DIR$/tasks/lesson/middle_age.html" />
+        <option value="$PROJECT_DIR$/patterns/iterator.html" />
+        <option value="$PROJECT_DIR$/patterns/singleton.html" />
       </list>
     </option>
   </component>
@@ -389,50 +328,6 @@
               <item name="docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="patterns" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="singleton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="exam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="exam" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="exam" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -500,12 +395,12 @@
       <workItem from="1561739900869" duration="1207000" />
       <workItem from="1561746799932" duration="104000" />
       <workItem from="1561825393282" duration="134000" />
-      <workItem from="1562076764221" duration="849000" />
+      <workItem from="1562076764221" duration="1353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73332000" />
+    <option name="totallyTimeSpent" value="73836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="0" width="1920" height="1200" extended-state="6" />
@@ -673,36 +568,8 @@
     <entry file="file://$PROJECT_DIR$/tasks/lesson/assets/Linked_List_intro.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/basic/string_processing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="55" column="66" lean-forward="true" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/basic/classes_and_objects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="58" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/lesson/assets/Library_Lists.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/lesson/basic_library.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/lesson/middle_age.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/logo/favicon.png">
       <provider selected="true" editor-type-id="images" />
@@ -720,34 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1392">
-          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/lesson/bottle_generics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3654">
-          <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/lesson/library_sets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3087">
-          <caret line="147" column="43" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patterns/iterator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13671">
@@ -762,66 +601,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/lesson/library_list.html">
+    <entry file="file://$PROJECT_DIR$/CNAME~ee7ff1a7f1c6c70f471130a56a99cf07536ea708">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="73" />
+        <state relative-caret-position="347">
+          <caret line="88" column="4" lean-forward="true" selection-start-line="88" selection-start-column="4" selection-end-line="90" selection-end-column="110" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/basic/java_and_functions.html">
+    <entry file="file://$PROJECT_DIR$/patterns.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/exam/vehicle_queue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6318">
-          <caret line="481" column="28" selection-start-line="481" selection-start-column="28" selection-end-line="481" selection-end-column="28" />
+        <state relative-caret-position="869">
+          <caret line="133" column="110" selection-start-line="133" selection-start-column="110" selection-end-line="133" selection-end-column="110" />
           <folding>
-            <element signature="n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#18;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#21;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#22;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#23;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#24;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#25;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#26;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#27;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#28;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#29;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#30;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/basic/linked_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4602">
-          <caret line="177" column="7" selection-start-line="175" selection-start-column="10" selection-end-line="177" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patterns/singleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5694">
-          <caret line="219" column="16" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/exam/predicate_iterator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="295" column="46" selection-start-line="295" selection-start-column="46" selection-end-line="295" selection-end-column="46" />
+        <state relative-caret-position="555">
+          <caret line="346" column="110" selection-start-line="346" selection-start-column="110" selection-end-line="346" selection-end-column="110" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#link#0;n#head#0;n#html#0;n#!!top" />
@@ -920,26 +723,119 @@
             <element signature="n#span#0;n#span#0;n#a#0;n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#span#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#11;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/patterns.html">
+    <entry file="file://$PROJECT_DIR$/tasks/basic/classes_and_objects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="119" column="82" selection-start-line="119" selection-start-column="82" selection-end-line="119" selection-end-column="82" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="321">
+          <caret line="251" column="110" selection-start-line="251" selection-start-column="110" selection-end-line="251" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/basic/java_and_functions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="160" column="110" selection-start-line="160" selection-start-column="110" selection-end-line="160" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/basic/linked_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="220" column="110" selection-start-line="220" selection-start-column="110" selection-end-line="220" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/basic/string_processing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="317" column="110" selection-start-line="317" selection-start-column="110" selection-end-line="317" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/exam/predicate_iterator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="194" column="110" selection-start-line="194" selection-start-column="110" selection-end-line="194" selection-end-column="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tasks/exam/renovation_project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="183" column="85" lean-forward="true" selection-start-line="183" selection-start-column="85" selection-end-line="183" selection-end-column="85" />
+        <state relative-caret-position="341">
+          <caret line="200" column="110" selection-start-line="200" selection-start-column="110" selection-end-line="200" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/exam/vehicle_queue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="501" column="110" selection-start-line="501" selection-start-column="110" selection-end-line="501" selection-end-column="110" />
+          <folding>
+            <element signature="n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#18;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#21;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#22;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#23;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#24;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#25;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#26;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#27;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#28;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#29;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#30;n#tbody#0;n#table#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/lesson/basic_library.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="274" column="110" selection-start-line="274" selection-start-column="110" selection-end-line="274" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/lesson/bottle_generics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="195" column="110" selection-start-line="195" selection-start-column="110" selection-end-line="195" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/lesson/library_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="154" column="110" selection-start-line="154" selection-start-column="110" selection-end-line="154" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/lesson/library_sets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="167" column="110" selection-start-line="167" selection-start-column="110" selection-end-line="167" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/lesson/middle_age.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="160" column="110" selection-start-line="160" selection-start-column="110" selection-end-line="160" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patterns/iterator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="289" column="110" selection-start-line="289" selection-start-column="110" selection-end-line="289" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patterns/singleton.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="254" column="16" lean-forward="true" selection-start-line="254" selection-start-column="16" selection-end-line="254" selection-end-column="16" />
         </state>
       </provider>
     </entry>
