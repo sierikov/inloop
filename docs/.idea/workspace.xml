@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89c6beb6-ef3b-4ac1-9ef3-45b9e86d9238" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tasks/exam/part_managemet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/exam/assets/._Renovation_Project.svg" beforeDir="false" />
-    </list>
+    <list default="true" id="89c6beb6-ef3b-4ac1-9ef3-45b9e86d9238" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -498,12 +493,12 @@
       <workItem from="1561746799932" duration="104000" />
       <workItem from="1561825393282" duration="134000" />
       <workItem from="1562076764221" duration="1587000" />
-      <workItem from="1562420203043" duration="789000" />
+      <workItem from="1562420203043" duration="1007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74859000" />
+    <option name="totallyTimeSpent" value="75077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
