@@ -70,12 +70,12 @@
 				<div class="vertical-center">
 					<div class="started-content">
 						<div class="date">Pattern</div>
-						<div class="h-title blog_title">Iterator</div>
+						<div class="h-title blog_title">Factory</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../index.html">Inloop</a> /
 								<a href="../patterns.html">Patterns</a> /
-								<a href="#">Iterator</a>
+								<a href="#">Factory</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -97,11 +97,11 @@
 						</div>
 					</div>
 					<p>
-						<b>Iterator</b> is a behavioral design pattern that lets you traverse elements of a collection without exposing its
-						underlying representation (list, stack, tree, etc.).
+						<b>Factory</b> is a creational design pattern that provides an interface for creating objects in a
+						superclass, but allows subclasses to alter the type of objects that will be created.
 					</p>
 					<p class="center">
-						<img class="mh-4" src="../img/patterns/iterator/iterator.png" alt="">
+						<img class="" src="../img/patterns/factory/factory.png" alt="">
 					</p>
 
 					<div class="title">
@@ -111,40 +111,21 @@
 						</div>
 					</div>
 					<p>
-						Collections are one of the most used data types in programming. Nonetheless, a collection is just a
-						container for a group of objects.
+						Imagine that you’re creating a logistics management application. The first version of your app can only
+						handle transportation by trucks, so the bulk of your code lives inside the <code>Truck</code> class.
 					</p>
 					<p class="center">
-						<img class="mh-4" src="./assets/iterator/Different_graphs.svg" alt="">
+						<img class="mh-4" src="./assets/factory/Logistic_App.png" alt="">
 					</p>
 					<p>
-						Most collections store their elements in simple lists. However, some of them are based on stacks, trees,
-						graphs and other complex data structures.
+						Great news, right? But how about the code? At present, most of your code is coupled to the
+						<code>Truck</code> class. Adding <code>Ships</code> into the app would require making changes to the entire
+						codebase. Moreover, if later you decide to add another type of transportation to the app, you will probably
+						need to make all of these changes again.
 					</p>
 					<p>
-						But no matter how a collection is structured, it must provide some way of accessing its elements so that
-						other code can use these elements. There should be a way to go through each element of the collection
-						without accessing the same elements over and over.
-					</p>
-					<p>
-						This may sound like an easy job if you have a collection based on a list. You just loop over all of the
-						elements. But how do you sequentially traverse elements of a complex data structure, such as a tree? For
-						example, one day you might be just fine with depth-first traversal of a tree. Yet the next day you might
-						require breadth-first traversal. And the next week, you might need something else, like random access to the
-						tree elements.
-					</p>
-					<p class="center">
-						<img class="mh-4" src="./assets/iterator/Different_ways.svg" alt="">
-					</p>
-					<p>
-						Adding more and more traversal algorithms to the collection gradually blurs its primary responsibility,
-						which is efficient data storage. Additionally, some algorithms might be tailored for a specific application,
-						so including them into a generic collection class would be weird.
-					</p>
-					<p>
-						On the other hand, the client code that’s supposed to work with various collections may not even care how
-						they store their elements. However, since collections all provide different ways of accessing their
-						elements, you have no option other than to couple your code to the specific collection classes.
+						As a result, you will end up with pretty nasty code, riddled with conditionals that switch the app’s
+						behavior depending on the class of transportation objects.
 					</p>
 					<div class="title">
 						<div class="title_inner">
@@ -153,8 +134,10 @@
 						</div>
 					</div>
 					<p>
-						The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate
-						object called an iterator.
+						The Factory Method pattern suggests that you replace direct object construction calls (using the
+						<code>new</code> operator) with calls to a special <em>factory</em> method. Don’t worry: the objects are
+						still created via the <code>new</code> operator, but it’s being called from within the factory method.
+						Objects returned by a factory method are often referred to as “products.”
 					</p>
 					<p class="center">
 						<img class="mh-5" src="./assets/iterator/Graphs_and_Iterator.svg" alt="">
