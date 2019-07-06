@@ -140,22 +140,27 @@
 						Objects returned by a factory method are often referred to as “products.”
 					</p>
 					<p class="center">
-						<img class="mh-5" src="./assets/iterator/Graphs_and_Iterator.svg" alt="">
+						<img class="mh-5" src="./assets/factory/Solution.png" alt="">
 					</p>
 					<p>
-						In addition to implementing the algorithm itself, an iterator object encapsulates all of the traversal
-						details, such as the current position and how many elements are left till the end. Because of this, several
-						iterators can go through the same collection at the same time, independently of each other.
+						At first glance, this change may look pointless: we just moved the constructor call from one part of the
+						program to another. However, consider this: now you can override the factory method in a subclass and change
+						the class of products being created by the method.
 					</p>
 					<p>
-						Usually, iterators provide one primary method for fetching elements of the collection. The client can keep
-						running this method until it doesn’t return anything, which means that the iterator has traversed all of the
-						elements.
+						There’s a slight limitation though: subclasses may return different types of products only if these
+						products have a common base class or interface. Also, the factory method in the base class should have its
+						return type declared as this interface.
+					</p>
+					<p class="center">
+						<img class="mh-5" src="./assets/factory/Solution_Details.png" alt="">
 					</p>
 					<p>
-						All iterators must implement the same interface. This makes the client code compatible with any collection
-						type or any traversal algorithm as long as there’s a proper iterator. If you need a special way to traverse
-						a collection, you just create a new iterator class, without having to change the collection or the client.
+						For example, both <code>Truck</code> and <code>Ship</code> classes should implement the
+						<code>Transport</code> interface, which declares a method called <code>deliver</code>. Each class implements
+						this method differently: trucks deliver cargo by land, ships deliver cargo by sea. The factory method in the
+						<code>RoadLogistics</code> class returns truck objects, whereas the factory method in the
+						<code>SeaLogistics</code> class returns ships.
 					</p>
 					<div class="title">
 						<div class="title_inner">
