@@ -153,7 +153,7 @@
 						return type declared as this interface.
 					</p>
 					<p class="center">
-						<img class="mh-5" src="./assets/factory/Solution_Details.png" alt="">
+						<img class="mh-4" src="./assets/factory/Solution_Details.png" alt="">
 					</p>
 					<p>
 						For example, both <code>Truck</code> and <code>Ship</code> classes should implement the
@@ -162,31 +162,14 @@
 						<code>RoadLogistics</code> class returns truck objects, whereas the factory method in the
 						<code>SeaLogistics</code> class returns ships.
 					</p>
-					<div class="title">
-						<div class="title_inner">
-							<span class="ion ion-android-globe"></span>
-							Real World Example
-						</div>
-					</div>
 					<p class="center">
-						<img class="mh-5" src="	https://images.unsplash.com/photo-1548585742-1df49e753a83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1956&q=80" alt="">
+						<img class="mh-4" src="./assets/factory/Solution_Impl.png" alt="">
 					</p>
 					<p>
-						You plan to visit Rome for a few days and visit all of its main sights and attractions. But once there, you
-						could waste a lot of time walking in circles, unable to find even the Colosseum.
-					</p>
-					<p>
-						On the other hand, you could buy a virtual guide app for your smartphone and use it for navigation. It’s
-						smart and inexpensive, and you could be staying at some interesting places for as long as you want.
-					</p>
-					<p>
-						A third alternative is that you could spend some of the trip’s budget and hire a local guide who knows the
-						city like the back of his hand. The guide would be able to tailor the tour to your likings, show you every
-						attraction and tell a lot of exciting stories. That’ll be even more fun; but, alas, more expensive, too.
-					</p>
-					<p>
-						All of these options—the random directions born in your head, the smartphone navigator or the human
-						guide—act as iterators over the vast collection of sights and attractions located in Rome.
+						The code that uses the factory method (often called the <em>client</em> code) doesn’t see a difference
+						between the actual products returned by various subclasses. The client treats all the products as abstract
+						<code>Transport</code>. The client knows that all transport objects are supposed to have the
+						<code>deliver</code> method, but exactly how it works isn’t important to the client.
 					</p>
 					<div class="title">
 						<div class="title_inner">
@@ -195,37 +178,32 @@
 						</div>
 					</div>
 					<p class="center">
-						<img class="mh-5" src="./assets/iterator/diagram.svg" alt="">
+						<img class="mh-5" src="./assets/factory/Diagram.png" alt="">
 					</p>
 					<ol>
 						<li>
-							The <b>Iterator</b> interface declares the operations required for traversing a collection: fetching the next
-							element, retrieving the current position, restarting iteration, etc.
+							The <strong>Product</strong> declares the interface, which is common to all objects that can be produced
+							by the creator and its subclasses.
 						</li>
 						<li>
-							<b>Concrete Iterators</b> implement specific algorithms for traversing a collection. The iterator object should
-							track the traversal progress on its own. This allows several iterators to traverse the same collection
-							independently of each other.
+							<strong>Concrete Products</strong> are different implementations of the product interface.
 						</li>
 						<li>
-							The <b>Collection</b> interface declares one or multiple methods for getting iterators compatible with the
-							collection. Note that the return type of the methods must be declared as the iterator interface so that
-							the concrete collections can return various kinds of iterators.
-						</li>
-						<li>
-							<b>Concrete Collections</b> return new instances of a particular concrete iterator class each time the client
-							requests one. You might be wondering, where’s the rest of the collection’s code? Don’t worry, it should be
-							in the same class. It’s just that these details aren’t crucial to the actual pattern, so we’re omitting
-							them.
-						</li>
-						<li>
-							The <b>Client</b> works with both collections and iterators via their interfaces. This way the client isn’t
-							coupled to concrete classes, allowing you to use various collections and iterators with the same client
-							code.
-							<br><br>
-							Typically, clients don’t create iterators on their own, but instead get them from collections. Yet, in
-							certain cases, the client can create one directly; for example, when the client defines its own special
-							iterator.
+							<p>
+								The <strong>Creator</strong> class declares the factory method that returns new product objects. It’s
+								important that the return type of this method matches the product interface.
+							</p>
+							<p>
+								You can declare the factory method as abstract to force all subclasses to implement their own versions
+								of the method. As an alternative, the base factory method can return some default product type.
+							</p>
+							<p>
+								Note, despite its name, product creation is <strong>not</strong> the primary responsibility of the
+								creator. Usually, the creator class already has some core business logic related to products. The
+								factory method helps to decouple this logic from the concrete product classes. Here is an analogy: a
+								large software development company can have a training department for programmers. However, the primary
+								function of the company as a whole is still writing code, not producing programmers.
+							</p>
 						</li>
 					</ol>
 					<div class="title">
@@ -236,26 +214,51 @@
 					</div>
 					<ol>
 						<li>
-							Use the Iterator pattern when your collection has a complex data structure under the hood, but you want to
-							hide its complexity from clients (either for convenience or security reasons).
+							Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your
+							code should work with.
 						</li>
 						<li>
-							The iterator encapsulates the details of working with a complex data structure, providing the client with
-							several simple methods of accessing the collection elements. While this approach is very convenient for
-							the client, it also protects the collection from careless or malicious actions which the client would be
-							able to perform if working with the collection directly.
+							<p>
+								The Factory Method separates product construction code from the code that actually uses the product.
+								Therefore it’s easier to extend the product construction code independently from the rest of the
+								code.
+							</p>
+							<p>
+								For example, to add a new product type to the app, you’ll only need to create a new creator subclass and
+								override the factory method in it.
+							</p>
 						</li>
 						<li>
-							Use the pattern to reduce duplication of the traversal code across your app.
+							Use the Factory Method when you want to provide users of your library or framework with a way to extend
+							its internal components.
 						</li>
 						<li>
-							The code of non-trivial iteration algorithms tends to be very bulky. When placed within the business logic
-							of an app, it may blur the responsibility of the original code and make it less maintainable. Moving the
-							traversal code to designated iterators can help you make the code of the application more lean and clean.
+							<p>
+								Inheritance is probably the easiest way to extend
+								the default behavior of a library or framework. But how would the framework recognize that your subclass
+								should be used instead of a standard component?
+							</p>
+							<p>
+								The solution is to reduce the code that constructs components across the framework into a single
+								factory method and let anyone override this method in addition to extending the component itself.
+							</p>
+							<p>
+								Let’s see how that would work. Imagine that you write an app using an open source UI framework. Your
+								app should have round buttons, but the framework only provides square ones. You extend the standard
+								<code>Button</code> class with a glorious <code>RoundButton</code> subclass. But now you need to tell
+								the main <code>UIFramework</code> class to use the new button subclass instead of a default one.
+							</p>
+							<p>
+								To achieve this, you create a subclass <code>UIWithRoundButtons</code> from a base framework class and
+								override its <code>createButton</code> method. While this method returns <code>Button</code> objects in
+								the base class, you make your subclass return <code>RoundButton</code> objects.
+								Now use the <code>UIWithRoundButtons</code>class instead of <code>UIFramework</code>.
+								And that’s about it!
+							</p>
 						</li>
 						<li>
-							Use the Iterator when you want your code to be able to traverse different data structures or when types of
-							these structures are unknown beforehand.
+							<p>Use the Factory Method when you want to save system resources by reusing existing objects instead of
+							rebuilding them each time.</p>
 						</li>
 						<li>
 							The pattern provides a couple of generic interfaces for both collections and iterators. Given that your
