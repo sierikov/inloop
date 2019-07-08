@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Garage Door </title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../../css/general.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link rel="stylesheet" href="../../css/glitch.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../../img/logo/favicon.ico">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../../index.html" class="lnk">Home</a></li>
+					<li><a href="#" class="lnk">About</a></li>
+					<li><a href="../../patterns.html" class="lnk">Patterns</a></li>
+					<li class="active"><a href="../../tasks.html" class="btn">Tasks</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">Lesson</div>
+						<div class="h-title blog_title">Garage Door</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../../index.html">Inloop</a> /
+								<a href="../../tasks.html">Tasks</a> /
+								<a href="#">Garage Door</a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">Garage Door</div>
+					</div>
+					<p>
+						A garage door (class <code>GarageDoor</code>) is controlled by a motor driven mechanism. It opens and closes
+						the door.
+					</p>
+					<p>
+						To control the garage door, there is a control panel with one button to open the door
+						(<code>openDoor()</code>) and another one to close it (<code>closeDoor()</code>). These buttons can be used
+						at any time. Furthermore, the door is equipped with two end switches. Each of them sends a signal (<code>stopper()</code>)
+						to the control if the opening or closing of the door has been completed.
+					</p>
+					<div class="title">
+						<div class="title_inner">The <code>Door</code></div>
+					</div>
+					<p>In the state design pattern, we use an abstract state class (<code>DoorState</code>), which provides the
+						design of all concrete states. The concrete states are represented by concrete classes that are subclasses
+						of the abstract class <code>DoorState</code>. Implement the state pattern the way it was introduced in the
+						lecture (as <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html">private inner
+							classes</a> of the context class <code>GarageDoor</code>)!</p>
+					<p>The state diagram below shows all possible transitions between the concrete states (<code>Closed</code>,
+						<code>Opening</code>, <code>Open</code>, <code>Closing</code>).</p>
+					<!-- TODO: Diagram -->
+					<!-- TODO: Class Diagram Section -->
+					<!-- TODO: Task Section -->
+					<!-- TODO: Remarks Section -->
+					<!-- TODO: JUnit Section -->
+					<!-- TODO: State Pattern -->
+					<p>
+						<span class="pattern ion ion-ios-cog"></span>
+						Patterns: <a href="../../patterns/state.html" class="context-link">State</a>
+					</p>
+					<div class="task_buttons">
+						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Docs">
+							Go to the Patterns
+						</a>
+						<a href="./tests/Basic_Library_tests.zip" class="btn" data-text="Download JUnit tests">
+							Download JUnit tests
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="clear"></div>
+		</div>
+	</div>
+	<footer>
+		<div class="soc">
+			<a target="_blank" href="https://twitter.com/Artem__Ser"><span class="ion ion-social-twitter"></span></a>
+			<a target="_blank" href="https://github.com/ArtemSer"><span class="ion ion-social-github"></span></a>
+			<a href="mailto:artem.sierikov@gmail.com"><span class="ion ion-android-mail"></span></a>
+		</div>
+		<div class="copy">© 2019 ArtemSer. Content: TU Dresden.</div>
+		<div class="clr"></div>
+	</footer>
+
+	<!-- Lines -->
+	<div class="line top"></div>
+	<div class="line bottom"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+
+</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/typed.js"></script>
+
+<!-- Vendor -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>

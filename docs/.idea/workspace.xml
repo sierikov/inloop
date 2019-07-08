@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c6beb6-ef3b-4ac1-9ef3-45b9e86d9238" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/patterns/factory.html" beforeDir="false" afterPath="$PROJECT_DIR$/patterns/factory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/lesson/garage_door.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +33,7 @@
         <counts>
           <entry key="CNAME~ee7ff1a7f1c6c70f471130a56a99cf07536ea708" value="1" />
           <entry key="css" value="24" />
-          <entry key="html" value="57" />
+          <entry key="html" value="59" />
           <entry key="ico" value="1" />
           <entry key="js" value="16" />
           <entry key="png" value="2" />
@@ -42,7 +43,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="24" />
-          <entry key="HTML" value="57" />
+          <entry key="HTML" value="59" />
           <entry key="Image" value="3" />
           <entry key="JavaScript" value="16" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -52,7 +53,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1697" />
-          <entry key="html" value="5736" />
+          <entry key="html" value="5836" />
           <entry key="js" value="214" />
           <entry key="svg" value="18" />
         </counts>
@@ -60,7 +61,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1697" />
-          <entry key="HTML" value="5736" />
+          <entry key="HTML" value="5836" />
           <entry key="JavaScript" value="214" />
           <entry key="SVG" value="18" />
         </counts>
@@ -78,11 +79,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/patterns/factory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="259" column="16" selection-start-line="259" selection-start-column="16" selection-end-line="259" selection-end-column="16" />
+            <state relative-caret-position="-72">
+              <caret line="254" column="101" lean-forward="true" selection-start-line="254" selection-start-column="101" selection-end-line="254" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tasks/lesson/garage_door.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#p#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#p#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#p#20;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +112,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1694">
               <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/exam/part_managemet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="162" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -117,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>a</find>
       <find>tre</find>
       <find>\&lt;li\&gt;\&lt;a href\=\&quot;\.\.\/\.\.\/index\.html\&quot; class\=\&quot;lnk\&quot;\&gt;Home\&lt;\/a\&gt;\&lt;\/li\&gt;\n\	\	\	\	\	\&lt;li class\=\&quot;active\&quot;\&gt;\n\	\	\	\	\	\	\&lt;a href\=\&quot;\.\.\/\.\.\/tasks\.html\&quot; class\=\&quot;lnk\&quot;\&gt;Tasks\&lt;\/a\&gt;\n\	\	\	\	\	\&lt;\/li\&gt;\n\	\	\	\	\	\&lt;li\&gt;\&lt;a href\=\&quot;\&quot; class\=\&quot;lnk\&quot;\&gt;Patterns\&lt;\/a\&gt;\&lt;\/li\&gt;\n\	\	\	\	\	\&lt;li\&gt;\&lt;a href\=\&quot;\&quot; class\=\&quot;btn\&quot;\&gt;Challenges\&lt;\/a\&gt;\&lt;\/li\&gt;</find>
       <find>butt</find>
@@ -147,6 +175,7 @@
       <find>&lt;a target=&quot;_blank&quot; href=&quot;https://twitter.com/Artem__Ser&quot;&gt;&lt;span class=&quot;ion ion-social-twitter&quot;&gt;&lt;/span&gt;&lt;/a&gt;</find>
       <find>&lt;a target=&quot;_blank&quot; href=&quot;mailto:artem.sierikov@gmail.com&quot;&gt;&lt;span class=&quot;ion ion-android-mail&quot;&gt;&lt;/span&gt;&lt;/a&gt;</find>
       <find>a factory method are often referred to as “products.”</find>
+      <find>bclasses. The cli</find>
     </findStrings>
     <replaceStrings>
       <replace>Patterns</replace>
@@ -215,6 +244,7 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/patterns/factory.html" />
+        <option value="$PROJECT_DIR$/tasks/lesson/garage_door.html" />
       </list>
     </option>
   </component>
@@ -253,25 +283,19 @@
             <path>
               <item name="docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="patterns" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="docs" type="b2602c69:ProjectViewProjectNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,10 +316,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tasks/lesson" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tasks/exam" />
       <recent name="$PROJECT_DIR$/patterns" />
-      <recent name="$PROJECT_DIR$/tasks/lesson" />
       <recent name="$PROJECT_DIR$/tasks/basic" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -343,15 +367,16 @@
       <workItem from="1561825393282" duration="134000" />
       <workItem from="1562076764221" duration="1587000" />
       <workItem from="1562420203043" duration="1209000" />
-      <workItem from="1562670480781" duration="3838000" />
+      <workItem from="1562670480781" duration="5186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79117000" />
+    <option name="totallyTimeSpent" value="80465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="0" width="1920" height="1200" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17678382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -365,7 +390,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.7962298" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32997987" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -378,17 +403,36 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../FS0ciety/assets/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -754,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/exam/part_managemet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="161" column="50" lean-forward="true" selection-start-line="161" selection-start-column="50" selection-end-line="161" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/patterns/iterator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -801,8 +838,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/patterns/factory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="259" column="16" selection-start-line="259" selection-start-column="16" selection-end-line="259" selection-end-column="16" />
+        <state relative-caret-position="-72">
+          <caret line="254" column="101" lean-forward="true" selection-start-line="254" selection-start-column="101" selection-end-line="254" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/exam/part_managemet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="162" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/lesson/garage_door.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#p#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#p#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#p#20;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
