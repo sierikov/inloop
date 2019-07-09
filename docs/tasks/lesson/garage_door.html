@@ -113,9 +113,33 @@
 					<p>The state diagram below shows all possible transitions between the concrete states (<code>Closed</code>,
 						<code>Opening</code>, <code>Open</code>, <code>Closing</code>).</p>
 					<!-- TODO: Diagram -->
-					<!-- TODO: Class Diagram Section -->
-					<!-- TODO: Task Section -->
-					<!-- TODO: Remarks Section -->
+					<div class="title">
+						<div class="title_inner">Class Diagram</div>
+					</div>
+					<p>The classes <code> GarageDoor </code> and <code> Motor </code>
+						should be implemented as shown in the class diagram below.</p>
+					<p>
+						<a href="./assets/Garage_Door.svg" target="_blank">
+							<img src="./assets/Garage_Door.svg" alt="">
+						</a>
+					</p>
+					<div class="title">
+						<div class="title_inner">Task</div>
+					</div>
+					<p>
+						Implement the classes <code>Motor</code> and <code>GarageDoor</code>! Note that
+						triggering a state transition that is not defined in the state diagram above should
+						result in an <code>IllegalStateException</code>.
+					</p>
+					<div class="title">
+						<div class="title_inner">Remarks</div>
+					</div>
+					<p>
+						In a real world scenario, the methods of the class <code>Motor</code> would contain
+						the commands for controlling the motor. Since we do not have a real motor and this
+						is only an example, you can fill them with some status reports printed to the console
+						if you want to.
+					</p>
 					<!-- TODO: JUnit Section -->
 					<!-- TODO: State Pattern -->
 					<p>
@@ -123,10 +147,10 @@
 						Patterns: <a href="../../patterns/state.html" class="context-link">State</a>
 					</p>
 					<div class="task_buttons">
-						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Docs">
+						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Basic_Library_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/GarageDoor_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
