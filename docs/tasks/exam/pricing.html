@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Pricing </title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../../css/general.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link rel="stylesheet" href="../../css/glitch.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../../img/logo/favicon.ico">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../../index.html" class="lnk">Home</a></li>
+					<li><a href="#" class="lnk">About</a></li>
+					<li><a href="../../patterns.html" class="lnk">Patterns</a></li>
+					<li class="active"><a href="../../tasks.html" class="btn">Tasks</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">SS 2006</div>
+						<div class="h-title blog_title">Pricing</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../../index.html">Inloop</a> /
+								<a href="../../tasks.html">Tasks</a> /
+								<a href="#"> Pricing </a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">Pricing</div>
+					</div>
+					<p>
+						The UML class diagram shown below models a complex pricing logic that allows for various discounts on
+						products. Two basic categories of discounts are available:
+					</p>
+					<ol>
+						<li>
+							Percentage discount on the catalog price (class <code>PercentageDiscountPricing</code>). The discount
+							percentage to grant is passed to the constructor (0 &lt;= percentage &lt;= 100).
+						</li>
+						<li>
+							Absolute discount on the catalog price (class <code>AbsoluteDiscountPricing</code>).
+							Absolute discount is available only for products with a catalog price above a certain minimum price
+							(<code>threshold</code>). The final product price may not fall below this <code>threshold</code> after
+							granting the discount. Both <code>discount</code> and <code>threshold</code> are passed as arguments
+							to the constructor.
+						</li>
+					</ol>
+					<p>
+						The class <code>Sale</code> represents a certain product an its discounts. Therefore, the catalog price of
+						the product (<code>preDiscountTotal</code>) is stored. The method <code>getTotal()</code> determines the
+						final price of the product after all registered discounts have been applied.
+						The actual discount calculation is performed in the method <code>getTotal()</code> of the classes
+						implementing the interface <code>ISalePricing</code>.</p>
+					</p>
+					<div class="single-post-text">
+						<div class="title">
+							<div class="title_inner"> Complex Pricing Structures</div>
+						</div>
+						<p>
+							In general, there are cases in which several discounts can be applied at the same time, e.g. discounts
+							for seniors or other special customers, loyalty bonus, deal of the day. While several discounts may be
+							registered for a <code>Sale</code> object, only one can actually be applied because our pricing logic is
+							very simple. A complex pricing logic (abstract class <code>ComplexPricing</code>) is responsible for
+							selecting the discount to be applied. There are two concrete pricing logic implementations:
+						</p>
+						<ol>
+							<li>
+								The class <code>BestForCustomerPricing</code> calculates the selling price based on the largest
+								discount for the customer.
+							</li>
+							<li>
+								The class <code>BestForStorePricing</code> selects the discount that is best for the vendor
+								(i.e. lowest total discount).
+							</li>
+						</ol>
+						<p>
+							Before the final price of a product is determined, all discounts to chose from must be known to the
+							selected pricing logic. Different discounts can be created by the static method
+							<code>Sale.createPricing()</code>. The arguments of this method are:
+						</p>
+						<ol>
+							<li>
+								<code>discountType</code>: A value of the enumeration <code>DiscountType</code> that determines
+								whether to use an absolute or percentage discount.
+							</li>
+							<li>
+								<code>percentage</code>: In case of a percentage discount, this argument specifies the granted
+								percentage. The two remaining arguments should be <code>0</code> in this case.
+							</li>
+							<li>
+								<code>discount</code> and <code>threshold</code>: In case of an absolute discount these arguments
+								describe the granted discount, as explained above. The percentage argument should be <code>0</code>
+								in this case.
+							</li>
+						</ol>
+						<p>
+							Finally, the desired pricing logic <code>pricing</code> (<code>BestForCustomerPricing</code> or
+							<code>BestForStorePricing</code>) is being selected using <code>setPricing()</code>.
+						</p>
+						<p>
+							To get an idea of how this whole pricing system is used, you can find an exemplary main class in the
+							Resources section.
+						</p>
+						<div class="title">
+							<div class="title_inner">Diagram</div>
+						</div>
+						<p>
+							<a href="./assets/Pricing.svg" target="_blank">
+								<img class="" src="./assets/Pricing.svg" alt="">
+							</a>
+						</p>
+						<div class="title">
+							<div class="title_inner">Task</div>
+						</div>
+						<p>
+							Implement all classes given in the UML diagram! Do not submit your main class. Use your knowledge about
+							esign patterns and identify the patterns used in this model before starting to write actual Java code.
+						</p>
+						<div class="title">
+							<div class="title_inner">Hints</div>
+						</div>
+						<ol>
+							<li>
+								<p>
+									he most important erroneous parameter values must be handled properly. Therefore, the parameter
+									value <code>null</code> should result in a <code>NullPointerException</code> while others like empty
+									<code>String</code>s, zero or negative numbers (for prices) that do not make sense should cause an
+									<code>IllegalArgumentException</code>.
+								</p>
+							</li>
+							<li>
+								<p>
+									n the related exam task, all parameters and variables representing money are of type
+									<code>double</code> to keep the task simple. Since <code>double</code> values are too inaccurate
+									for monetary calculations and thus are not used in real world applications, you should use
+									<code>long</code> instead of <code>double</code> (representing the corresponding amount of cents).
+								</p>
+							</li>
+						</ol>
+						<div class="task_buttons">
+							<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
+								Go to the Patterns
+							</a>
+							<a href="./tests/Pricing_tests.zip" class="btn" data-text="Download JUnit tests">
+								Download JUnit tests
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="clear"></div>
+			</div>
+
+		</div>
+
+		<footer>
+			<div class="soc">
+				<a target="_blank" href="https://twitter.com/Artem__Ser"><span class="ion ion-social-twitter"></span></a>
+				<a target="_blank" href="https://github.com/ArtemSer"><span class="ion ion-social-github"></span></a>
+				<a href="mailto:artem.sierikov@gmail.com"><span class="ion ion-android-mail"></span></a>
+			</div>
+			<div class="copy">© 2019 ArtemSer. Content: TU Dresden.</div>
+			<div class="clr"></div>
+		</footer>
+
+		<!-- Lines -->
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+
+	</div>
+
+
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/main.js"></script>
+	<script src="../../js/typed.js"></script>
+
+	<!-- Vendor -->
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>
