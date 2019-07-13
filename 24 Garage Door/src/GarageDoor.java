@@ -8,61 +8,101 @@ class GarageDoor {
         this.motor = new Motor();
         this.currentState = new Closed();
     }
-
     void openDoor() {
-
+        currentState.openDoor();
     }
-
     void closeDoor(){
-
+        currentState.closeDoor();
     }
-
     void stopper() {
-
+        currentState.stopper();
     }
 
-    public Motor getMotor() {
+    private Motor getMotor() {
         return this.motor;
     }
 
     private void setState(DoorState doorState){
-
+        this.currentState = doorState;
     }
 
-    abstract class DoorState {
-        void openDoor(){};
-        void closeDoor(){};
-        void stopper(){};
+    protected abstract class DoorState {
+        public abstract void openDoor();
+        public abstract void closeDoor();
+        public abstract void stopper();
     }
 
-    class Closed extends DoorState {
-        void openDoor(){
-            setState(Open);
+    protected class Closed extends DoorState {
+        @Override
+        public void openDoor(){
+            setState(new Opening());
+            getMotor().upwards();
+        }
+
+        @Override
+        public void stopper(){
+            throw new IllegalStateException();
+        }
+
+        @Override
+        public void closeDoor() {
+            throw new IllegalStateException();
         }
     }
 
-    class Opening extends DoorState {
-        void closeDoor(){
-
+    protected class Opening extends DoorState {
+        @Override
+        public void openDoor() {
+            throw new IllegalStateException();
         }
 
-        void stopper(){
+        @Override
+        public void closeDoor(){
+            getMotor().downwards();
+            setState(new Closing());
+        }
 
+        @Override
+        public void stopper(){
+            getMotor().stop();
+            setState(new Open());
         }
     }
 
-    class Open extends DoorState {
-        void closeDoor(){
+    protected class Open extends DoorState {
+        @Override
+        public void openDoor() {
+            throw new IllegalStateException();
+        }
 
+        @Override
+        public void closeDoor(){
+            getMotor().downwards();
+            setState(new Closing());
+        }
+
+        @Override
+        public void stopper(){
+            throw new IllegalStateException();
         }
     }
-    class Closing extends DoorState {
-        void openDoor(){
+    protected class Closing extends DoorState {
 
+        @Override
+        public void openDoor(){
+            getMotor().upwards();
+            setState(new Opening());
         }
 
-        void stopper(){
+        @Override
+        public void closeDoor() {
+            throw new IllegalStateException();
+        }
 
+        @Override
+        public void stopper(){
+            getMotor().stop();
+            setState(new Closed());
         }
     }
 
