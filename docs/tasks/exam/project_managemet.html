@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Inloop | Part Management</title>
+	<meta name="description" content="Inloop Tasks for Exam preparation">
+	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+	      rel='stylesheet'>
+
+	<link rel="stylesheet" href="../../css/general.css"/>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<link rel="stylesheet" href="../../css/glitch.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/responsive.css">
+	<link rel="stylesheet" href="../../css/icons.css">
+
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="../../img/logo/favicon.ico">
+
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+	<div class="centrize full-width">
+		<div class="vertical-center">
+			<div class="pre-inner">
+				<div class="load typing-load"><p>loading...</p></div>
+				<span class="typed-load"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Header -->
+	<header>
+		<div class="head-top">
+			<a href="#" class="menu-btn"><span></span></a>
+			<div class="top-menu">
+				<ul>
+					<li><a href="../../index.html" class="lnk">Home</a></li>
+					<li><a href="#" class="lnk">About</a></li>
+					<li><a href="../../patterns.html" class="lnk">Patterns</a></li>
+					<li class="active"><a href="../../tasks.html" class="btn">Tasks</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<!-- Started -->
+		<div class="section started">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="started-content">
+						<div class="date">WS 2005/06</div>
+						<div class="h-title blog_title">Part Management</div>
+						<div class="h-subtitle typing-bread">
+							<p>
+								<a href="../../index.html">Inloop</a> /
+								<a href="../../tasks.html">Tasks</a> /
+								<a href="#">Part Management</a>
+							</p>
+						</div>
+						<span class="typed-bread"></span>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+		</div>
+
+		<!-- Blog -->
+		<div class="section blog">
+			<div class="content">
+
+				<div class="single-post-text">
+					<div class="title">
+						<div class="title_inner">Management</div>
+					</div>
+					<p>Given the class diagram below, implement a simple part management structure for a factory.</p>
+					<p>
+						Here we&rsquo;ve got a sample <code>Factory</code> which can produce the following <code>Part</code>s:
+						<code>Components</code>, <code>SingleComponent</code> and <code>Resource</code>. Upon calling <code>createPart()</code>,
+						it would create a part. The class <code>Part</code> represents what all parts have in common, and therefore
+						is abstract. A <code>Factory</code> has a <code>ReceivingStock</code>, which is a type of <code>Stock</code>
+						and a <code>Purchasing</code> department which performs actions on its stock as required (here:
+						<code>buy()</code>).
+					</p>
+					<p>
+						A <code>Stock</code>&lsquo;s <code>Part</code>s are managed with a <code>java.util.Map&lt;Part,
+						Integer&gt;</code>. This map has all <code>Part</code>s on the stock as keys, and their respective amounts
+						as values. The following methods operate on this map:
+					</p>
+					<ol>
+						<li>
+							<code>getCount()</code>: Returns the number of physical parts for a <code>Part</code> or -1 if the part is
+							not in the stock.
+						</li>
+						<li>
+							<code>insert()</code>: If the part exists in the stock, this method increases the number of physical parts
+							by the given value, otherwise the <code>Part</code> is inserted into the map with the given number of
+							physical parts.
+						</li>
+						<li>
+							<code>remove()</code>: If the part exists, this method decreases the number of physical parts only if
+							there are enough parts in the stock (<code>true</code> case), otherwise no changes are made
+							(<code>false</code> case). Returns also <code>false</code> if the part does not exist.
+						</li>
+					</ol>
+					<p>
+						The purchasing department observes the stock and has to be notified of operations performed on the <code>stock</code>.
+						A <code>ReceivingStock</code> has the two attributes <code>minStockItems</code> and
+						<code>maxStockItems</code>. These attributes define the maximum and minimum number of physical parts for a
+						<code>Part</code> and these limits apply to every <code>Part</code> in the stock separately. All methods
+						that change the number of parts in the stock must emit a signal (<code>notifyPartCountChanged()</code>).
+						Observing departments then check if the part count has dropped below <code>minStockItems</code> (<code>onPartCountChange()</code>),
+						and if so, buy new parts. The purchasing department would then, for example, <code>buy()</code> the amount
+						of parts needed to reach <code>maxStockItems</code> again.
+					</p>
+					<div class="title">
+						<div class="title_inner">Diagram</div>
+					</div>
+					<p>
+						<a href="./assets/Part_Management.svg" target="_blank">
+							<img class="" src="./assets/Part_Management.svg" alt="">
+						</a>
+					</p>
+					<p>You can open image (click on it) to copy text from the image. </p>
+					<div class="title">
+						<div class="title_inner">Task</div>
+					</div>
+					<p>
+						Before starting to code, try to find design patterns that help you to implement the classes. Implement the
+						part management structure!
+					</p>
+					<div class="title">
+						<div class="title_inner">Hints</div>
+					</div>
+					<p>
+						The most important erroneous parameter values must be handled properly. Therefore, the parameter value
+						<code>null</code> should result in a <code>NullPointerException</code> while others like empty
+						<code>String</code>s, zero or negative numbers that do not make sense should cause an <code>IllegalArgumentException</code>.
+					</p>
+					<p>
+						<span class="pattern ion ion-ios-cog"></span>
+						Patterns: <a href="../../patterns/factory.html" class="context-link">Factory</a>
+					</p>
+					<div class="task_buttons">
+						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
+							Go to the Patterns
+						</a>
+						<a href="./tests/Part_Management_tests.zip" class="btn" data-text="Download JUnit tests">
+							Download JUnit tests
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="clear"></div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="soc">
+			<a target="_blank" href="https://twitter.com/Artem__Ser"><span class="ion ion-social-twitter"></span></a>
+			<a target="_blank" href="https://github.com/ArtemSer"><span class="ion ion-social-github"></span></a>
+			<a href="mailto:artem.sierikov@gmail.com"><span class="ion ion-android-mail"></span></a>
+		</div>
+		<div class="copy">© 2019 ArtemSer. Content: TU Dresden.</div>
+		<div class="clr"></div>
+	</footer>
+
+	<!-- Lines -->
+	<div class="line top"></div>
+	<div class="line bottom"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+
+</div>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/typed.js"></script>
+
+<!-- Vendor -->
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+</html>
