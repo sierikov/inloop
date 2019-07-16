@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://inloop.tk/</title>
+  <link>http://inloop.tk/</link>
+
+<item>
+     <link>https://inloop.tk/</link>
+     <title>Inloop</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/index.html</link>
+     <title>Inloop</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/patterns.html</link>
+     <title>Inloop | Patterns</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks.html</link>
+     <title>Inloop | Tasks</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/patterns/iterator.html</link>
+     <title>Inloop | Iterator</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/patterns/singleton.html</link>
+     <title>Inloop | Singleton</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/basic/classes_and_objects.html</link>
+     <title>Inloop | Classes and Objects</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/basic/java_and_functions.html</link>
+     <title>Inloop | Java and Functions</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/basic/linked_list.html</link>
+     <title>Inloop | Linked List</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/basic/string_processing.html</link>
+     <title>Inloop | String Processing</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/lesson/basic_library.html</link>
+     <title>Inloop | A Basic Library </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/lesson/library_list.html</link>
+     <title>Inloop | Collection I (Lists) </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/lesson/library_sets.html</link>
+     <title>Inloop | Collection II (Sets) </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/lesson/bottle_generics.html</link>
+     <title>Inloop | Generics (Bottle) </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/lesson/middle_age.html</link>
+     <title>Inloop | Collection II (Sets) </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/lesson/garage_door.html</link>
+     <title>Inloop | Garage Door </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/exam/pricing.html</link>
+     <title>Inloop | Pricing </title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/exam/part_managemet.html</link>
+     <title>Inloop | Part Management</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/exam/renovation_project.html</link>
+     <title>Inloop | Renovation Project</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/exam/vehicle_queue.html</link>
+     <title>Inloop | Vehicle Queue</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/tasks/exam/predicate_iterator.html</link>
+     <title>Inloop | Predicate Iterator</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://inloop.tk/patterns/factory.html</link>
+     <title>Inloop | Iterator</title>
+     <description>Inloop Tasks for Exam preparation</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>3</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

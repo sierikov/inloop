@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://inloop.tk/</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/index.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/patterns.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/patterns/iterator.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/patterns/singleton.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/basic/classes_and_objects.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/basic/java_and_functions.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/basic/linked_list.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/basic/string_processing.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/lesson/basic_library.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/lesson/library_list.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/lesson/library_sets.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/lesson/bottle_generics.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/lesson/middle_age.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/lesson/garage_door.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/exam/pricing.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/exam/part_managemet.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/exam/renovation_project.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/exam/vehicle_queue.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/tasks/exam/predicate_iterator.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://inloop.tk/patterns/factory.html</loc>
+  <lastmod>2019-07-16T10:06:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
