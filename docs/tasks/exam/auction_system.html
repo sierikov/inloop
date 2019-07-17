@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Project Management</title>
+	<title>Inloop | Auction System</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">WS 2007/08</div>
-						<div class="h-title blog_title">Project Management</div>
+						<div class="date">WS 2011/12</div>
+						<div class="h-title blog_title">Auction System</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Project Management</a>
+								<a href="#">Auction System</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,55 +91,74 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Project Management</div>
+						<div class="title_inner">Auction System</div>
 					</div>
-					<p>Your task is to implement a new version of a project management environment. A project consists of several
-						tasks and deliverables (documents or products, which have to be delivered). Furthermore, the old version’s
-						functionality of getting information about a project’s total costs and required time must be included.</p>
 					<p>
-						You need to implement the following classes. They are also shown in the class diagram below.
+						In this task you should implement the functionality of an auction system, which should support two
+						different types of auctions: An English auction and an all-pay auction. The auction system consists of six
+						different classes:
 					</p>
 					<ol>
 						<li>
-							<p>
-								The class <code>Project</code> represents a single project. <code>Project</code> provides several
-								operations to retrieve the necessary information about a project. The actual structure of a project is
-								represented by the classes <code>ProjectItem</code>, <code>Task</code> and <code>Deliverable</code>.
-								A project cannot be created without a valid rate, which is used for a project&rsquo;s main task. The
-								method <code>allDeliverables()</code> returns a <code>Map</code>, which maps (due) dates to the
-								corresponding <code>Deliverable</code> objects.
-							</p>
+							<code>Auction</code>: Each auction has a <code>java.util.List</code> of its auctioned items
+							(<code>allItems</code>) and a list of all bidders (<code>bidders</code>).
 						</li>
 						<li>
-							<p>
-								The class <code>ProjectItem</code> is the main part of a project&rsquo;s structure. All project items
-								have a <code>name</code> and a detailed <code>description</code>. Furthermore, there is a
-								<code>rate</code> which describes the costs per time unit. The estimate costs are calculated by
-								multiplying the required time with the rate and adding that value (rounded to a <code>long</code>)
-								to the material costs. There are two different types of project items: tasks and deliverables.
-							</p>
+							<code>EnglishAuction</code> and <code>AllPayAuction</code>: These are subclasses of an <code>Auction</code>.
 						</li>
 						<li>
-							<p>
-								The class <code>Task</code> describes a task within a project. Each task may contain sub-tasks and/or
-								deliverables. The material costs and required time of a task is the sum of the costs/time of all of the
-								task&rsquo;s sub-items.
-							</p>
+							<code>Item</code>: An item has a <code>name</code>, a <code>description</code> and a <code>minPrice</code>.
+							Each item has a <code>java.util.List</code> containing all bids on that item (<code>allBids</code>).
 						</li>
 						<li>
-							<p>
-								The class <code>Deliverable</code> describes a document or product which has to be delivered for the
-								work on the associated project. A <code>Deliverable</code> object is characterized by a date of
-								delivery, material cost and production time.
-							</p>
+							<code>Bid</code>: Each bid has a <code>price</code> and a related <code>bidder</code>.
+						</li>
+						<li>
+							<code>Person</code>: Only the <code>name</code> is stored for a person.
 						</li>
 					</ol>
+					<div class="title">
+						<div class="title_inner">Sequence of an English auction</div>
+					</div>
+					<p>
+						First an auctioneer opens (creates) an auction. Then he/she creates the auctioning items and adds each one
+						to the <code>allItems</code> list (<code>registerItem()</code>). Once all items are registered, the
+						bidders may place bids on them (<code>addBid()</code>). The system compares a bid with the current highest
+						bid or the <code>minPrice</code>. If no bid is placed yet, it creates a new <code>Bid</code>. If the bidden
+						<code>price</code> is higher than the current highest bid, the bid is marked as the new
+						<code>highestBid</code>. Each bid has exactly one bidder and all bidders of an auction should be stored in
+						the <code>bidders</code> collection of that auction. A <code>String</code> containing information of the
+						auction&rsquo;s items (see Task section for example) can be generated any time of the auction
+						(<code>generateItemListString()</code>). Eventually when there are no more incoming bids the auctioneer
+						closes the auction (<code>closeAuction()</code>). The <code>closeAuction()</code> method should return the
+						<code>String</code> generated by <code>generateItemListString()</code>. Additional items may be registered
+						during the auction until the auction is closed. If you try to register an Item which has the same name as
+						one of the auction&rsquo;s items, an <code>IlleagalArgumentException</code> is thrown.
+						After the auction&rsquo;s closed, bidding on or adding an item, as well as closing the auction again,
+						results in an <code>IllegalStateException</code>.
+					</p>
+					<p>
+						<a href="./assets/Auction_system.svg" target="_blank">
+							<img class="" src="./assets/Auction_system.svg" alt="">
+						</a>
+					</p>
+					<p>You can open image (click on it) to copy text from the image. </p>
+					<div class="title">
+						<div class="title_inner">All-pay auction</div>
+					</div>
+					<p>
+						Additionally to English auctions, a second auction type is required by the auction system: In all-pay
+						auctions every bid must be payed. As a consequence our auction system should additionally generate all bids
+						(<code>generateAllBidsString()</code>) when calling <code>generateItemString()</code> for all-pay auctions.
+						Implement the <code>generateItemListString()</code> method using the template method design pattern and name
+						the primitive method <code>generateItemString()</code>.
+					</p>
 					<div class="title">
 						<div class="title_inner">Class Diagram</div>
 					</div>
 					<p>
-						<a href="./assets/Project_Management.svg" target="_blank">
-							<img class="" src="./assets/Project_Management.svg" alt="">
+						<a href="./assets/Auction_System_Diagram.svg" target="_blank">
+							<img class="" src="./assets/Auction_System_Diagram.svg" alt="">
 						</a>
 					</p>
 					<p>You can open image (click on it) to copy text from the image. </p>
@@ -147,36 +166,56 @@
 						<div class="title_inner">Task</div>
 					</div>
 					<p>
-						Implement the project management explained above!
+						Implement the auction system structure!
 					</p>
 					<p>
-						Implement a class <code>Adapter</code>, which maps the old interface <code>IProject</code> to the new
-						<code>Project</code> class. Thus, you have to take a closer look at the old <code>getDeliverables()</code>
-						method, which only returns all <code>Deliverable</code> objects of the project in a <code>List</code>.
-					</p>
-					<p>
-						Client is an unknown application which manages projects using only the interface <code>IProject</code>.
-					</p>
-					<p>
-						<a href="./assets/Project_Management_Client.svg" target="_blank">
-							<img class="" src="./assets/Project_Management_Client.svg" alt="">
-						</a>
-					</p>
-					<div class="title">
-						<div class="title_inner">Hints</div>
-					</div>
+						The <code>generate*String()</code> and <code>toString()</code> methods should be implemented in such a way
+						that the<code>generateItemListString()</code> method returns strings like the following examples:
+					 </p>
 					<ol>
 						<li>
-							Use the type <code>long</code> for the calculation of prices in cents, since <code>double</code> cannot
-							accurately represent the base 10 multiples we use for money.
+							<p>
+								for an <code>EnglishAuction</code>
+							</p>
+							<pre class="codehilite"><code>Blueprint: A blueprint for building a touch screen (minimum bidding price: 5 EUR)
+Highest bid: 10 EUR by Steve Jobs
+Magazine: Computer magazine (minimum bidding price: 5 EUR)
+Highest bid: 5 EUR by Linus Torvalds
+Watch: jWatch (minimum bidding price: 150 EUR)
+No bids placed</code></pre>
+
+
 						</li>
 						<li>
-							The most important erroneous parameter values must be handled properly. Therefore, the parameter value
-							<code>null</code> should result in a <code>NullPointerException</code> while others like empty
-							<code>String</code>s, zero or negative numbers (for prices) that do not make sense should cause an
-							<code>IllegalArgumentException</code>.
+							<p>
+								for an <code>AllPayAuction</code>
+							</p>
+							<pre class="codehilite"><code>Blueprint: A blueprint for building a touch screen (minimum bidding price:5 EUR)
+Highest bid: 10 EUR by Steve Jobs
+All bids:
+5 EUR by Bill Gates
+7 EUR by Linus Torvalds
+10 EUR by Steve Jobs
+Magazine: Computer magazine (minimum bidding price: 5 EUR)
+Highest bid: 5 EUR by Linus Torvalds
+All bids:
+5 EUR by Linus Torvalds
+Watch: jWatch (minimum bidding price: 150 EUR)
+No bids placed</code></pre>
 						</li>
 					</ol>
+					<p>
+						The lines must be separated by the newline character <code>\n</code>.
+					</p>
+							<div class="title">
+						<div class="title_inner">Hints</div>
+					</div>
+					<p>
+						The most important erroneous parameter values must be handled properly. Therefore, the parameter value
+						<code>null</code> should result in a <code>NullPointerException</code> while others like empty
+						<code>String</code>s, zero or negative numbers that do not make sense should cause an
+						<code>IllegalArgumentException</code>.
+					</p>
 					<p>
 						<span class="pattern ion ion-ios-cog"></span>
 						Patterns: <a href="../../patterns/factory.html" class="context-link">Factory</a>
@@ -185,7 +224,7 @@
 						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Project_Management_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Auction_System_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
