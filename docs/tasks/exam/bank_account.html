@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Payroll</title>
+	<title>Inloop | Bank Account</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">WS 2012/13</div>
-						<div class="h-title blog_title">Payroll</div>
+						<div class="date">SS 2017</div>
+						<div class="h-title blog_title">Bank Account</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Payroll</a>
+								<a href="#">Bank Account</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,50 +91,64 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Payroll</div>
+						<div class="title_inner">Bank Account</div>
 					</div>
 					<p>
-						In this task we will deal with a software for the monthly payroll of employees in a company. This software
-						is divided into two parts: The employee management and the actual payroll management.
+						The following task uses the State pattern to implement a simple bank account. An
+						account (class <code>BankAccount</code>) can be <em>opened</em> (using the constructor
+						<code>BankAccount()</code>) and has an initial <code>balance</code> of 0. An account has the state
+						<code>Positive</code>, if its balance is greater than or equal to 0. If the balance is
+						lower than 0, the account is <code>Negative</code>. Money is added to the account by using
+						the method <code>payIn()</code> and withdrawn by calling <code>payOff()</code>.
 					</p>
 					<p>
-						On the employee side, we have the abstract class <code>Employee</code> with an identifier (<code>id</code>)
-						and three abstract methods. <code>isPayday()</code> determines whether the given day is the payday of the
-						employee. <code>calculatePay()</code> generally determines the (gross) salary of the employee but in some
-						cases throws an <code>UnpayableEmployeeException</code> instead (see below). Because this type of
-						<code>Exception</code> is a so called <em>checked exception</em>, it has to be included in the method signature
-						of <code>calculatePay()</code> via the <strong><code>throws</code></strong> keyword. Finally,
-						<code>calculateDeductions()</code> determines the employee&rsquo;s deductions, i.e. the difference between gross
-						and net salary.
+						An account can be overdrawn by the amount of the overdraft credit that is
+						specified when the account is opened (field <code>lineOfCredit</code>). If the account&rsquo;s
+						balance reaches its lowest limit, no money can be withdrawn anymore until the
+						next call of <code>payIn()</code>. The account now has the state <code>Frozen</code> and calls to
+						<code>payOff()</code> should result in an <code>IllegalStateException</code>.
 					</p>
 					<p>
-						As you can see in the class diagram below, <code>Employee</code> has two subclasses: <code>Volunteer</code> and
-						<code>Appointee</code>. The basic difference is that the <code>Volunteer</code> does not receive any payment which
-						is why he does not have a payday or any deductions. Hence, calling <code>calculatePay()</code> on a
-						<code>Volunteer</code> causes an <code>UnpayableEmployeeException</code> to be thrown. The <code>Appointee</code>,
-						on the other hand, has a contract which requires him to work a certain number of hours each month and grants him a
-						certain hourly salary. However, 40 percent of the money the <code>Appointee</code> would theoretically receive are
-						used for things like the employee&rsquo;s social insurance.
+						Calls of the method <code>payOff()</code>, that would exceed the <code>lineOfCredit</code>, are
+						unsuccessful and should return <code>false</code>.</p>
+					<p>An account can only be closed (<code>BankAccount.close()</code>), if its balance is 0.
+						After that the account enters the state <code>Closed</code> where no money can be payed in
+						or off anymore. Any attempt to do so should result in an <code>IllegalStateException</code>.
 					</p>
 					<p>
-						The actual payroll management is done by the class <code>Payroll</code> in combination with a
-						<code>PayrollDisposition</code>. The method <code>doPayroll()</code> retrieves the list of employees from a
-						<code>PayrollDB</code> and calls <code>sendPayment()</code> for each <code>Employee</code> to submit the respective
-						salary.
+						If the method <code>payInterest()</code> is called, the interest is payed. That means in
+						the state <code>Positive</code> 1% of the balance is added. If the state is <code>Negative</code> the
+						balance is decreased by another 3% and in the state <code>Frozen</code> 5% are subtracted.
+						Interest always needs to be paid, so there is no exception if the <code>balance</code>
+						exceeds the <code>lineOfCredit</code>.
 					</p>
 					<p>
-						As an example for the implementation of the interface <code>PayrollDisposition</code>, we use the class
-						<code>PayrollDispositionImpl</code>. It keeps each sent payment in a <code>java.util.Map</code> that maps
-						<code>Employee</code>s to their payment figure. Additionally, <code>PayrollDispositionImpl</code> provides methods
-						which calculate the total amount of money used for payments as well as the average amount of money paid to the
-						employees.
+						Information about the current balance and state can be aquired by calling
+						<code>printBalance()</code>. Take a look at the following example output:
 					</p>
+					<pre class="codehilite"><code class="language-java">BankAccount account = new BankAccount(&quot;0815&quot;, 20);
+
+account.payIn(10)
+account.printBalance()  // Balance is POSITIVE: +10.0.
+
+account.payOff(20)
+account.printBalance()  // Balance is NEGATIVE: -10.0.
+
+account.payOff(10)
+account.printBalance()  // Balance is NEGATIVE: -20.0. You need to pay in money.
+
+account.payIn(20)
+account.printBalance()  // Balance is POSITIVE: +0.0.
+
+account.close()
+account.printBalance()  // This account is CLOSED. The balance is 0.</code></pre>
+
 					<div class="title">
 						<div class="title_inner">Class Diagram</div>
 					</div>
 					<p>
-						<a href="./assets/Payroll.svg" target="_blank">
-							<img class="" src="./assets/Payroll.svg" alt="">
+						<a href="./assets/Bank_Account.svg" target="_blank">
+							<img class="" src="./assets/Bank_Account.svg" alt="">
 						</a>
 					</p>
 					<p> You can open image (click on it) to copy text from the image. </p>
@@ -142,17 +156,31 @@
 						<div class="title_inner">Task</div>
 					</div>
 					<p>
-					Create the given interfaces and implement all of the classes above!
-				</p>
+						Implement the bank account according to the description and the class diagram
+						above. Use <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html">inner classes</a> of
+						<code>BankAccount</code> to implement the State pattern. The common superclass of <code>Positive</code>,
+						<code>Negative</code>, <code>Frozen</code> and<code>Closed</code> should be called <code>AccountState</code>.
+					</p>
 					<div class="title">
 						<div class="title_inner">Hints</div>
 					</div>
-					<p>
-						The most important erroneous parameter values must be handled properly. Therefore, the parameter value
-						<code>null</code> should result in a <code>NullPointerException</code> while others like empty
-						<code>String</code>s, negative numbers, zero or integers that do not make sense should cause an
-						<code>IllegalArgumentException</code>.
-					</p>
+					<ol>
+						<li>
+							The most important erroneous parameter values must be handled properly.
+							Therefore, the parameter value <code>null</code> should result in a
+							<code>NullPointerException</code> while others like empty <code>String</code>s, zero or negative
+							numbers that do not make sense should cause an <code>IllegalArgumentException</code>.
+						</li>
+						<li>
+							The method <code>AccountState.toString()</code> should return the simple name of the
+							class, for example &ldquo;Positive&rdquo; if the state is <code>Positive</code>.
+							<code>BankAccount.getState()</code> is also returning the output of this method.
+						</li>
+						<li>
+							If <code>lineOfCredit</code> is set to 0, the account can never enter the state <code>Frozen</code>,
+							because for a balance equal to 0 the state must be set to <code>Positive</code>.
+						</li>
+					</ol>
 						<span class="pattern ion ion-ios-cog"></span>
 						Patterns: <a href="../../patterns/factory.html" class="context-link">Factory</a>
 					</p>
@@ -160,7 +188,7 @@
 						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Payroll_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Bank_Account_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
