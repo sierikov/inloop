@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Part Management</title>
+	<title>Inloop | Enterprise Node</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">WS 2005/06</div>
-						<div class="h-title blog_title">Part Management</div>
+						<div class="date">SS 2015</div>
+						<div class="h-title blog_title">Enterprise Node</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Part Management</a>
+								<a href="#">Enterprise Node</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,54 +91,62 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Management</div>
+						<div class="title_inner">Enterprise Node</div>
 					</div>
-					<p>Given the class diagram below, implement a simple part management structure for a factory.</p>
 					<p>
-						Here we&rsquo;ve got a sample <code>Factory</code> which can produce the following <code>Part</code>s:
-						<code>Components</code>, <code>SingleComponent</code> and <code>Resource</code>. Upon calling <code>createPart()</code>,
-						it would create a part. The class <code>Part</code> represents what all parts have in common, and therefore
-						is abstract. A <code>Factory</code> has a <code>ReceivingStock</code>, which is a type of <code>Stock</code>
-						and a <code>Purchasing</code> department which performs actions on its stock as required (here:
-						<code>buy()</code>).
+						In this task, we are modeling the structure of enterprises with trees that consist of
+						<code>EnterpriseNode</code>s. Possible node types within the tree are <code>AbstractEnterpriseUnit</code>s
+						as well as actual people within the enterprise (<code>StaffMember</code>).
 					</p>
 					<p>
-						A <code>Stock</code>&lsquo;s <code>Part</code>s are managed with a <code>java.util.Map&lt;Part,
-						Integer&gt;</code>. This map has all <code>Part</code>s on the stock as keys, and their respective amounts
-						as values. The following methods operate on this map:
+						The organizational units of enterprises are structured hierarchically: Holdings consist of companies,
+						companies consist of divisions and divisions are separated into teams. The former three are
+						<code>AbstractUnit</code>s and can be assigned direct child nodes in the tree structure via
+						<code>add()</code>. Adding a wrong unit (e.g. a Team to a Holding) should result in an
+						<code>IllegalArgumentException</code>. The method <code>remove()</code> accordingly removes a given direct
+						child node. Both methods return <code>true</code> if and only if they were supposed to actually perform
+						their operation. For example, when trying to add a node that is already a direct child node,
+						<code>add()</code> should return <code>false</code> and not add the node again.
 					</p>
-					<ol>
-						<li>
-							<code>getCount()</code>: Returns the number of physical parts for a <code>Part</code> or -1 if the part is
-							not in the stock.
-						</li>
-						<li>
-							<code>insert()</code>: If the part exists in the stock, this method increases the number of physical parts
-							by the given value, otherwise the <code>Part</code> is inserted into the map with the given number of
-							physical parts.
-						</li>
-						<li>
-							<code>remove()</code>: If the part exists, this method decreases the number of physical parts only if
-							there are enough parts in the stock (<code>true</code> case), otherwise no changes are made
-							(<code>false</code> case). Returns also <code>false</code> if the part does not exist.
-						</li>
-					</ol>
 					<p>
-						The purchasing department observes the stock and has to be notified of operations performed on the <code>stock</code>.
-						A <code>ReceivingStock</code> has the two attributes <code>minStockItems</code> and
-						<code>maxStockItems</code>. These attributes define the maximum and minimum number of physical parts for a
-						<code>Part</code> and these limits apply to every <code>Part</code> in the stock separately. All methods
-						that change the number of parts in the stock must emit a signal (<code>notifyPartCountChanged()</code>).
-						Observing departments then check if the part count has dropped below <code>minStockItems</code> (<code>onPartCountChange()</code>),
-						and if so, buy new parts. The purchasing department would then, for example, <code>buy()</code> the amount
-						of parts needed to reach <code>maxStockItems</code> again.
+						At another level of the enterprise structure, there are teams as the fundamental enterprise units. Each
+						team is led by a single <code>StaffMember</code>, the <code>teamLeader</code>. Additionally, the class
+						<code>StaffMember</code> keeps track of the <code>directSubordinates</code> of the respective person. The
+						method <code>addDirectSubordinate()</code> and <code>removeDirectSubordinate()</code> work analogous to
+						<code>AbstractUnit</code>&lsquo;s <code>add()</code> and <code>remove()</code>.
+					</p>
+					<p>
+						<code>StaffMember</code> objects can be compared to other objects of their kind by calling
+						<code>compareTo()</code>. This method implements the behavior defined by the interface
+						<code>java.lang.Comparable&lt;T&gt;</code> regarding the alphabetic order of the compared staff
+						members&rsquo; names. Implementing this interface makes the class <code>StaffMember</code> more flexible
+						allowing different data structures to store and manage its objects.
+					</p>
+					<p>
+						To iterate over the whole enterprise structure, we define an interface <code>EnterpriseNodeIterator</code>
+						which extends the interface <code>java.util.Iterator&lt;T&gt;</code> by restricting the possible values of
+						the type parameter <code>T</code> to implementations of <code>EnterpriseNode</code>. Apart from that,
+						an <code>EnterpriseNodeIterator</code>&lsquo;s methods <code>hasNext()</code> and <code>next()</code>
+						behave as defined by <code>Iterator&lt;T&gt;</code>
+						(see <a class="context-link" target="_blank"
+						        href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html">its
+						documentation in the Java API Documentation</a>).
+					</p>
+					<p>
+						We want to focus on the <code>StaffMemberIterator</code> as one concrete iterator for the enterprise
+						structure. Its constructor is given a <code>Set</code> of staff members (<code>directSubordinates</code>)
+						and additionally determines all staff members below these <code>directSubordinates</code> recursively
+						(<code>findSubordinatesRecursively()</code>). Eventually, the resulting set of staff members
+						(<code>allMembers</code>) is sorted alphabetically by the name of the staff members
+						(see <a class="context-link" target="_blank" href="#hints">Hints</a>). Afterwards, the iterator methods mentioned above must be able to iterate
+						over all of the directly and indirectly given staff members in order.
 					</p>
 					<div class="title">
-						<div class="title_inner">Diagram</div>
+						<div class="title_inner">Class Diagram</div>
 					</div>
 					<p>
-						<a href="./assets/Part_Management.svg" target="_blank">
-							<img class="" src="./assets/Part_Management.svg" alt="">
+						<a href="./assets/Enterprise_Node.svg" target="_blank">
+							<img class="" src="./assets/Enterprise_Node.svg" alt="">
 						</a>
 					</p>
 					<p>You can open image (click on it) to copy text from the image. </p>
@@ -146,17 +154,25 @@
 						<div class="title_inner">Task</div>
 					</div>
 					<p>
-						Before starting to code, try to find design patterns that help you to implement the classes. Implement the
-						part management structure!
+						Create the given interfaces and implement all of the classes above!
 					</p>
 					<div class="title">
 						<div class="title_inner">Hints</div>
 					</div>
-					<p>
-						The most important erroneous parameter values must be handled properly. Therefore, the parameter value
-						<code>null</code> should result in a <code>NullPointerException</code> while others like empty
-						<code>String</code>s, zero or negative numbers that do not make sense should cause an <code>IllegalArgumentException</code>.
-					</p>
+					<ol>
+						<li>
+							The most important erroneous parameter values must be handled properly. Therefore, the parameter value
+							<code>null</code> should result in a <code>NullPointerException</code> (where it makes sense) while
+							others like empty <code>String</code>s should cause an <code>IllegalArgumentException</code>.
+						</li>
+						<li>
+							To check if an object is an instance of a certain class you can use the keyword <code>instanceof</code>.
+						</li>
+						<li>
+							A <code>TreeSet</code> is a collection that, unlike a <code>HashSet</code> or a set in mathematical set
+							theory, may be sorted. It still disallows duplicate elements.
+						</li>
+					</ol>
 					<p>
 						<span class="pattern ion ion-ios-cog"></span>
 						Patterns: <a href="../../patterns/factory.html" class="context-link">Factory</a>
@@ -165,7 +181,7 @@
 						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Part_Management_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Enterprise_Node_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
