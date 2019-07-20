@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Project Management</title>
+	<title>Inloop | Event App</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">WS 2007/08</div>
-						<div class="h-title blog_title">Project Management</div>
+						<div class="date">SS 2013</div>
+						<div class="h-title blog_title">Event App</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Project Management</a>
+								<a href="#">Event App</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,55 +91,69 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Project Management</div>
+						<div class="title_inner">Event App</div>
 					</div>
-					<p>Your task is to implement a new version of a project management environment. A project consists of several
-						tasks and deliverables (documents or products, which have to be delivered). Furthermore, the old version’s
-						functionality of getting information about a project’s total costs and required time must be included.</p>
 					<p>
-						You need to implement the following classes. They are also shown in the class diagram below.
+						In many places, event nights with varying themes take place, e.g., the <em>Lange Nacht der
+						Wissenschaften</em> in Dresden. To make information about event nights accessible, an application for mobile
+						devices has to be created. In this task, we want to focus on an event catalog for such a possible event
+						night application.
+					</p>
+					<p>
+						An <code>Event</code> is defined by its <code>title</code> and an <code>EventCategory</code> which can be
+						either an <code>EXHIBITION</code>, a <code>PRESENTATION</code> or a <code>SHOW</code>. Additionally,
+						<code>Event</code> implements <code>Comparable&lt;Event&gt;</code>. <code>Event</code>s can be compared to
+						other <code>Event</code>s by their title, and if the title is equal, by their category.
+					</p>
+					<p>
+						The other central data class in this system is <code>Time</code>. Its objects are defined by two
+						<em>valid</em> integers for the hour and minute of a certain point of time. Note that <code>Time</code> is
+						using the 24-hour clock.
+					</p>
+					<p>
+						The interface <code>EventCatalog</code> defines methods needed to store and manage events in a manner where
+						an <code>Event</code> is associated with (possibly several) <code>Time</code> objects that represent the
+						times at which the <code>Event</code> takes place. Apply one of the adapter patterns to use the class
+						<code>java.util.TreeMap&lt;K,V&gt;</code> for the actual storage of the data.
 					</p>
 					<ol>
 						<li>
-							<p>
-								The class <code>Project</code> represents a single project. <code>Project</code> provides several
-								operations to retrieve the necessary information about a project. The actual structure of a project is
-								represented by the classes <code>ProjectItem</code>, <code>Task</code> and <code>Deliverable</code>.
-								A project cannot be created without a valid rate, which is used for a project&rsquo;s main task. The
-								method <code>allDeliverables()</code> returns a <code>Map</code>, which maps (due) dates to the
-								corresponding <code>Deliverable</code> objects.
-							</p>
+							<code>addCatalogEntry()</code>: In case the catalog does not contain the <code>Event</code>, adds the
+							<code>Event</code> to the catalog, associates it with the given <code>Time</code> objects and returns
+							<code>true</code>. Otherwise, just returns <code>false</code>. It is important to note that all of the
+							<code>Time</code> objects within the <code>Set</code> must be checked for validity. This way, no invalid
+							<code>Time</code> object will be stored in the catalog.
 						</li>
 						<li>
-							<p>
-								The class <code>ProjectItem</code> is the main part of a project&rsquo;s structure. All project items
-								have a <code>name</code> and a detailed <code>description</code>. Furthermore, there is a
-								<code>rate</code> which describes the costs per time unit. The estimate costs are calculated by
-								multiplying the required time with the rate and adding that value (rounded to a <code>long</code>)
-								to the material costs. There are two different types of project items: tasks and deliverables.
-							</p>
+							<code>addTimeToEvent()</code>: In case the catalog contains the <code>Event</code> and it is not
+							associated to the <code>Time</code>, adds the association and returns <code>true</code> (otherwise
+							<code>false</code>).</li>
+						<li><code>getTimesOfEvent()</code>: In case the catalog contains the <code>Event</code>, returns the
+							associated <code>Time</code> objects in a <code>Set</code>. Otherwise returns <code>null</code>.
 						</li>
 						<li>
-							<p>
-								The class <code>Task</code> describes a task within a project. Each task may contain sub-tasks and/or
-								deliverables. The material costs and required time of a task is the sum of the costs/time of all of the
-								task&rsquo;s sub-items.
-							</p>
+							<code>filterByEventCategory()</code>: Returns a non-<code>null</code> <code>Map&lt;Event,
+							Set&lt;Time&gt;&gt;</code> containing only those events of the given category. Each of the
+							<code>Event</code> objects has to be associated to a <code>Set</code> with the <code>Time</code> objects
+							that the <code>Event</code> is associated to within the <code>EventCatalog</code>.
 						</li>
 						<li>
-							<p>
-								The class <code>Deliverable</code> describes a document or product which has to be delivered for the
-								work on the associated project. A <code>Deliverable</code> object is characterized by a date of
-								delivery, material cost and production time.
-							</p>
+							<code>deleteEvent()</code>: In case the catalog contains the <code>Event</code>, removes it and returns a
+							<code>Set</code> with all the <code>Time</code> objects the <code>Event</code> was associated to.
+							Otherwise returns <code>null</code>.
 						</li>
-					</ol>
+						<li>
+							<code>deleteTime()</code>: In case the catalog contains the <code>Event</code> and the latter is
+							associated to the <code>Time</code>, removes the association and returns <code>true</code>. Otherwise
+							returns <code>false</code>.
+						</li>
+						</ol>
 					<div class="title">
 						<div class="title_inner">Class Diagram</div>
 					</div>
 					<p>
-						<a href="./assets/Project_Management.svg" target="_blank">
-							<img class="" src="./assets/Project_Management.svg" alt="">
+						<a href="./assets/Event_App.svg" target="_blank">
+							<img class="" src="./assets/Event_App.svg" alt="">
 						</a>
 					</p>
 					<p>You can open image (click on it) to copy text from the image. </p>
@@ -147,34 +161,27 @@
 						<div class="title_inner">Task</div>
 					</div>
 					<p>
-						Implement the project management explained above!
-					</p>
-					<p>
-						Implement a class <code>Adapter</code>, which maps the old interface <code>IProject</code> to the new
-						<code>Project</code> class. Thus, you have to take a closer look at the old <code>getDeliverables()</code>
-						method, which only returns all <code>Deliverable</code> objects of the project in a <code>List</code>.
-					</p>
-					<p>
-						Client is an unknown application which manages projects using only the interface <code>IProject</code>.
-					</p>
-					<p>
-						<a href="./assets/Project_Management_Client.svg" target="_blank">
-							<img class="" src="./assets/Project_Management_Client.svg" alt="">
-						</a>
-					</p>
+					Create the given interface and implement all of the classes above!
+				</p>
 					<div class="title">
 						<div class="title_inner">Hints</div>
 					</div>
 					<ol>
 						<li>
-							Use the type <code>long</code> for the calculation of prices in cents, since <code>double</code> cannot
-							accurately represent the base 10 multiples we use for money.
-						</li>
-						<li>
 							The most important erroneous parameter values must be handled properly. Therefore, the parameter value
 							<code>null</code> should result in a <code>NullPointerException</code> while others like empty
-							<code>String</code>s, zero or negative numbers (for prices) that do not make sense should cause an
+							<code>String</code>s or integers that do not make sense should cause an
 							<code>IllegalArgumentException</code>.
+						</li>
+						<li>
+							When you implement <code>Event.compareTo()</code>, it&rsquo;s good to know that strings and enums already
+							implement the <code>Comparable&lt;T&gt;</code> interface. Think about
+							<a class="context-link" target="_blank" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Comparable.html#compareTo(T)">
+								what the <code>compareTo()</code> return values mean</a> and how you can reuse them.
+						</li>
+						<li>
+							Take care to declare the <code>enum</code> constants/literals in the same order as shown in the class
+							diagram.
 						</li>
 					</ol>
 					<p>
@@ -185,7 +192,7 @@
 						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Project_Management_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Event_App_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
