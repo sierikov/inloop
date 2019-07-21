@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Project Management</title>
+	<title>Inloop | Payroll</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">WS 2007/08</div>
-						<div class="h-title blog_title">Project Management</div>
+						<div class="date">WS 2012/13</div>
+						<div class="h-title blog_title">Payroll</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Project Management</a>
+								<a href="#">Payroll</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,93 +91,68 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Project Management</div>
+						<div class="title_inner">Payroll</div>
 					</div>
-					<p>Your task is to implement a new version of a project management environment. A project consists of several
-						tasks and deliverables (documents or products, which have to be delivered). Furthermore, the old version’s
-						functionality of getting information about a project’s total costs and required time must be included.</p>
 					<p>
-						You need to implement the following classes. They are also shown in the class diagram below.
+						In this task we will deal with a software for the monthly payroll of employees in a company. This software
+						is divided into two parts: The employee management and the actual payroll management.
 					</p>
-					<ol>
-						<li>
-							<p>
-								The class <code>Project</code> represents a single project. <code>Project</code> provides several
-								operations to retrieve the necessary information about a project. The actual structure of a project is
-								represented by the classes <code>ProjectItem</code>, <code>Task</code> and <code>Deliverable</code>.
-								A project cannot be created without a valid rate, which is used for a project&rsquo;s main task. The
-								method <code>allDeliverables()</code> returns a <code>Map</code>, which maps (due) dates to the
-								corresponding <code>Deliverable</code> objects.
-							</p>
-						</li>
-						<li>
-							<p>
-								The class <code>ProjectItem</code> is the main part of a project&rsquo;s structure. All project items
-								have a <code>name</code> and a detailed <code>description</code>. Furthermore, there is a
-								<code>rate</code> which describes the costs per time unit. The estimate costs are calculated by
-								multiplying the required time with the rate and adding that value (rounded to a <code>long</code>)
-								to the material costs. There are two different types of project items: tasks and deliverables.
-							</p>
-						</li>
-						<li>
-							<p>
-								The class <code>Task</code> describes a task within a project. Each task may contain sub-tasks and/or
-								deliverables. The material costs and required time of a task is the sum of the costs/time of all of the
-								task&rsquo;s sub-items.
-							</p>
-						</li>
-						<li>
-							<p>
-								The class <code>Deliverable</code> describes a document or product which has to be delivered for the
-								work on the associated project. A <code>Deliverable</code> object is characterized by a date of
-								delivery, material cost and production time.
-							</p>
-						</li>
-					</ol>
+					<p>
+						On the employee side, we have the abstract class <code>Employee</code> with an identifier (<code>id</code>)
+						and three abstract methods. <code>isPayday()</code> determines whether the given day is the payday of the
+						employee. <code>calculatePay()</code> generally determines the (gross) salary of the employee but in some
+						cases throws an <code>UnpayableEmployeeException</code> instead (see below). Because this type of
+						<code>Exception</code> is a so called <em>checked exception</em>, it has to be included in the method signature
+						of <code>calculatePay()</code> via the <strong><code>throws</code></strong> keyword. Finally,
+						<code>calculateDeductions()</code> determines the employee&rsquo;s deductions, i.e. the difference between gross
+						and net salary.
+					</p>
+					<p>
+						As you can see in the class diagram below, <code>Employee</code> has two subclasses: <code>Volunteer</code> and
+						<code>Appointee</code>. The basic difference is that the <code>Volunteer</code> does not receive any payment which
+						is why he does not have a payday or any deductions. Hence, calling <code>calculatePay()</code> on a
+						<code>Volunteer</code> causes an <code>UnpayableEmployeeException</code> to be thrown. The <code>Appointee</code>,
+						on the other hand, has a contract which requires him to work a certain number of hours each month and grants him a
+						certain hourly salary. However, 40 percent of the money the <code>Appointee</code> would theoretically receive are
+						used for things like the employee&rsquo;s social insurance.
+					</p>
+					<p>
+						The actual payroll management is done by the class <code>Payroll</code> in combination with a
+						<code>PayrollDisposition</code>. The method <code>doPayroll()</code> retrieves the list of employees from a
+						<code>PayrollDB</code> and calls <code>sendPayment()</code> for each <code>Employee</code> to submit the respective
+						salary.
+					</p>
+					<p>
+						As an example for the implementation of the interface <code>PayrollDisposition</code>, we use the class
+						<code>PayrollDispositionImpl</code>. It keeps each sent payment in a <code>java.util.Map</code> that maps
+						<code>Employee</code>s to their payment figure. Additionally, <code>PayrollDispositionImpl</code> provides methods
+						which calculate the total amount of money used for payments as well as the average amount of money paid to the
+						employees.
+					</p>
 					<div class="title">
 						<div class="title_inner">Class Diagram</div>
 					</div>
 					<p>
-						<a href="./assets/Project_Management.svg" target="_blank">
-							<img class="" src="./assets/Project_Management.svg" alt="">
+						<a href="./assets/Payroll.svg" target="_blank">
+							<img class="" src="./assets/Payroll.svg" alt="">
 						</a>
 					</p>
-					<p>You can open image (click on it) to copy text from the image. </p>
+					<p> You can open image (click on it) to copy text from the image. </p>
 					<div class="title">
 						<div class="title_inner">Task</div>
 					</div>
 					<p>
-						Implement the project management explained above!
-					</p>
-					<p>
-						Implement a class <code>Adapter</code>, which maps the old interface <code>IProject</code> to the new
-						<code>Project</code> class. Thus, you have to take a closer look at the old <code>getDeliverables()</code>
-						method, which only returns all <code>Deliverable</code> objects of the project in a <code>List</code>.
-					</p>
-					<p>
-						Client is an unknown application which manages projects using only the interface <code>IProject</code>.
-					</p>
-					<p>
-						<a href="./assets/Project_Management_Client.svg" target="_blank">
-							<img class="" src="./assets/Project_Management_Client.svg" alt="">
-						</a>
-					</p>
+					Create the given interfaces and implement all of the classes above!
+				</p>
 					<div class="title">
 						<div class="title_inner">Hints</div>
 					</div>
-					<ol>
-						<li>
-							Use the type <code>long</code> for the calculation of prices in cents, since <code>double</code> cannot
-							accurately represent the base 10 multiples we use for money.
-						</li>
-						<li>
-							The most important erroneous parameter values must be handled properly. Therefore, the parameter value
-							<code>null</code> should result in a <code>NullPointerException</code> while others like empty
-							<code>String</code>s, zero or negative numbers (for prices) that do not make sense should cause an
-							<code>IllegalArgumentException</code>.
-						</li>
-					</ol>
 					<p>
+						The most important erroneous parameter values must be handled properly. Therefore, the parameter value
+						<code>null</code> should result in a <code>NullPointerException</code> while others like empty
+						<code>String</code>s, negative numbers, zero or integers that do not make sense should cause an
+						<code>IllegalArgumentException</code>.
+					</p>
 						<span class="pattern ion ion-ios-cog"></span>
 						Patterns: <a href="../../patterns/factory.html" class="context-link">Factory</a>
 					</p>
@@ -185,7 +160,7 @@
 						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Project_Management_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Payroll_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
