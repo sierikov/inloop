@@ -4,7 +4,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Inloop | Part Management</title>
+	<title>Inloop | Project Management</title>
 	<meta name="description" content="Inloop Tasks for Exam preparation">
 	<meta name="keywords" content="TU Dresden, Inloop, Tasks">
 
@@ -69,13 +69,13 @@
 			<div class="centrize full-width">
 				<div class="vertical-center">
 					<div class="started-content">
-						<div class="date">WS 2005/06</div>
-						<div class="h-title blog_title">Part Management</div>
+						<div class="date">WS 2007/08</div>
+						<div class="h-title blog_title">Project Management</div>
 						<div class="h-subtitle typing-bread">
 							<p>
 								<a href="../../index.html">Inloop</a> /
 								<a href="../../tasks.html">Tasks</a> /
-								<a href="#">Part Management</a>
+								<a href="#">Project Management</a>
 							</p>
 						</div>
 						<span class="typed-bread"></span>
@@ -91,54 +91,55 @@
 
 				<div class="single-post-text">
 					<div class="title">
-						<div class="title_inner">Management</div>
+						<div class="title_inner">Project Management</div>
 					</div>
-					<p>Given the class diagram below, implement a simple part management structure for a factory.</p>
+					<p>Your task is to implement a new version of a project management environment. A project consists of several
+						tasks and deliverables (documents or products, which have to be delivered). Furthermore, the old version’s
+						functionality of getting information about a project’s total costs and required time must be included.</p>
 					<p>
-						Here we&rsquo;ve got a sample <code>Factory</code> which can produce the following <code>Part</code>s:
-						<code>Components</code>, <code>SingleComponent</code> and <code>Resource</code>. Upon calling <code>createPart()</code>,
-						it would create a part. The class <code>Part</code> represents what all parts have in common, and therefore
-						is abstract. A <code>Factory</code> has a <code>ReceivingStock</code>, which is a type of <code>Stock</code>
-						and a <code>Purchasing</code> department which performs actions on its stock as required (here:
-						<code>buy()</code>).
-					</p>
-					<p>
-						A <code>Stock</code>&lsquo;s <code>Part</code>s are managed with a <code>java.util.Map&lt;Part,
-						Integer&gt;</code>. This map has all <code>Part</code>s on the stock as keys, and their respective amounts
-						as values. The following methods operate on this map:
+						You need to implement the following classes. They are also shown in the class diagram below.
 					</p>
 					<ol>
 						<li>
-							<code>getCount()</code>: Returns the number of physical parts for a <code>Part</code> or -1 if the part is
-							not in the stock.
+							<p>
+								The class <code>Project</code> represents a single project. <code>Project</code> provides several
+								operations to retrieve the necessary information about a project. The actual structure of a project is
+								represented by the classes <code>ProjectItem</code>, <code>Task</code> and <code>Deliverable</code>.
+								A project cannot be created without a valid rate, which is used for a project&rsquo;s main task. The
+								method <code>allDeliverables()</code> returns a <code>Map</code>, which maps (due) dates to the
+								corresponding <code>Deliverable</code> objects.
+							</p>
 						</li>
 						<li>
-							<code>insert()</code>: If the part exists in the stock, this method increases the number of physical parts
-							by the given value, otherwise the <code>Part</code> is inserted into the map with the given number of
-							physical parts.
+							<p>
+								The class <code>ProjectItem</code> is the main part of a project&rsquo;s structure. All project items
+								have a <code>name</code> and a detailed <code>description</code>. Furthermore, there is a
+								<code>rate</code> which describes the costs per time unit. The estimate costs are calculated by
+								multiplying the required time with the rate and adding that value (rounded to a <code>long</code>)
+								to the material costs. There are two different types of project items: tasks and deliverables.
+							</p>
 						</li>
 						<li>
-							<code>remove()</code>: If the part exists, this method decreases the number of physical parts only if
-							there are enough parts in the stock (<code>true</code> case), otherwise no changes are made
-							(<code>false</code> case). Returns also <code>false</code> if the part does not exist.
+							<p>
+								The class <code>Task</code> describes a task within a project. Each task may contain sub-tasks and/or
+								deliverables. The material costs and required time of a task is the sum of the costs/time of all of the
+								task&rsquo;s sub-items.
+							</p>
+						</li>
+						<li>
+							<p>
+								The class <code>Deliverable</code> describes a document or product which has to be delivered for the
+								work on the associated project. A <code>Deliverable</code> object is characterized by a date of
+								delivery, material cost and production time.
+							</p>
 						</li>
 					</ol>
-					<p>
-						The purchasing department observes the stock and has to be notified of operations performed on the <code>stock</code>.
-						A <code>ReceivingStock</code> has the two attributes <code>minStockItems</code> and
-						<code>maxStockItems</code>. These attributes define the maximum and minimum number of physical parts for a
-						<code>Part</code> and these limits apply to every <code>Part</code> in the stock separately. All methods
-						that change the number of parts in the stock must emit a signal (<code>notifyPartCountChanged()</code>).
-						Observing departments then check if the part count has dropped below <code>minStockItems</code> (<code>onPartCountChange()</code>),
-						and if so, buy new parts. The purchasing department would then, for example, <code>buy()</code> the amount
-						of parts needed to reach <code>maxStockItems</code> again.
-					</p>
 					<div class="title">
-						<div class="title_inner">Diagram</div>
+						<div class="title_inner">Class Diagram</div>
 					</div>
 					<p>
-						<a href="./assets/Part_Management.svg" target="_blank">
-							<img class="" src="./assets/Part_Management.svg" alt="">
+						<a href="./assets/Project_Management.svg" target="_blank">
+							<img class="" src="./assets/Project_Management.svg" alt="">
 						</a>
 					</p>
 					<p>You can open image (click on it) to copy text from the image. </p>
@@ -146,17 +147,36 @@
 						<div class="title_inner">Task</div>
 					</div>
 					<p>
-						Before starting to code, try to find design patterns that help you to implement the classes. Implement the
-						part management structure!
+						Implement the project management explained above!
+					</p>
+					<p>
+						Implement a class <code>Adapter</code>, which maps the old interface <code>IProject</code> to the new
+						<code>Project</code> class. Thus, you have to take a closer look at the old <code>getDeliverables()</code>
+						method, which only returns all <code>Deliverable</code> objects of the project in a <code>List</code>.
+					</p>
+					<p>
+						Client is an unknown application which manages projects using only the interface <code>IProject</code>.
+					</p>
+					<p>
+						<a href="./assets/Project_Management_Client.svg" target="_blank">
+							<img class="" src="./assets/Project_Management_Client.svg" alt="">
+						</a>
 					</p>
 					<div class="title">
 						<div class="title_inner">Hints</div>
 					</div>
-					<p>
-						The most important erroneous parameter values must be handled properly. Therefore, the parameter value
-						<code>null</code> should result in a <code>NullPointerException</code> while others like empty
-						<code>String</code>s, zero or negative numbers that do not make sense should cause an <code>IllegalArgumentException</code>.
-					</p>
+					<ol>
+						<li>
+							Use the type <code>long</code> for the calculation of prices in cents, since <code>double</code> cannot
+							accurately represent the base 10 multiples we use for money.
+						</li>
+						<li>
+							The most important erroneous parameter values must be handled properly. Therefore, the parameter value
+							<code>null</code> should result in a <code>NullPointerException</code> while others like empty
+							<code>String</code>s, zero or negative numbers (for prices) that do not make sense should cause an
+							<code>IllegalArgumentException</code>.
+						</li>
+					</ol>
 					<p>
 						<span class="pattern ion ion-ios-cog"></span>
 						Patterns: <a href="../../patterns/factory.html" class="context-link">Factory</a>
@@ -165,7 +185,7 @@
 						<a href="../../patterns.html" target="_blank" class="btn fill" data-text="Go to the Patterns">
 							Go to the Patterns
 						</a>
-						<a href="./tests/Part_Management_tests.zip" class="btn" data-text="Download JUnit tests">
+						<a href="./tests/Project_Management_tests.zip" class="btn" data-text="Download JUnit tests">
 							Download JUnit tests
 						</a>
 					</div>
