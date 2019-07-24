@@ -420,6 +420,10 @@ header .head-top .top-menu ul li.active a.btn {
 	margin-top: 40px;
 	margin-bottom: 0px;
 }
+
+.section .content .title.about {
+	margin-bottom: 40px;
+}
 .section .content .title .title_inner{
 	display: inline-block;
 	vertical-align: middle;

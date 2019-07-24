@@ -96,6 +96,10 @@
 		-moz-border-radius: 80px;
 		-webkit-border-radius: 80px;
 	}
+
+	.section.about .desc {
+		margin-left: 100px
+	}
 }
 
 @media (max-width: 580px) {
@@ -179,6 +183,28 @@
 	}
 	.section.started .started-content .h-title.blog_title {
 		font-size: 26px
+	}
+
+	.section.about {
+		text-align: center
+	}
+
+	.section.about .image {
+		float: none;
+		text-align: center
+	}
+
+	.section.about .image img {
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		-moz-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		-khtml-border-radius: 100px
+	}
+
+	.section.about .desc {
+		margin-left: 0
 	}
 }
 

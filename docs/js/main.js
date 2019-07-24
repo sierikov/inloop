@@ -96,6 +96,7 @@ $(function () {
     /* Initialize masonry items */
     var $container = $('.box-items');
 
+
     $container.imagesLoaded(function(){
         $container.multipleFilterMasonry({
             itemSelector: '.box-item',
