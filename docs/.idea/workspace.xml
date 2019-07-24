@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c6beb6-ef3b-4ac1-9ef3-45b9e86d9238" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +32,7 @@
         <counts>
           <entry key="CNAME~ee7ff1a7f1c6c70f471130a56a99cf07536ea708" value="1" />
           <entry key="css" value="30" />
-          <entry key="html" value="97" />
+          <entry key="html" value="98" />
           <entry key="ico" value="1" />
           <entry key="js" value="17" />
           <entry key="png" value="2" />
@@ -50,7 +45,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="30" />
-          <entry key="HTML" value="97" />
+          <entry key="HTML" value="98" />
           <entry key="Image" value="3" />
           <entry key="JavaScript" value="17" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -63,7 +58,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1714" />
-          <entry key="html" value="7740" />
+          <entry key="html" value="7744" />
           <entry key="js" value="217" />
           <entry key="svg" value="18" />
           <entry key="xml" value="4" />
@@ -73,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1714" />
-          <entry key="HTML" value="7740" />
+          <entry key="HTML" value="7744" />
           <entry key="JavaScript" value="217" />
           <entry key="SVG" value="18" />
           <entry key="XML" value="4" />
@@ -138,6 +133,18 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="361">
+                  <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+                  <folding>
+                    <element signature="n#head#0;n#html#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="608">
@@ -252,13 +259,13 @@
         <option value="$PROJECT_DIR$/tasks/exam/my_matrix.html" />
         <option value="$PROJECT_DIR$/tasks/exam/auction_system.html" />
         <option value="$PROJECT_DIR$/tasks/exam/bank_account.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="$PROJECT_DIR$/css/about.css" />
         <option value="$PROJECT_DIR$/tasks.html" />
         <option value="$PROJECT_DIR$/about.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -404,12 +411,12 @@
       <workItem from="1563720180859" duration="342000" />
       <workItem from="1563722676853" duration="1868000" />
       <workItem from="1563822794784" duration="1293000" />
-      <workItem from="1563982241203" duration="4250000" />
+      <workItem from="1563982241203" duration="4354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115813000" />
+    <option name="totallyTimeSpent" value="115917000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -742,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-453">
-          <caret line="63" column="11" lean-forward="true" selection-start-line="51" selection-start-column="2" selection-end-line="63" selection-end-column="11" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5122">
@@ -806,6 +803,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="423" column="32" selection-start-line="423" selection-start-column="32" selection-end-line="423" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -821,10 +825,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="423" column="32" selection-start-line="423" selection-start-column="32" selection-end-line="423" selection-end-column="32" />
+        <state relative-caret-position="361">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
