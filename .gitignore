@@ -1,5 +1,2 @@
-.idea/**
-out/**
-*/.idea
-*/out
-docs/.idea
+**/out
+**/.idea
