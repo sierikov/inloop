@@ -14,7 +14,6 @@ public class Main {
         p.add(p4);
         p.add(p5);
         sale1 = new Sale(10000, p);
-        System.out.println("BestForCustomer Price = " + sale1.getTotal()
-                / 100.00 + " EUR");
+        System.out.println("BestForCustomer Price = " + sale1.getTotal() / 100.00 + " EUR");
     }
 }
