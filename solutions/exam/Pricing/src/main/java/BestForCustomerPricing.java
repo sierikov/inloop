@@ -11,14 +11,9 @@ public class BestForCustomerPricing extends ComplexPricing {
     public long getTotal(Sale sale) {
         AtomicLong currentTotal = new AtomicLong();
         currentTotal.set(sale.getPreDiscountTotal());
-        System.out.println(currentTotal.get());
-        this.getPricings().forEach(
-                pricing -> {
-                    if (pricing.getTotal(sale) < currentTotal.get()) {
-                        System.out.println(pricing.getTotal(sale));
-                        currentTotal.set(pricing.getTotal(sale));
-                    }});
-        System.out.println(currentTotal.get());
+        this.getPricings().stream()
+                .filter(pricing -> pricing.getTotal(sale) < currentTotal.get())
+                .forEach(pricing -> currentTotal.set(pricing.getTotal(sale)));
         return currentTotal.get();
     }
 }

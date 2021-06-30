@@ -4,10 +4,9 @@ import java.util.List;
 import java.util.Objects;
 
 public abstract class ComplexPricing implements ISalePricing {
-    private List<ISalePricing> pricings = new ArrayList<>();
+    private final List<ISalePricing> pricings = new ArrayList<>();
 
-    public ComplexPricing( ISalePricing pricing){
-
+    public ComplexPricing(ISalePricing pricing) {
     }
 
     protected ComplexPricing() {

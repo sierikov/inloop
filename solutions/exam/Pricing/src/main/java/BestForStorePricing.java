@@ -10,11 +10,9 @@ public class BestForStorePricing extends ComplexPricing{
     @Override
     public long getTotal(Sale sale) {
         AtomicLong currentTotal = new AtomicLong();
-        this.getPricings().forEach(
-                pricing -> {
-            if (pricing.getTotal(sale) > currentTotal.get()) {
-                currentTotal.set(pricing.getTotal(sale));
-            }});
+        this.getPricings().stream()
+                .filter(pricing -> pricing.getTotal(sale) > currentTotal.get())
+                .forEach(pricing -> currentTotal.set(pricing.getTotal(sale)));
         return currentTotal.get();
     }
 }
