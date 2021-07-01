@@ -6,7 +6,7 @@
 
     <groupId>inloop</groupId>
     <artifactId>DesktopSearchEngine</artifactId>
-    <version>19.06</version>
+    <version>21.07</version>
     <properties>
         <java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>

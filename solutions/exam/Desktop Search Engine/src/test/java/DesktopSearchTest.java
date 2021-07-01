@@ -75,7 +75,7 @@ public class DesktopSearchTest {
 
     @Test
     public void testProcessRequestDefaultCollector() {
-        List result = deskSearch.processRequest("txt");
+        List<Resource> result = deskSearch.processRequest("txt");
         assertTrue("DesktopSearch().processRequest should return an empty List if there is no resource on the index!",
                 result != null && result.size() == 0);
 
