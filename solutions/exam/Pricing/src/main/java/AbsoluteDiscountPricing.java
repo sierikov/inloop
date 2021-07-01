@@ -13,4 +13,12 @@ public class AbsoluteDiscountPricing implements ISalePricing {
         if (sale.getPreDiscountTotal() - discount > threshold)  return sale.getPreDiscountTotal() - discount;
         else return Math.min(threshold, sale.getPreDiscountTotal());
     }
+
+    @Override
+    public String toString() {
+        return "AbsoluteDiscountPricing{" +
+                "threshold=" + threshold +
+                ", discount=" + discount +
+                '}';
+    }
 }

@@ -7,6 +7,7 @@ public abstract class ComplexPricing implements ISalePricing {
     private final List<ISalePricing> pricings = new ArrayList<>();
 
     public ComplexPricing(ISalePricing pricing) {
+        this.add(pricing);
     }
 
     protected ComplexPricing() {

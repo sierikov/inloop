@@ -11,4 +11,11 @@ public class PercentageDiscountPricing implements ISalePricing {
         long p = (long) (sale.getPreDiscountTotal() * (this.percentage / 100.0f));
         return sale.getPreDiscountTotal() - p;
     }
+
+    @Override
+    public String toString() {
+        return "PercentageDiscountPricing{" +
+                "percentage=" + percentage +
+                '}';
+    }
 }
