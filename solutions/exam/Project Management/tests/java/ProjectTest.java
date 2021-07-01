@@ -18,8 +18,8 @@ public class ProjectTest {
         Deliverable d1, d2, d3, d4;
         LocalDate cal;
 
-        expDeliv_Task1 = new HashMap<LocalDate, List<Deliverable>>();
-        expDeliv_Task2 = new HashMap<LocalDate, List<Deliverable>>();
+        expDeliv_Task1 = new HashMap<java.time.LocalDate, List<Deliverable>>();
+        expDeliv_Task2 = new HashMap<java.time.LocalDate, List<Deliverable>>();
 
         cal = LocalDate.of(2008, 2, 10);
         d1 = new Deliverable("checkTask", "Request instruction list", 1.0, 10, 30.0, cal);
