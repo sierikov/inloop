@@ -111,5 +111,5 @@ public class StockTest {
             fail("Stock.addObserver() should throw a NullPointerException if the argument is null!");
         } catch (NullPointerException e) {
         }
-    }
+    }  
 }
