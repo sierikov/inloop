@@ -2,10 +2,9 @@ import java.util.Map;
 import java.util.Objects;
 
 class Validator {
-    static String checkParam(String string) {
+    static void checkParam(String string) {
         if(Objects.isNull(string)) throw new NullPointerException();
         if(string.isEmpty()) throw  new IllegalArgumentException();
-        return string;
     }
 
     static double checkParam(double d) {

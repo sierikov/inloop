@@ -1,17 +1,17 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 public class MaterialTest {
     private static class MaterialDummy extends Material {
-        public MaterialDummy(String s, double d) {
-            super(s, d);
+        MaterialDummy(String name, double price) {
+            super(name, price);
         }
 
         @Override
-        public int getMaterialReq(Surface s) {
+        public int getMaterialRequirements(Surface surface) {
             return 13;
         }
     }
@@ -28,7 +28,7 @@ public class MaterialTest {
         try {
             new MaterialDummy(null, 0);
             fail("The constructor of Material should throw a NullPointerException if the name argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException ignored) {
         }
     }
 
@@ -37,7 +37,7 @@ public class MaterialTest {
         try {
             new MaterialDummy("", 0);
             fail("The constructor of Material should throw an IllegalArgumentException if the name argument is an empty String!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
     }
 
@@ -46,7 +46,7 @@ public class MaterialTest {
         try {
             new MaterialDummy("test", -10.0);
             fail("The constructor of Material should throw an IllegalArgumentException if the cost argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
     }
 
@@ -57,7 +57,8 @@ public class MaterialTest {
 
     @Test
     public void testGetPricePerUnit() {
-        assertEquals("Material.getPricePerUnit() should return the correct value!", 1234.56, material.getPricePerUnit(), 0.0001);
+        assertEquals("Material.getPricePerUnit() should return the correct value!", 1234.56,
+                material.getPricePerUnit(), 0.0001);
     }
 
     @Test
@@ -65,7 +66,7 @@ public class MaterialTest {
         try {
             material.getPriceOfASurface(null);
             fail("Material.getPriceOfASurface() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException ignored) {
         }
     }
 

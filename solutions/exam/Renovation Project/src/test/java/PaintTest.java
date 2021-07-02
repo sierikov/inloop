@@ -1,8 +1,8 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class PaintTest {
     private Paint testPaint;
@@ -38,7 +38,7 @@ public class PaintTest {
         try {
             new Paint(null, 10.0, 1, 10.0);
             fail("Paint.Paint() should throw a NullPointerException if the name argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException ignored) {
         }
     }
 
@@ -47,13 +47,13 @@ public class PaintTest {
         try {
             new Paint("", 10.0, 1, 10.0);
             fail("Paint.Paint() should throw an IllegalArgumentException if the name argument is empty!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
         
         try {
             new Paint("name", -10.0, 1, 10.0);
             fail("Paint.Paint() should throw an IllegalArgumentException if the price argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
     }
 
@@ -62,61 +62,61 @@ public class PaintTest {
         try {
             new Paint("test", 50.0, 0, 10.0);
             fail("Paint.Paint() should throw an IllegalArgumentException if the noOfCoats argument is zero!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
 
         try {
             new Paint("test", 50.0, -2, 10.0);
             fail("Paint.Paint() should throw an IllegalArgumentException if the noOfCoats argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
 
         try {
             new Paint("test", 50.0, 1, 0.0);
             fail("Paint.Paint() should throw an IllegalArgumentException if the noOfSqMPerLiter argument is zero!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
 
         try {
             new Paint("test", 50.0, 1, -10.0);
             fail("Paint.Paint() should throw an IllegalArgumentException if the noOfSqMPerLiter argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
     }
 
     @Test
-    public void testGetNoOfCoats() {
-        assertEquals("Paint.getNoOfCoats() should return the correct value!", 2, testPaint.getNoOfCoats());
+    public void testGetNumberOfCoats() {
+        assertEquals("Paint.getNumberOfCoats() should return the correct value!", 2, testPaint.getNumberOfCoats());
     }
 
     @Test
-    public void testGetNoOfSqMPerLiter() {
-        assertEquals("Paint.getNoOfCoats() should return the correct value!", 10.0, testPaint.getNoOfSqMPerLiter(),
+    public void testGetSquareMetersPerLiter() {
+        assertEquals("Paint.getSquareMetersPerLiter() should return the correct value!", 10.0, testPaint.getSquareMetersPerLiter(),
                 0.0);
     }
 
     @Test
-    public void testGetMaterialReqNullArgument() {
+    public void testGetMaterialRequirementsNullArgument() {
         try {
-            testPaint.getMaterialReq(null);
-            fail("Paint.getMaterialReq() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+            testPaint.getMaterialRequirements(null);
+            fail("Paint.getMaterialRequirements() should throw a NullPointerException if the argument is null!");
+        } catch (NullPointerException ignored) {
         }
     }
 
     @Test
-    public void testGetMaterialReq() {
-        assertEquals("Paint.getMaterialReq() should calculate the required materials using the given formula!",
-                results[0], testPaint.getMaterialReq(surfaces[0]));
-        assertEquals("Paint.getMaterialReq() should round down if the tolerance is less than 0.02!", results[1],
-                testPaint.getMaterialReq(surfaces[1]));
-        assertEquals("Paint.getMaterialReq() should round up if the tolerance is higher than or equal to 0.02!",
-                results[2], testPaint.getMaterialReq(surfaces[2]));
-        assertEquals("Paint.getMaterialReq() should round down if the tolerance is less than 0.02!", results[3],
-                testPaint.getMaterialReq(surfaces[3]));
-        assertEquals("Paint.getMaterialReq() should round down if the tolerance is less than 0.02!", results[4],
-                testPaint.getMaterialReq(surfaces[4]));
-        assertEquals("Paint.getMaterialReq() should round up if the tolerance is higher than or equal to 0.02!",
-                results[5], testPaint.getMaterialReq(surfaces[5]));
+    public void testGetMaterialRequirements() {
+        assertEquals("Paint.getMaterialRequirements() should calculate the required materials using the given formula!",
+                results[0], testPaint.getMaterialRequirements(surfaces[0]));
+        assertEquals("Paint.getMaterialRequirements() should round down if the tolerance is less than 0.02!", results[1],
+                testPaint.getMaterialRequirements(surfaces[1]));
+        assertEquals("Paint.getMaterialRequirements() should round up if the tolerance is higher than or equal to 0.02!",
+                results[2], testPaint.getMaterialRequirements(surfaces[2]));
+        assertEquals("Paint.getMaterialRequirements() should round down if the tolerance is less than 0.02!", results[3],
+                testPaint.getMaterialRequirements(surfaces[3]));
+        assertEquals("Paint.getMaterialRequirements() should round down if the tolerance is less than 0.02!", results[4],
+                testPaint.getMaterialRequirements(surfaces[4]));
+        assertEquals("Paint.getMaterialRequirements() should round up if the tolerance is higher than or equal to 0.02!",
+                results[5], testPaint.getMaterialRequirements(surfaces[5]));
     }
 }

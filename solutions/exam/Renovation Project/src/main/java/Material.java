@@ -21,8 +21,8 @@ public abstract class Material {
 
     public double getPriceOfASurface(Surface surface) {
         Objects.requireNonNull(surface);
-        return this.getPricePerUnit() * getMaterialReq(surface);
+        return this.getPricePerUnit() * getMaterialRequirements(surface);
     }
 
-    public abstract int getMaterialReq(Surface surface);
+    public abstract int getMaterialRequirements(Surface surface);
 }

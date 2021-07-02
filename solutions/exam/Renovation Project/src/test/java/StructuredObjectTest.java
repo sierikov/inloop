@@ -1,10 +1,13 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
-import java.util.*;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Collections;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class StructuredObjectTest {
     private StructuredObject structuredObject;
@@ -29,43 +32,43 @@ public class StructuredObjectTest {
         try {
             structuredObject.add(null);
             fail("StructuredObject.add() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException ignored) {
         }
     }
 
     @Test
-    public void testAddMaterialReqNullArgument() {
+    public void testAddMaterialRequirementsNullArgument() {
         try {
-            structuredObject.addMaterialReq(null);
-            fail("StructuredObject.addMaterialReq() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+            structuredObject.addMaterialRequirements(null);
+            fail("StructuredObject.addMaterialRequirements() should throw a NullPointerException if the argument is null!");
+        } catch (NullPointerException ignored) {
         }
         try {
-            structuredObject.addMaterialReq(Collections.singletonMap(null, 1));
-            fail("StructuredObject.addMaterialReq() should throw a NullPointerException if a key of the argument is null!");
-        } catch (NullPointerException e) {
+            structuredObject.addMaterialRequirements(Collections.singletonMap(null, 1));
+            fail("StructuredObject.addMaterialRequirements() should throw a NullPointerException if a key of the argument is null!");
+        } catch (NullPointerException ignored) {
         }
         try {
-            structuredObject.addMaterialReq(Collections.singletonMap("key", null));
-            fail("StructuredObject.addMaterialReq() should throw a NullPointerException if a value of the argument is null!");
-        } catch (NullPointerException e) {
+            structuredObject.addMaterialRequirements(Collections.singletonMap("key", null));
+            fail("StructuredObject.addMaterialRequirements() should throw a NullPointerException if a value of the argument is null!");
+        } catch (NullPointerException ignored) {
         }
     }
 
     @Test
     public void testFloorSurface() {
-        Surface s1 = new Surface(2.0, 3.0);
-        Material m1 = new Flooring("PVC red", 5.0, 2.0);
-        s1.setMaterial(m1);
-        structuredObject.add(s1);
+        Surface surface = new Surface(2.0, 3.0);
+        Material material = new Flooring("PVC red", 5.0, 2.0);
+        surface.setMaterial(material);
+        structuredObject.add(surface);
 
         Map<String, Integer> expectedMaterials = new TreeMap<String, Integer>();
         expectedMaterials.put("PVC red", 3);
 
         Map<String, Integer> actualMaterials = new TreeMap<String, Integer>();
-        actualMaterials = structuredObject.addMaterialReq(actualMaterials);
+        actualMaterials = structuredObject.addMaterialRequirements(actualMaterials);
 
-        assertEquals("StructuredObject.addMaterialReq() should return a Map containing the correct entries!",
+        assertEquals("StructuredObject.addMaterialRequirements() should return a Map containing the correct entries!",
                 expectedMaterials, actualMaterials);
         assertEquals("StructuredObject.getPrice() should return the correct value!", 15.0,
                 structuredObject.getPrice(), 0.0);
@@ -73,43 +76,43 @@ public class StructuredObjectTest {
 
     @Test
     public void testSurface() {
-        StructuredObject so1 = new StructuredObject();
-        Surface s1 = new Surface(2.0, 3.0);
-        Surface s2 = new Surface(3.0, 4.0);
+        StructuredObject structuredObject = new StructuredObject();
+        Surface surface1 = new Surface(2.0, 3.0);
+        Surface surface2 = new Surface(3.0, 4.0);
 
-        Material m1 = new Flooring("PVC red", 10.0, 2.0);
-        Material m2 = new Paint("Wall paint green", 50.0, 2, 10.0);
+        Material material1 = new Flooring("PVC red", 10.0, 2.0);
+        Material material2 = new Paint("Wall paint green", 50.0, 2, 10.0);
 
-        s1.setMaterial(m1);
-        s2.setMaterial(m2);
+        surface1.setMaterial(material1);
+        surface2.setMaterial(material2);
 
-        structuredObject.add(s1);
-        structuredObject.add(so1);
+        this.structuredObject.add(surface1);
+        this.structuredObject.add(structuredObject);
 
-        so1.add(s2);
-        so1.add(s2);
+        structuredObject.add(surface2);
+        structuredObject.add(surface2);
 
         Map<String, Integer> expectedMaterials = new TreeMap<String, Integer>();
         expectedMaterials.put("PVC red", 3);
         expectedMaterials.put("Wall paint green", 5);
 
         Map<String, Integer> actualMaterials = new TreeMap<String, Integer>();
-        actualMaterials = structuredObject.addMaterialReq(actualMaterials);
+        actualMaterials = this.structuredObject.addMaterialRequirements(actualMaterials);
 
-        assertEquals("RenovationObject.addMaterialReq() should return a Map containing the correct entries",
+        assertEquals("RenovationObject.addMaterialRequirements() should return a Map containing the correct entries",
                 expectedMaterials, actualMaterials);
         assertEquals("RenovationObject.getPrice() should return the correct value!", 280.0,
-                structuredObject.getPrice(), 0.0);
+                this.structuredObject.getPrice(), 0.0);
     }
 
     @Test
-    public void testDontChangeArgumentAddMaterialReq() {
+    public void testDontChangeArgumentAddMaterialRequirements() {
         structuredObject.add(new StructuredObject());
         Map<String, Integer> mat = Collections.singletonMap("Wood", 4);
         try{
-            structuredObject.addMaterialReq(mat);
+            structuredObject.addMaterialRequirements(mat);
         } catch (UnsupportedOperationException e) {
-            fail("StructuredObject.addaddMaterialReq() shouldn't change the given Map. Instead, a new Map should be used!");
+            fail("StructuredObject.addMaterialRequirements() shouldn't change the given Map. Instead, a new Map should be used!");
         }
     }
 }

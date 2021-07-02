@@ -15,7 +15,8 @@ public class Flooring extends Material {
     }
 
     @Override
-    public int getMaterialReq(Surface surface) {
+    public int getMaterialRequirements(Surface surface) {
+        Objects.requireNonNull(surface);
         int result = (int) (surface.getArea() / this.widthOfFlooring);
         double tolerance = round(surface.getArea() % this.widthOfFlooring);
         if (tolerance <= this.limit) return result;

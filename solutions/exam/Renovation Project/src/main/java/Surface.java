@@ -34,7 +34,7 @@ public class Surface extends RenovationObject {
     }
 
     @Override
-    public Map<String, Integer> addMaterialReq(Map<String, Integer> materialsOld) {
+    public Map<String, Integer> addMaterialRequirements(Map<String, Integer> materialsOld) {
         Validator.checkParam(materialsOld);
         Objects.requireNonNull(this.selectedMaterial);
 
@@ -42,7 +42,7 @@ public class Surface extends RenovationObject {
         Map<String, Integer> materials = new TreeMap<>(materialsOld);
 
 
-        int materialAmountCurr  = this.selectedMaterial.getMaterialReq(this);
+        int materialAmountCurr  = this.selectedMaterial.getMaterialRequirements(this);
         String materialName     = this.selectedMaterial.getName();
 
         if (materials.containsKey(materialName)){

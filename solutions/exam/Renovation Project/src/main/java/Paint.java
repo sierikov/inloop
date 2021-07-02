@@ -13,11 +13,11 @@ public class Paint extends  Material{
         this.noOfSqMPerLiter = Validator.checkParam(noOfSqMPerLiter);
     }
 
-    public int getNoOfCoast() {
+    public int getNumberOfCoats() {
         return this.noOfCoast;
     }
 
-    public double getNoOfSqMPerLiter() {
+    public double getSquareMetersPerLiter() {
         return this.noOfSqMPerLiter;
     }
 
@@ -28,9 +28,9 @@ public class Paint extends  Material{
 
 
     @Override
-    public int getMaterialReq(Surface surface){
+    public int getMaterialRequirements(Surface surface){
         Objects.requireNonNull(surface);
-        double calcVal =  (surface.getArea() * this.getNoOfCoats()) / this.getNoOfSqMPerLiter();
+        double calcVal =  (surface.getArea() * this.getNoOfCoats()) / this.getSquareMetersPerLiter();
         int result = (int) (calcVal / this.getVolumeOfCan());
         double tolerance = calcVal % this.getVolumeOfCan();
         return tolerance <= this.limit ? result : result + 1;

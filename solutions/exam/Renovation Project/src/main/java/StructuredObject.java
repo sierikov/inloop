@@ -24,10 +24,10 @@ public class StructuredObject extends RenovationObject {
         return price.get();
     }
 
-    public Map<String, Integer> addMaterialReq(Map<String, Integer> materialMap) {
+    public Map<String, Integer> addMaterialRequirements(Map<String, Integer> materialMap) {
         Validator.checkParam(materialMap);
 
-        for (RenovationObject obj : parts) materialMap = obj.addMaterialReq(materialMap);
+        for (RenovationObject obj : parts) materialMap = obj.addMaterialRequirements(materialMap);
 
         return materialMap;
     }

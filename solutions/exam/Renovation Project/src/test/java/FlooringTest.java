@@ -1,8 +1,8 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class FlooringTest {
     private Flooring testFlooring;
@@ -32,7 +32,7 @@ public class FlooringTest {
         try {
             new Flooring(null, 10.0, 10.0);
             fail("Flooring.Flooring() should throw a NullPointerException if the name argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException ignored) {
         }
     }
 
@@ -41,13 +41,13 @@ public class FlooringTest {
         try {
             new Flooring("", 10.0, 10.0);
             fail("Flooring.Flooring() should throw an IllegalArgumentException if the name argument is empty!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
 
         try {
             new Flooring("name", -10.0, 10.0);
             fail("Flooring.Flooring() should throw an IllegalArgumentException if the price argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
     }
 
@@ -57,13 +57,13 @@ public class FlooringTest {
         try {
             new Flooring("test", 10.0, 0.0);
             fail("The constructor of Flooring should throw an IllegalArgumentException if the width argument is zero!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
 
         try {
             new Flooring("test", 10.0, -2.0);
             fail("The constructor of Flooring should throw an IllegalArgumentException if the width argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException ignored) {
         }
     }
 
@@ -73,21 +73,21 @@ public class FlooringTest {
     }
 
     @Test
-    public void testGetMaterialReqNullArgument() {
+    public void testGetMaterialRequirementsNullArgument() {
         try {
-            testFlooring.getMaterialReq(null);
-            fail("Flooring.getMaterialReq() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+            testFlooring.getMaterialRequirements(null);
+            fail("Flooring.getMaterialRequirements() should throw a NullPointerException if the argument is null!");
+        } catch (NullPointerException ignored) {
         }
     }
 
     @Test
-    public void testGetMaterialReq() {
-        assertEquals("Flooring.getMaterialReq() should calculate the required materials using the given formula!",
-                results[0], testFlooring.getMaterialReq(surfaces[0]));
-        assertEquals("Flooring.getMaterialReq() should round up if the tolerance is higher than or equal to 0.02!",
-                results[1], testFlooring.getMaterialReq(surfaces[1]));
-        assertEquals("Flooring.getMaterialReq() should round down if the tolerance is less than 0.02!", results[2],
-                testFlooring.getMaterialReq(surfaces[2]));
+    public void testGetMaterialRequirements() {
+        assertEquals("Flooring.getMaterialRequirements() should calculate the required materials using the given formula!",
+                results[0], testFlooring.getMaterialRequirements(surfaces[0]));
+        assertEquals("Flooring.getMaterialRequirements() should round up if the tolerance is higher than or equal to 0.02!",
+                results[1], testFlooring.getMaterialRequirements(surfaces[1]));
+        assertEquals("Flooring.getMaterialRequirements() should round down if the tolerance is less than 0.02!", results[2],
+                testFlooring.getMaterialRequirements(surfaces[2]));
     }
 }
