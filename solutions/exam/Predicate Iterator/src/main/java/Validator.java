@@ -1,8 +1,3 @@
-import org.omg.CORBA.Object;
-
-import java.util.Arrays;
-import java.util.Objects;
-
 public class Validator {
     public static boolean checkParams(String... strings) {
         boolean isValid;
@@ -14,9 +9,7 @@ public class Validator {
     }
 
     private static boolean checkParam(String string) {
-
-        return string != null && string.isEmpty();
+        return string != null;
     }
-
 
 }
