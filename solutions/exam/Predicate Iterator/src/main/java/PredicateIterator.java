@@ -1,43 +1,52 @@
 import java.util.Iterator;
-import java.util.ListIterator;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
-public class PredicateIterator<Type> implements Iterator {
+public class PredicateIterator<T> implements Iterator<T> {
 
-    private ListIterator<Type> iterator;
-    private Predicate<Type> predicate;
-    private Type argument;
+    private final Iterator<T> iterator;
+    private final Predicate<T> predicate;
+    private Optional<T> store;
+    private boolean tested = false;
 
-    public PredicateIterator(Iterator<Type> iterator, Predicate<Type> predicate, Type argument) {
-        this.iterator = (ListIterator<Type>) iterator;
+    public PredicateIterator(Iterator<T> iterator, Predicate<T> predicate) {
+        this.iterator = iterator;
         this.predicate = predicate;
-        this.argument = argument;
+        this.store = Optional.empty();
+    }
+
+    private void findNext(){
+        T tmp;
+        while (iterator.hasNext()) {
+            tmp = iterator.next();
+            if (predicate.test(tmp)) {
+                tested = true;
+                this.store = Optional.of(tmp);
+                return;
+            }
+        }
+        this.store = Optional.empty();
     }
 
     @Override
     public boolean hasNext() {
-        while(iterator.hasNext()){
-            if (predicate.predicate(iterator.next(), argument)) {
-                iterator.previous();
-                return true;
-            }
-        }
-        return false;
-
+        if (this.iterator == null) throw new NoSuchElementException();
+        this.findNext();
+        return this.store.isPresent();
     }
 
     @Override
-    public Type next(){
-        Type temp;
-
-        while (iterator.hasNext()){
-            temp = iterator.next();
-            if(predicate.predicate(temp,argument)) return temp;
+    public T next() {
+        if (!tested) {
+            this.findNext();
         }
-
+        if (this.store.isPresent()){
+            tested = false;
+            return this.store.get();
+        }
         throw new NoSuchElementException();
-
     }
+
 
     @Override
     public void remove() {

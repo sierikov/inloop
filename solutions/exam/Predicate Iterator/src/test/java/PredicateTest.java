@@ -1,10 +1,10 @@
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class PredicateTest {
     @Test
-    public void testInterface() {
-        assertTrue(Predicate.class.isInterface());
+    public void shouldBeAnInterface() {
+        assertTrue("Predicate<T> should be an interface!", Predicate.class.isInterface());
     }
 }

@@ -1,3 +1,3 @@
-public interface Predicate<Type> {
-     boolean predicate(Type element, Type argument);
+public interface Predicate<T> {
+     boolean test(T value);
 }
