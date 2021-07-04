@@ -13,7 +13,7 @@ public class Appointee extends Employee {
 
     @Override
     public boolean isPayday(int dayOfMonth) {
-        return dayOfMonth == this.payday;
+        return Validator.checkDayInMonth(dayOfMonth) == this.payday;
     }
 
     @Override

@@ -1,6 +1,6 @@
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class UnpayableEmployeeExceptionTest {
     @Test
@@ -13,10 +13,10 @@ public class UnpayableEmployeeExceptionTest {
     public void testConstructor() {
         try {
             throw new UnpayableEmployeeException("Test message");
-        } catch (UnpayableEmployeeException e) {
+        } catch (UnpayableEmployeeException exception) {
             assertEquals(
                     "A thrown UnpayableEmployeeException should contain the message specified in the constructor!",
-                    "Test message", e.getMessage());
+                    "Test message", exception.getMessage());
         }
     }
 }

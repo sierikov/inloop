@@ -1,13 +1,11 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class PayrollDispositionImplTest {
     private PayrollDispositionImpl disposition;
@@ -44,7 +42,8 @@ public class PayrollDispositionImplTest {
         try {
             disposition.sendPayment(null, 5);
             fail("PayrollDispositionImpl.sendPayment() should throw a NullPointerException if the empl argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException exception) {
+            // NullPointerException correctly thrown
         }
     }
 
@@ -53,13 +52,15 @@ public class PayrollDispositionImplTest {
         try {
             disposition.sendPayment(newEmployee, -1);
             fail("PayrollDispositionImpl.sendPayment() should throw an IllegalArgumentException if the payment argument is negative!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
 
         try {
             disposition.sendPayment(newEmployee, 0);
             fail("PayrollDispositionImpl.sendPayment() should throw an IllegalArgumentException if the payment argument is zero!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
     }
 
@@ -102,7 +103,7 @@ public class PayrollDispositionImplTest {
             assertEquals("PayrollDispositionImpl.getPayments() should return all sent Employee-payment pairs!",
                     disposition.getPayments().get(e.getKey()), e.getValue(), 0);
         }
-        assertTrue("PayrollDispositionImpl.getPayments() should only return sent Employee-payment pairs!",
-                disposition.getPayments().size() == payments.size());
+        assertEquals("PayrollDispositionImpl.getPayments() should only return sent Employee-payment pairs!",
+                disposition.getPayments().size(), payments.size());
     }
 }

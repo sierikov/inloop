@@ -1,14 +1,13 @@
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.junit.Test;
 
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
-import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class EmployeeTest {
     private static class EmployeeImpl extends Employee {
-        public EmployeeImpl(String id) {
+        EmployeeImpl(String id) {
             super(id);
         }
 
@@ -34,19 +33,19 @@ public class EmployeeTest {
         try {
             assertTrue("Employee.isPayday() should be abstract!",
                     Modifier.isAbstract(Employee.class.getDeclaredMethod("isPayday", int.class).getModifiers()));
-        } catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException exception) {
             fail("Employee should have a method named isPayday with one parameter of type int!");
         }
         try {
             assertTrue("Employee.calculatePay() should be abstract!",
                     Modifier.isAbstract(Employee.class.getDeclaredMethod("calculatePay").getModifiers()));
-        } catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException exception) {
             fail("Employee should have a method named calculatePay without any parameters!");
         }
         try {
             assertTrue("Employee.calculateDeductions() should be abstract!",
                     Modifier.isAbstract(Employee.class.getDeclaredMethod("calculateDeductions").getModifiers()));
-        } catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException exception) {
             fail("Employee should have a method named calculateDeductions without any parameters!");
         }
     }
@@ -56,19 +55,22 @@ public class EmployeeTest {
         try {
             new EmployeeImpl(null);
             fail("Employee.Employee() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException exception) {
+            // NullPointerException correctly thrown
         }
 
         try {
             new Appointee(null, 1, 1, 1);
             fail("Appointee.Appointee() should throw a NullPointerException if the id argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException exception) {
+            // NullPointerException correctly thrown
         }
 
         try {
             new Volunteer(null);
             fail("Volunteer.Volunteer() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException exception) {
+            // NullPointerException correctly thrown
         }
     }
 
@@ -77,32 +79,35 @@ public class EmployeeTest {
         try {
             new EmployeeImpl("");
             fail("Employee.Employee() should throw an IllegalArgumentException if the argument is empty!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
 
         try {
             new Appointee("", 1, 1, 1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the id argument is empty!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
 
         try {
             new Volunteer("");
             fail("Volunteer.Volunteer() should throw an IllegalArgumentException if the argument is empty!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
     }
 
     @Test
     public void testGetId() {
         Employee e = new EmployeeImpl("Martin");
-        assertTrue("Employee.getId() should return the correct value!", e.getId().equals("Martin"));
+        assertEquals("Employee.getId() should return the correct value!", "Martin", e.getId());
 
         e = new Appointee("Eric", 1, 1, 1);
-        assertTrue("Appointee.getId() should return the correct value!", e.getId().equals("Eric"));
+        assertEquals("Appointee.getId() should return the correct value!", "Eric", e.getId());
 
         e = new Volunteer("Michael");
-        assertTrue("Volunteer.getId() should return the correct value!", e.getId().equals("Michael"));
+        assertEquals("Volunteer.getId() should return the correct value!", "Michael", e.getId());
     }
 
     @Test
@@ -111,7 +116,7 @@ public class EmployeeTest {
             assertTrue("Employee.calculatePay() should declare to throw UnpayableEmployeeException!",
                     Arrays.asList(Employee.class.getDeclaredMethod("calculatePay").getExceptionTypes())
                             .contains(UnpayableEmployeeException.class));
-        } catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException exception) {
             fail("Employee should have a method named calculatePay without any parameters!");
         }
     }

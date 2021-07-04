@@ -1,13 +1,10 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class AppointeeTest {
-    private Appointee appointee1, appointee2;
+    private Employee appointee1, appointee2;
 
     @Before
     public void setUp() {
@@ -20,27 +17,30 @@ public class AppointeeTest {
         try {
             new Appointee("Martin", -1, 1, 1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the payday argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
         try {
             new Appointee("Martin", 0, 1, 1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the payday argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
         try {
-            new Appointee("Martin", 32, 1, 1);
+            new Appointee("Martin", 31, 1, 1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the payday argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
     }
 
     @Test
     public void testConstructorValidPayday() {
         try {
-            for (int i = 1; i < 32; i++) {
+            for (int i = 1; i <= 30; i++) {
                 new Appointee("Martin", i, 1, 1);
             }
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
             fail("Appointee.Appointee() should not throw an IllegalArgumentException if the payday argument is valid!");
         }
     }
@@ -50,13 +50,15 @@ public class AppointeeTest {
         try {
             new Appointee("Martin", 1, 0, 1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the hoursPerMonth argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
 
         try {
             new Appointee("Martin", 1, -1, 1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the hoursPerMonth argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
     }
 
@@ -65,25 +67,51 @@ public class AppointeeTest {
         try {
             new Appointee("Martin", 1, 1, 0);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the payPerHour argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
 
         try {
             new Appointee("Martin", 1, 1, -1);
             fail("Appointee.Appointee() should throw an IllegalArgumentException if the payPerHour argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
 
         try {
             new Appointee("Martin", 1, 1, Double.MIN_VALUE);
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
             fail("Appointee.Appointee() should not throw an IllegalArgumentException if the payPerHour argument is valid!");
         }
     }
 
     @Test
+    public void testIsPaydayIllegalArgument() {
+        try {
+            appointee1.isPayday(-1);
+            fail("Appointee.isPayday() should throw an IllegalArgumentException for values lower than 1!");
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
+        }
+
+        try {
+            appointee1.isPayday(0);
+            fail("Appointee.isPayday() should throw an IllegalArgumentException for values lower than 1!");
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
+        }
+
+        try {
+            appointee1.isPayday(31);
+            fail("Appointee.isPayday() should throw an IllegalArgumentException for values greater than 30!");
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
+        }
+    }
+
+    @Test
     public void testIsPayday() {
-        for (int i = -10; i < 40; i++) {
+        for (int i = 1; i <= 30; i++) {
             if (i == 5) {
                 assertTrue("Appointee.isPayday() should return the correct value!", appointee1.isPayday(i));
             } else {
@@ -104,7 +132,7 @@ public class AppointeeTest {
                     appointee1.calculatePay(), 0.0001);
             assertEquals("Appointee.calculatePay() should return the correct value!", 1649.21,
                     appointee2.calculatePay(), 0.0001);
-        } catch (UnpayableEmployeeException e) {
+        } catch (UnpayableEmployeeException exception) {
             fail("Appointee.calculatePay() should never throw an UnpayableEmployeeException!");
         }
     }

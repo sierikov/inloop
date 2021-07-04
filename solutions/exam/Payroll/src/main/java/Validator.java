@@ -18,7 +18,7 @@ public class Validator {
     }
 
     public static int checkDayInMonth(int day){
-        if (day <= 0 || day > 31) throw new IllegalArgumentException();
+        if (day <= 0 || day > 30) throw new IllegalArgumentException();
         return day;
     }
 }

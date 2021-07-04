@@ -1,16 +1,17 @@
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class PayrollTest {
     private static class PayrollDBImpl implements PayrollDB {
         private List<Employee> db;
 
-        public PayrollDBImpl(List<Employee> employees) {
+        PayrollDBImpl(List<Employee> employees) {
             db = employees;
         }
 
@@ -25,7 +26,8 @@ public class PayrollTest {
         try {
             new Payroll(null, 1);
             fail("Payroll.Payroll() should throw a NullPointerException if the disposition argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException exception) {
+            // NullPointerException correctly thrown
         }
     }
 
@@ -34,27 +36,30 @@ public class PayrollTest {
         try {
             new Payroll(new PayrollDispositionImpl(), -1);
             fail("Payroll.Payroll() should throw an IllegalArgumentException if the payday argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
         try {
             new Payroll(new PayrollDispositionImpl(), 0);
             fail("Payroll.Payroll() should throw an IllegalArgumentException if the payday argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
         try {
-            new Payroll(new PayrollDispositionImpl(), 32);
+            new Payroll(new PayrollDispositionImpl(), 31);
             fail("Payroll.Payroll() should throw an IllegalArgumentException if the payday argument is invalid!");
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
         }
     }
 
     @Test
     public void testConstructorValidPayday() {
         try {
-            for (int i = 1; i < 32; i++) {
+            for (int i = 1; i <= 30; i++) {
                 new Payroll(new PayrollDispositionImpl(), i);
             }
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException exception) {
             fail("Payroll.Payroll() should not throw an IllegalArgumentException if the payday argument is valid!");
         }
     }
@@ -64,7 +69,8 @@ public class PayrollTest {
         try {
             new Payroll(new PayrollDispositionImpl(), 1).doPayroll(null);
             fail("Payroll.doPayroll() should throw a NullPointerException if the argument is null!");
-        } catch (NullPointerException e) {
+        } catch (NullPointerException exception) {
+            // NullPointerException correctly thrown
         }
     }
 

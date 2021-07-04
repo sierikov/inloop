@@ -6,6 +6,7 @@ public class Volunteer extends Employee {
 
     @Override
     public boolean isPayday(int dayOfMonth) {
+        Validator.checkDayInMonth(dayOfMonth);
         return false;
     }
 

@@ -1,12 +1,10 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class VolunteerTest {
-    Volunteer volunteer;
+    private Volunteer volunteer;
 
     @Before
     public void setUp() {
@@ -14,8 +12,32 @@ public class VolunteerTest {
     }
 
     @Test
+    public void testIsPaydayIllegalArgument() {
+        try {
+            volunteer.isPayday(-1);
+            fail("Volunteer.isPayday() should throw an IllegalArgumentException for values lower than 1!");
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
+        }
+
+        try {
+            volunteer.isPayday(0);
+            fail("Volunteer.isPayday() should throw an IllegalArgumentException for values lower than 1!");
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
+        }
+
+        try {
+            volunteer.isPayday(31);
+            fail("Volunteer.isPayday() should throw an IllegalArgumentException for values greater than 30!");
+        } catch (IllegalArgumentException exception) {
+            // IllegalArgumentException correctly thrown
+        }
+    }
+
+    @Test
     public void testIsPayday() {
-        for (int i = -10; i < 40; i++) {
+        for (int i = 1; i <= 30; i++) {
             assertFalse("Volunteer.isPayday() should return the correct value!", volunteer.isPayday(i));
         }
     }
@@ -25,7 +47,8 @@ public class VolunteerTest {
         try {
             volunteer.calculatePay();
             fail("Volunteer.calculatePay() should throw an UnpayableEmployeeException!");
-        } catch (UnpayableEmployeeException e) {
+        } catch (UnpayableEmployeeException exception) {
+            //UnpayableEmployeeException correctly thrown
         }
     }
 
