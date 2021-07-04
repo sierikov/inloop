@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class StaffMemberIteratorTest {
     @Test
-    public void testConstructorNullArgument() {
+    public void testConstructorRejectsNullArgument() {
         try {
             new StaffMemberIterator(null);
             fail("StaffMemberIterator.StaffMemberIterator() should throw a NullPointerException if the argument is null!");
@@ -18,20 +18,7 @@ public class StaffMemberIteratorTest {
     }
 
     @Test
-    public void testIteratorNullInSet() {
-        Set<StaffMember> nullSet = new HashSet<>();
-        nullSet.add(null);
-
-        try{
-            new StaffMemberIterator(nullSet);
-            fail("StaffMemberIterator.StaffMemberIterator() should throw a NullPointerException if the argument contains null!");
-        }
-        catch (NullPointerException e) {
-        }
-    }
-
-    @Test
-    public void testIteratorEmptySet() {
+    public void testIteratorOverEmptySet() {
         Iterator<StaffMember> iter = new StaffMemberIterator(new HashSet<>());
 
         assertFalse("StaffMemberIterator.hasNext() should return false if there is no next element!", iter.hasNext());
@@ -43,9 +30,9 @@ public class StaffMemberIteratorTest {
     }
 
     @Test
-    public void testIterator() {
+    public void testIteratorReturnsElementsInProperOrder() {
         StaffMember teamLeader = new StaffMember("Mike", "Supervisor");
-        List<StaffMember> expectedMembers = new ArrayList<>(TeamTest.createTeamHierarchy(teamLeader));
+        SortedSet<StaffMember> expectedMembers = new TreeSet<>(TeamTest.createTeamHierarchy(teamLeader));
         expectedMembers.remove(teamLeader);
 
         Iterator<StaffMember> expectedIter = expectedMembers.iterator();

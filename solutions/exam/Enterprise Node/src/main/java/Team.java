@@ -1,8 +1,6 @@
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 class Team extends AbstractEnterpriseUnit {
 
@@ -17,14 +15,13 @@ class Team extends AbstractEnterpriseUnit {
         return teamLeader;
     }
 
-    List<StaffMember> getTeamMembers() {
-        List<StaffMember> members = new ArrayList<>();
+    SortedSet<StaffMember> getTeamMembers() {
+        SortedSet<StaffMember> members = new TreeSet<>(StaffMember::compareTo);
         members.add(teamLeader);
         StaffMemberIterator memberIterator = new StaffMemberIterator(this.teamLeader.getDirectSubordinates());
         while(memberIterator.hasNext()){
             members.add(memberIterator.next());
         }
-        members.sort(StaffMember::compareTo);
         return members;
 
     }

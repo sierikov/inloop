@@ -1,23 +1,28 @@
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.util.Set;
+import java.util.TreeSet;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.*;
-
 public class StaffMemberTest {
-    private StaffMember member;
-    private List<StaffMember> subordinates;
+    private StaffMember mike;
+    private StaffMember bob;
+    private Set<StaffMember> staffMembers;
 
     @Before
     public void setUp() {
-        member = new StaffMember("Mike", "Supervisor");
-        subordinates = new ArrayList<>();
-        subordinates.add(new StaffMember("Member 1", "Executive 1"));
-        subordinates.add(new StaffMember("Member 2", "Executive 2"));
-        subordinates.add(new StaffMember("Member 3", "Executive 3"));
-        subordinates.add(new StaffMember("Member 4", "Executive 4"));
+        mike = new StaffMember("Mike", "Supervisor");
+        bob = new StaffMember("Bob", "Executive 1");
+        staffMembers = new TreeSet<>();
+        staffMembers.add(bob);
+        staffMembers.add(new StaffMember("Member 2", "Executive 2"));
+        staffMembers.add(new StaffMember("Member 3", "Executive 3"));
+        staffMembers.add(new StaffMember("Member 4", "Executive 4"));
     }
 
     @Test
@@ -52,28 +57,28 @@ public class StaffMemberTest {
 
     @Test
     public void testGetName() {
-        assertEquals("StaffMember.getName() should return the correct value!", "Mike", member.getName());
+        assertEquals("StaffMember.getName() should return the correct value!", "Mike", mike.getName());
     }
 
     @Test
     public void testGetJob() {
-        assertEquals("StaffMember.getJob() should return the correct value!", "Supervisor", member.getJob());
+        assertEquals("StaffMember.getJob() should return the correct value!", "Supervisor", mike.getJob());
     }
 
     @Test
     public void testCompareTo() {
         assertTrue("StaffMember.compareTo() should return a positive integer if the given value is smaller!",
-                member.compareTo(new StaffMember("Marc", "CEO")) > 0);
+                mike.compareTo(new StaffMember("Marc", "CEO")) > 0);
         assertEquals("StaffMember.compareTo() should return the integer zero if the given value is equal!",
-                0, member.compareTo(new StaffMember("Mike", "Chief Supervisor")));
+                0, mike.compareTo(new StaffMember("Mike", "Chief Supervisor")));
         assertTrue("StaffMember.compareTo() should return a negative integer if the given value is greater!",
-                member.compareTo(new StaffMember("Monique", "CFO")) < 0);
+                mike.compareTo(new StaffMember("Monique", "CFO")) < 0);
     }
 
     @Test
     public void testAddDirectSubordinateNullArgument() {
         try {
-            member.addDirectSubordinate(null);
+            mike.addDirectSubordinate(null);
             fail("StaffMember.addDirectSubordinate() should throw a NullPointerException if the argument is null!");
         } catch (NullPointerException e) {
         }
@@ -81,24 +86,25 @@ public class StaffMemberTest {
 
     @Test
     public void testAddDirectSubordinate() {
-        for (int i = 0; i < subordinates.size(); i++) {
+        for (StaffMember subordinate : staffMembers) {
             assertTrue("StaffMember.addDirectSubordinate() should return true if the member is to be added!",
-                    member.addDirectSubordinate(subordinates.get(i)));
+                    mike.addDirectSubordinate(subordinate));
             assertTrue(
                     "StaffMember.addDirectSubordinate() should add the member if it was not a direct subordinate previously!",
-                    member.getDirectSubordinates().contains(subordinates.get(i)));
+                    mike.getDirectSubordinates().contains(subordinate));
 
+            int sizeBefore = mike.getDirectSubordinates().size();
             assertFalse("StaffMember.addDirectSubordinate() should return false if the member is not to be added!",
-                    member.addDirectSubordinate(subordinates.get(i)));
+                    mike.addDirectSubordinate(subordinate));
             assertEquals("StaffMember.addDirectSubordinate() should not add the member if it is a direct subordinate!",
-                    i + 1, member.getDirectSubordinates().size());
+                    sizeBefore, mike.getDirectSubordinates().size());
         }
     }
 
     @Test
     public void testRemoveDirectSubordinateNullArgument() {
         try {
-            member.removeDirectSubordinate(null);
+            mike.removeDirectSubordinate(null);
             fail("StaffMember.removeDirectSubordinate() should throw a NullPointerException if the argument is null!");
         } catch (NullPointerException e) {
         }
@@ -106,48 +112,49 @@ public class StaffMemberTest {
 
     @Test
     public void testRemoveDirectSubordinate() {
-        for (StaffMember subordinate : subordinates) {
-            member.addDirectSubordinate(subordinate);
+        for (StaffMember subordinate : staffMembers) {
+            mike.addDirectSubordinate(subordinate);
         }
 
-        for (StaffMember subordinate : subordinates) {
+        for (StaffMember subordinate : staffMembers) {
             assertTrue(
                     "StaffMember.removeDirectSubordinate() should return true if the member was a direct subordinate!",
-                    member.removeDirectSubordinate(subordinate));
+                    mike.removeDirectSubordinate(subordinate));
             assertFalse(
                     "StaffMember.removeDirectSubordinate() should remove the member if it is a direct subordinate!",
-                    member.getDirectSubordinates().contains(subordinate));
+                    mike.getDirectSubordinates().contains(subordinate));
             assertFalse(
                     "StaffMember.removeDirectSubordinate() should return false if the member is not a direct subordinate!",
-                    member.removeDirectSubordinate(subordinate));
+                    mike.removeDirectSubordinate(subordinate));
         }
     }
 
     @Test
     public void testRemoveIndirectSubordinate() {
-        for (StaffMember subordinate : subordinates) {
-            member.addDirectSubordinate(subordinate);
+        for (StaffMember subordinate : staffMembers) {
+            mike.addDirectSubordinate(subordinate);
         }
 
         StaffMember newMember = new StaffMember("New Guy", "New Stuff");
-        subordinates.get(0).addDirectSubordinate(newMember);
+        bob.addDirectSubordinate(newMember);
 
         assertFalse(
                 "StaffMember.removeDirectSubordinate() should return false if the member is not a direct subordinate!",
-                member.removeDirectSubordinate(newMember));
+                mike.removeDirectSubordinate(newMember));
         assertTrue("StaffMember.removeDirectSubordinate() should not remove an indirect subordinate!",
-                subordinates.get(0).getDirectSubordinates().contains(newMember));
+                bob.getDirectSubordinates().contains(newMember));
     }
 
     @Test
-    public void testGetDirectSubordinates() {
+    public void testGetDirectSubordinatesInitiallyEmpty() {
+        Set<StaffMember> subordinates = mike.getDirectSubordinates();
         assertTrue(
-                "StaffMember.getDirectSubordinates() should return an empty List if no direct subordinates have been added!",
-                member.getDirectSubordinates().isEmpty());
+                "StaffMember.getDirectSubordinates() should return an empty set if no direct subordinates have been added!",
+                subordinates.isEmpty());
     }
 
     @Test
     public void testToString() {
-        assertEquals("StaffMember.toString() should return the correct value!", "Mike", member.toString());
+        assertEquals("StaffMember.toString() should return the correct value!", "Mike", mike.toString());
     }
 }

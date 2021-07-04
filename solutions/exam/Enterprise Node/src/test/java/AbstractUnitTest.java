@@ -1,11 +1,15 @@
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 public class AbstractUnitTest {
     private static class AbstractUnitImpl extends AbstractUnit {
@@ -15,13 +19,15 @@ public class AbstractUnitTest {
     }
 
     private AbstractUnit unit;
-    private List<AbstractUnit> childNodes;
+    private Set<AbstractUnit> childNodes;
+    private AbstractUnit subUnit;
 
     @Before
     public void setUp() {
         unit = new AbstractUnitImpl("Abstract Unit");
-        childNodes = new ArrayList<>();
-        childNodes.add(new AbstractUnitImpl("AU1"));
+        subUnit = new AbstractUnitImpl("AU1");
+        childNodes = new HashSet<>();
+        childNodes.add(subUnit);
         childNodes.add(new AbstractUnitImpl("AU2"));
         childNodes.add(new AbstractUnitImpl("AU3"));
         childNodes.add(new AbstractUnitImpl("AU4"));
@@ -67,17 +73,18 @@ public class AbstractUnitTest {
 
     @Test
     public void testAdd() {
-        for (int i = 0; i < childNodes.size(); i++) {
-            assertTrue("AbstractUnit.add() should return true if the unit is to be added!",
-                    unit.add(childNodes.get(i)));
+        for (AbstractUnit childNode : childNodes) {
+            assertTrue("AbstractUnit.add() should return true if the unit was added!",
+                    unit.add(childNode));
             assertTrue(
-                    "AbstractUnit.add() should add the unit if it was not a child node previously!",
-                    unit.getChildNodes().contains(childNodes.get(i)));
+                    "AbstractUnit.add() should add the unit if it was not a direct child node previously!",
+                    unit.getChildNodes().contains(childNode));
 
-            assertFalse("AbstractUnit.add() should return false if the unit is not to be added!",
-                    unit.add(childNodes.get(i)));
-            assertEquals("AbstractUnit.add() should not add the unit if it is a child node!",
-                    i + 1, unit.getChildNodes().size());
+            int sizeBefore = unit.getChildNodes().size();
+            assertFalse("AbstractUnit.add() should return false if the unit was not added!",
+                    unit.add(childNode));
+            assertEquals("AbstractUnit.add() should not add duplicates of the unit!",
+                    sizeBefore, unit.getChildNodes().size());
         }
     }
 
@@ -113,17 +120,18 @@ public class AbstractUnitTest {
         }
 
         AbstractUnit newUnit = new Holding("H1");
-        childNodes.get(0).add(newUnit);
+        subUnit.add(newUnit);
 
         assertFalse("AbstractUnit.remove() should return false if the unit is not a direct child node!",
                 unit.remove(newUnit));
         assertTrue("AbstractUnit.remove() should not remove an indirect child node!",
-                childNodes.get(0).getChildNodes().contains(newUnit));
+                subUnit.getChildNodes().contains(newUnit));
     }
 
     @Test
-    public void testGetChildNodes() {
-        assertTrue("AbstractUnit.getChildNodes() should return an empty List if no child nodes have been added!",
-                unit.getChildNodes().isEmpty());
+    public void testGetChildNodesInitiallyEmpty() {
+        List<AbstractEnterpriseUnit> childNodes = unit.getChildNodes();
+        assertTrue("AbstractUnit.getChildNodes() should return an empty set if no child nodes have been added!",
+                childNodes.isEmpty());
     }
 }
