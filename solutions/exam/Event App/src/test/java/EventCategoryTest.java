@@ -1,26 +1,19 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class EventCategoryTest {
-    public enum ExpEventCategory {
-        EXHIBITION, PRESENTATION, SHOW
-    }
+	@Test
+	public void testSize() {
+		assertEquals("EventCategory should contain exactly three enum literals!", 3, EventCategory.values().length);
+	}
 
-    @Test
-    public void testValues() {
-        assertEquals("The enumeration EventCategory should have the right number of values!",
-                ExpEventCategory.values().length, EventCategory.values().length);
-        for (ExpEventCategory e : ExpEventCategory.values()) {
-            try {
-                assertEquals(
-                        "EventCategory." + e.name()
-                                + " should be at the correct position within the enumeration EventCategory!",
-                        e.ordinal(), EventCategory.valueOf(e.name()).ordinal());
-            } catch (Exception ex) {
-                fail("The enumeration EventCategory should possess the value " + e.name() + "!");
-            }
-        }
-    }
+	@Test
+	public void testOrder() {
+		assertTrue("Enum literal EXHIBITION should be declared before PRESENTATION!",
+				EventCategory.EXHIBITION.compareTo(EventCategory.PRESENTATION) < 0);
+		assertTrue("Enum literal PRESENTATION should be declared before SHOW!",
+				EventCategory.PRESENTATION.compareTo(EventCategory.SHOW) < 0);
+	}
 }
