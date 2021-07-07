@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>inloop</groupId>
-    <artifactId>DesktopSearchEngine</artifactId>
+    <artifactId>AuctionSystem</artifactId>
     <version>21.07</version>
     <properties>
         <java.version>11</java.version>
