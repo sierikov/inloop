@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public class Validator {
-    public static void checkParam(String... strs){
-        for (String str : strs) checkParam(str);
+    public static void checkParam(Object o){
+        Objects.requireNonNull(o);
     }
 
     public static String checkParam(String str){

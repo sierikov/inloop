@@ -1,23 +1,23 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 public class BidTest {
-    private Bid b;
-    private Person p;
+    private Bid bid;
+    private Person person;
 
     @Before
     public void setUp() {
-        p = new Person("Max");
-        b = new Bid(p, 10);
+        person = new Person("Max");
+        bid = new Bid(person, 10);
     }
 
     @Test
     public void testConstructorNullArgument() {
         try {
-            b = new Bid(null, 1);
+            bid = new Bid(null, 1);
             fail("Bid.Bid() should throw a NullPointerException if the person argument is null!");
         } catch (NullPointerException e) {
         }
@@ -26,13 +26,13 @@ public class BidTest {
     @Test
     public void testConstructorIllegalArgument() {
         try {
-            b = new Bid(p, 0);
+            bid = new Bid(person, 0);
             fail("Bid.Bid() should throw an IllegalArgumentException if the price argument is zero!");
         } catch (IllegalArgumentException e) {
         }
 
         try {
-            b = new Bid(p, -1);
+            bid = new Bid(person, -1);
             fail("Bid.Bid() should throw an IllegalArgumentException if the price argument is negative!");
         } catch (IllegalArgumentException e) {
         }
@@ -40,16 +40,16 @@ public class BidTest {
 
     @Test
     public void testGetBidder() {
-        assertEquals("Bid.getBidder() should return the correct value!", p, b.getBidder());
+        assertEquals("Bid.getBidder() should return the correct value!", person, bid.getBidder());
     }
 
     @Test
     public void testGetPrice() {
-        assertEquals("Bid.getPrice() should return the correct value!", 10, b.getPrice());
+        assertEquals("Bid.getPrice() should return the correct value!", 10, bid.getPrice());
     }
 
     @Test
     public void testToString() {
-        assertEquals("Bid.toString() should return the correct value!", "10 EUR by Max", b.toString());
+        assertEquals("Bid.toString() should return the correct value!", "10 EUR by Max", bid.toString());
     }
 }

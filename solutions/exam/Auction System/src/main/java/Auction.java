@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public abstract class Auction {
@@ -13,22 +14,23 @@ public abstract class Auction {
         allItems = new ArrayList<>();
     }
 
-    public void addBid(String itemName, String nameOfBidder, long price) {
-        Validator.checkParam(itemName);
+    public void addBid(Item item, String nameOfBidder, long price) {
+        this.checkClosed();
+        Validator.checkParam(item);
         Validator.checkParam(price);
         Person bidder = this.findBidderOrNew(nameOfBidder);
-        Item item = this.findItem(itemName);
+        this.findItem(item);
         if (!bidders.contains(bidder)) {
             bidders.add(bidder);
         }
         item.addBid(bidder, price);
     }
 
-    private Item findItem(String itemName) {
+    private Item findItem(Item item) {
         return allItems
                 .stream()
-                .filter(item1 -> item1.getName().equals(itemName))
-                .findAny().get();
+                .filter(item1 -> item1.equals(item))
+                .findAny().orElseThrow(() -> new NoSuchElementException("There is no bid with this name"));
     }
 
 
@@ -37,12 +39,6 @@ public abstract class Auction {
                 .filter(person -> person.getName().equals(name))
                 .findAny()
                 .orElse(new Person(name));
-    }
-
-    // because in the test is int (UML - long)
-    void addBid(String itemName, String nameOfBidder, int price) {
-        this.checkClosed();
-        this.addBid(itemName, nameOfBidder, Long.valueOf(price));
     }
 
     void registerItem(Item item) {
