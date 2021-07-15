@@ -27,19 +27,19 @@ public class FrozenTest {
 
         if (frozenClass.isPresent()) {
             assertEquals(
-                    "Frozen should be subclass of AccountState",
+                    "Frozen should be a subclass of AccountState!",
                     "AccountState",
                     frozenClass.get().getSuperclass().getSimpleName()
             );
         } else {
-            fail("BankAccount should have inner class Frozen");
+            fail("BankAccount should have inner class Frozen!");
         }
     }
 
-   @Test
-    public void testToString() {
+    @Test
+    public void testGetState() {
         assertEquals(
-                "BankAccount.getState() should return \"Frozen\", if the state is Frozen.",
+                "BankAccount.getState() should return \"Frozen\", if the state is Frozen!",
                 "Frozen",
                 account.getState()
         );
@@ -47,43 +47,41 @@ public class FrozenTest {
 
     @Test
     public void testPayInToNegative() {
-        assertTrue("Frozen.payIn() should return true", account.payIn(30));
+        assertTrue("Frozen.payIn() should return true!", account.payIn(30));
         assertEquals("Frozen.payIn() should add the sum passed as argument " +
-                "to the balance of the account", -20, account.getBalance(), DELTA);
-        assertEquals("Frozen.payOff() should change the state to Negative, " +
-                        "if the sum passed as argument is lower than the account's lineOfCredit",
+                "to the balance of the account!", -20, account.getBalance(), DELTA);
+        assertEquals("Frozen.payIn() should change the state to Negative, " +
+                        "if the sum passed as argument is lower than the account's lineOfCredit!",
                 "Negative", account.getState());
     }
 
     @Test
     public void testPayInToPositive() {
-        assertTrue("Frozen.payIn() should return true", account.payIn(50));
+        assertTrue("Frozen.payIn() should return true!", account.payIn(50));
         assertEquals("Frozen.payIn() should add the sum passed as argument " +
-                "to the balance of the account", 0, account.getBalance(), DELTA);
-        assertEquals("Positive.payOff() should change the state to Positive, " +
-                        "if the sum passed as argument is equal to the account's lineOfCredit",
+                "to the balance of the account!", 0, account.getBalance(), DELTA);
+        assertEquals("Frozen.payIn() should change the state to Positive, " +
+                        "if the sum passed as argument is equal to the account's lineOfCredit!",
                 "Positive", account.getState());
 
         account.payOff(50);
-        assertTrue("Frozen.payIn() should return true", account.payIn(60));
+        assertTrue("Frozen.payIn() should return true!", account.payIn(60));
         assertEquals("Frozen.payIn() should add the sum passed as argument " +
-                "to the balance of the account", 10, account.getBalance(), DELTA);
-        assertEquals("Positive.payOff() should change the state to Positive, " +
-                        "if the sum passed as argument is greater than the account's lineOfCredit",
+                "to the balance of the account!", 10, account.getBalance(), DELTA);
+        assertEquals("Frozen.payIn() should change the state to Positive, " +
+                        "if the sum passed as argument is greater than the account's lineOfCredit!",
                 "Positive", account.getState());
     }
 
     @Test
     public void testPayOff() {
-        try {
-            account.payOff(10);
-            fail("Frozen.payOff() should throw an IllegalStateException.");
-        } catch (IllegalStateException ignored) {
-
-        }
-        assertEquals("Frozen.payOff() should not change the account's balance",
+        assertFalse(
+                "Frozen.payOff() should throw return false!",
+                account.payOff(10)
+        );
+        assertEquals("Frozen.payOff() should not change the account's balance!",
                 -50, account.getBalance(), DELTA);
-        assertEquals("Frozen.payOff() should not change the account's state",
+        assertEquals("Frozen.payOff() should not change the account's state!",
                 "Frozen", account.getState());
     }
 
@@ -91,7 +89,7 @@ public class FrozenTest {
     public void testPayInterest() {
         account.payInterest();
         assertEquals(
-                "Frozen.payInterest() should increase the debts by 5 percent.",
+                "Frozen.payInterest() should increase the debts by 5 percent!",
                 -52.5,
                 account.getBalance(),
                 DELTA
@@ -101,7 +99,7 @@ public class FrozenTest {
         account.payOff(10);
         account.payInterest();
         assertEquals(
-                "Frozen.payInterest() should increase the debts by 5 percent.",
+                "Frozen.payInterest() should increase the debts by 5 percent!",
                 -10.5,
                 account.getBalance(),
                 DELTA
@@ -116,7 +114,7 @@ public class FrozenTest {
         account.printBalance();
         var outString = outStream.toString(StandardCharsets.UTF_8);
         assertEquals(
-                "Frozen.printBalance() should print the balance as specified in the task description.",
+                "Frozen.printBalance() should print the balance as specified in the task description!",
                 "Balance is NEGATIVE: -50.0. You need to pay in money.",
                 outString.trim()
         );

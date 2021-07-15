@@ -15,10 +15,10 @@ public class AccountStateTest {
                 .findFirst();
 
         if (stateClass.isPresent()) {
-            assertTrue("Inner class AccountState should be abstract",
+            assertTrue("Inner class AccountState should be abstract!",
                     Modifier.isAbstract(stateClass.get().getModifiers()));
         } else {
-            fail("BankAccount should have inner class AccountState");
+            fail("BankAccount should have inner class AccountState!");
         }
     }
 }

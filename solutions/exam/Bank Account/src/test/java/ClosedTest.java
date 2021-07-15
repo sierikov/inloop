@@ -6,8 +6,7 @@ import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class ClosedTest {
 
@@ -28,19 +27,19 @@ public class ClosedTest {
 
         if (frozenClass.isPresent()) {
             assertEquals(
-                    "Closed should be subclass of AccountState",
+                    "Closed should be a subclass of AccountState!",
                     "AccountState",
                     frozenClass.get().getSuperclass().getSimpleName()
             );
         } else {
-            fail("BankAccount should have inner class Closed");
+            fail("BankAccount should have an inner class Closed!");
         }
     }
 
     @Test
     public void testToString() {
         assertEquals(
-                "BankAccount.getState() should return \"Closed\", if the state is Closed.",
+                "BankAccount.getState() should return \"Closed\" if the state is Closed!",
                 "Closed",
                 account.getState()
         );
@@ -48,19 +47,18 @@ public class ClosedTest {
 
     @Test
     public void testPayIn() {
-        try {
-            account.payIn(10);
-            fail("Closed.payIn() should throw an IllegalStateException.");
-        } catch (IllegalStateException ignored) {
-        }
+        assertFalse(
+                "Closed.payIn() should return false!",
+                account.payIn(10)
+        );
         assertEquals(
-                "Closed.payIn() should not change the account's balance",
+                "Closed.payIn() should not change the account's balance!",
                 0.0,
                 account.getBalance(),
                 DELTA
         );
         assertEquals(
-                "Closed.payIn() should not change the account's state",
+                "Closed.payIn() should not change the account's state!",
                 "Closed",
                 account.getState()
         );
@@ -68,19 +66,18 @@ public class ClosedTest {
 
     @Test
     public void testPayOff() {
-        try {
-            account.payOff(10);
-            fail("Closed.payOff() should throw an IllegalStateException.");
-        } catch (IllegalStateException ignored) {
-        }
+        assertFalse(
+                "Closed.payOff() should return false!",
+                account.payOff(10)
+        );
         assertEquals(
-                "Closed.payOff() should not change the account's balance",
+                "Closed.payOff() should not change the account's balance!",
                 0.0,
                 account.getBalance(),
                 DELTA
         );
         assertEquals(
-                "Closed.payOff() should not change the account's state",
+                "Closed.payOff() should not change the account's state!",
                 "Closed",
                 account.getState()
         );
@@ -90,17 +87,17 @@ public class ClosedTest {
     public void testPayInterest() {
         try {
             account.payInterest();
-            fail("Closed.payInterest() should throw an IllegalStateException.");
+            fail("Closed.payInterest() should throw an IllegalStateException!");
         } catch (IllegalStateException ignored) {
         }
         assertEquals(
-                "Closed.payInterest() should not change the account's balance",
+                "Closed.payInterest() should not change the account's balance!",
                 0.0,
                 account.getBalance(),
                 DELTA
         );
         assertEquals(
-                "Closed.payInterest() should not change the account's state",
+                "Closed.payInterest() should not change the account's state!",
                 "Closed",
                 account.getState()
         );
@@ -114,7 +111,7 @@ public class ClosedTest {
         account.printBalance();
         var outString = outStream.toString(StandardCharsets.UTF_8);
         assertEquals(
-                "Closed.printBalance() should print the balance as specified in the task description.",
+                "Closed.printBalance() should print the balance as specified in the task description!",
                 "This account is CLOSED. The balance is 0.",
                 outString.trim()
         );

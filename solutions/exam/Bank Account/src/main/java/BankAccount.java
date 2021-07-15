@@ -149,7 +149,7 @@ public class BankAccount {
         }
         @Override
         public boolean payOff(double amount) {
-            throw new IllegalStateException();
+            return false;
         }
         @Override
         public void payInterest() {
@@ -168,11 +168,11 @@ public class BankAccount {
     class Closed extends AccountState {
         @Override
         public boolean payIn(double amount) {
-            throw new IllegalStateException();
+            return false;
         }
         @Override
         public boolean payOff(double amount) {
-            throw new IllegalStateException();
+            return false;
         }
         @Override
         public void printBalance() {
