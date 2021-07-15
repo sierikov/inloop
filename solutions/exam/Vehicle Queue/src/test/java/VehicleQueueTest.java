@@ -2,7 +2,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -12,8 +15,8 @@ public class VehicleQueueTest {
 
     @Test
     public void testImplementsObserver() {
-        assertTrue("The class VehicleQueue should implement java.util.Observer!",
-                Observer.class.isAssignableFrom(VehicleQueue.class));
+        assertTrue("The class VehicleQueue should implement ClockObserver!",
+                ClockObserver.class.isAssignableFrom(VehicleQueue.class));
     }
 
     @Test
@@ -121,20 +124,14 @@ public class VehicleQueueTest {
     }
 
     @Test
-    public void testUpdate() {
-        VehicleQueue queue;
-
+    public void testTick() {
         for (VehicleQueueTestData testData : testDataList) {
-            queue = new VehicleQueue(testData.getEntryDelay(), testData.getExitDelay(),
+            VehicleQueue queue = new VehicleQueue(testData.getEntryDelay(), testData.getExitDelay(),
                     testData.getTrafficLightRate(), new VehicleGenerator());
             for (int time = 1; time <= testData.getQueueSizeValues().length; time++) {
-                Time tObject = Time.getInstance();
-                tObject.initEndOfTime(time);
-                tObject.run();
-
-                queue.update(tObject, time);
+                queue.tick(time);
                 assertEquals(
-                        "VehicleQueue.update() should change the size of the queue correctly!\n"
+                        "VehicleQueue.tick(…) should change the size of the queue correctly!\n"
                                 + "If you want to know the exact point where it failed, have a look at the source code of this JUnit test.\n"
                                 + "The test failed at queueSizeValue no. " + time + " of test data set no. "
                                 + (testDataList.indexOf(testData) + 1)

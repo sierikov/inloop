@@ -5,13 +5,11 @@ public class VehicleGenerator {
 
     VehicleGenerator(){
         randomGenerator = new Random();
-
     }
 
     public  Vehicle createVehicle(){
-        int type = randomGenerator.nextInt(3);
-
-        switch (type) {
+        int vehicleType = randomGenerator.nextInt(3);
+        switch (vehicleType) {
             case 1: return new Bicycle();
             case 2: return new Bus();
             default: return new Car();
