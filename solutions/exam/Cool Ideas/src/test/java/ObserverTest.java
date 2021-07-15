@@ -1,13 +1,16 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static java.lang.reflect.Modifier.isInterface;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.UncheckedIOException;
 import java.io.UnsupportedEncodingException;
 
-import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 // Checking-code for io-streams is from:
 // https://stackoverflow.com/questions/1119385/junit-test-for-system-out-println
@@ -59,10 +62,10 @@ public class ObserverTest {
 
     @Test
     public void testStructure() {
-        assertSame("JContent should be a subclass of java.util.Observable!", java.util.Observable.class,
-                JContent.class.getSuperclass());
-        assertTrue("JMember should implement java.util.Observer!",
-                java.util.Observer.class.isAssignableFrom(JMember.class));
+        assertTrue("ContentObserver should be an interface!",
+                isInterface(ContentObserver.class.getModifiers()));
+        assertTrue("JMember should implement ContentObserver!",
+                ContentObserver.class.isAssignableFrom(JMember.class));
     }
 
     @Test

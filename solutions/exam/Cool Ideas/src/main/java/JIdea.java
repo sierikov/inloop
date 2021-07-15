@@ -50,7 +50,7 @@ public class JIdea extends JContent{
     }
 
     public void addAttachment(JAttachment attachment){
-        Objects.requireNonNull(attachment);
+        Validator.checkParam(attachment);
         this.attachments.add(attachment);
     }
 
@@ -59,7 +59,7 @@ public class JIdea extends JContent{
     }
 
     public boolean removeAttachment(JAttachment attachment){
-        Objects.requireNonNull(attachment);
+        Validator.checkParam(attachment);
         return attachments.remove(attachment);
     }
 

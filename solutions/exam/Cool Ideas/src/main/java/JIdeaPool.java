@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class JIdeaPool {
@@ -10,7 +9,7 @@ public class JIdeaPool {
     }
 
     public void add(JTopic topic) {
-        Objects.requireNonNull(topic);
+        Validator.checkParam(topic);
         if (!pool.containsKey(topic)) pool.put(topic, new HashSet<>());
     }
 
