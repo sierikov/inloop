@@ -7,9 +7,8 @@ public class SerfTest {
     public void testTaxableIncome() {
         Peasant serf = new Serf();
 
-        int income;
         for (int i = 0; i <= 12; i++) {
-            income = serf.taxableIncome();
+            int income = serf.taxableIncome();
             assertEquals("Serf.taxableIncome() should respect the royal instruction 5"
                     + (income < 0 ? " and not return a value below 0" : "") + "!", 0, income);
         }

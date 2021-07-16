@@ -9,6 +9,7 @@ public class Inhabitant {
     }
 
     public void setIncome(int income) {
+        if (income < 0) throw new IllegalArgumentException("Income cannot be negative.");
         this.income = income;
     }
 
