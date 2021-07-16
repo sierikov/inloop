@@ -1,19 +1,16 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 // Checking-code for io-streams is from:
 // https://stackoverflow.com/questions/1119385/junit-test-for-system-out-println
 
-public class LibTest {
+public class LibraryTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private PrintStream backOut, backErr;
@@ -26,8 +23,12 @@ public class LibTest {
         backOut = System.out;
         backErr = System.err;
 
-        System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
+        try {
+            System.setOut(new PrintStream(outContent, false, "UTF-8"));
+            System.setErr(new PrintStream(errContent, false, "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            throw new UncheckedIOException("UTF-8 is not supported.", e);
+        }
 
         lib = new Library();
         book = new Book("Java");
@@ -47,8 +48,12 @@ public class LibTest {
 
     // A method comparing the String streamOutput with the actual streams
     private void testStreams(String message, String streamOutput) {
-        assertEquals(message, streamOutput + System.lineSeparator(), outContent.toString());
-        assertEquals("Your program should not print into the error stream (System.err)!", "", errContent.toString());
+        try {
+            assertEquals(message, streamOutput + System.lineSeparator(), outContent.toString("UTF-8"));
+            assertEquals("Your program should not print into the error stream (System.err)!", "", errContent.toString("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            throw new UncheckedIOException("UTF-8 is not supported.", e);
+        }
     }
 
     @Test
