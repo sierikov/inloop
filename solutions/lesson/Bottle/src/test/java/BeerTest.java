@@ -1,6 +1,5 @@
 import org.junit.Test;
 
-import static com.sun.tools.internal.ws.wsdl.parser.Util.fail;
 import static org.junit.Assert.*;
 
 public class BeerTest {
@@ -14,7 +13,7 @@ public class BeerTest {
         try {
             Beer.class.getDeclaredMethod("getBrewery");
         } catch(NoSuchMethodException e) {
-            fail("The class Beer should have a method with the name \"getRegion()\"!");
+            fail("The class Beer should have a method with the name \"getBrewery()\"!");
         }
         try {
             Beer.class.getDeclaredMethod("toString");
@@ -25,7 +24,7 @@ public class BeerTest {
 
     @Test
     public void testGetBrewery() {
-        Beer b = new Beer("Freiberger");
-        assertEquals("Beer.getRegion() should return the correct brewery!", "Freiberger", b.getBrewery());
+        Beer beer = new Beer("Freiberger");
+        assertEquals("Beer.getBrewery() should return the correct brewery!", "Freiberger", beer.getBrewery());
     }
 }

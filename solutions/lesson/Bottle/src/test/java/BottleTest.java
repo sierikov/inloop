@@ -31,17 +31,17 @@ public class BottleTest {
     public void testFill() {
         bottle.fill(beer);
 
-        Field f = null;
+        Field contentField = null;
         try {
-            f = bottle.getClass().getDeclaredField("content");
+            contentField = bottle.getClass().getDeclaredField("content");
         } catch (NoSuchFieldException e) {
             fail("The class Bottle should contain an Object with the name \"content\"");
         }
-        f.setAccessible(true);
+        contentField.setAccessible(true);
 
         Beer content = null;
         try {
-            content = castToBeer(f.get(bottle));
+            content = (Beer) contentField.get(bottle);
         } catch(IllegalAccessException e) {
             fail("The class Bottle should contain an Object with the name \"content\"");
         } catch(ClassCastException e) {
@@ -49,11 +49,6 @@ public class BottleTest {
         }
 
         assertTrue(content.equals(beer));
-    }
-
-    @SuppressWarnings("unchecked")
-    private Beer castToBeer(Object o) {
-        return (Beer) o;
     }
 
     @Test

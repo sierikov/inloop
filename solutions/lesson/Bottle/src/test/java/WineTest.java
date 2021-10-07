@@ -26,7 +26,9 @@ public class WineTest {
 
     @Test
     public void testGetRegion() {
-        Wine wine = new Wine("Pfalz") {};
+        Wine wine = new Wine("Pfalz") {
+            // anonymous subclass for testing purposes
+        };
         assertEquals("Wine.getRegion() should return the correct region!", "Pfalz", wine.getRegion());
     }
 }

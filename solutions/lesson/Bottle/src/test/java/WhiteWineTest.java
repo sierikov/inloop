@@ -10,7 +10,7 @@ public class WhiteWineTest {
 
     @Test
     public void testGetRegion() {
-        WhiteWine ww = new WhiteWine("Dresden");
-        assertEquals("WhiteWine.getRegion() should return the correct region!", "Dresden", ww.getRegion());
+        WhiteWine whiteWine = new WhiteWine("Dresden");
+        assertEquals("WhiteWine.getRegion() should return the correct region!", "Dresden", whiteWine.getRegion());
     }
 }
