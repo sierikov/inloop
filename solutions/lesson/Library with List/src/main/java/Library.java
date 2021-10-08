@@ -12,17 +12,18 @@ public class Library {
         System.out.println("Hello, I am a library, which can store stock!");
     }
 
-    public void sortedInsertion(Book newBook) {
+    public boolean insertBook(Book newBook) {
         Objects.requireNonNull(newBook);
         for (int i = 0; i < this.stock.size(); i++) {
             Book b = this.stock.get(i);
             if (b.compareTo(newBook) >= 0) {
                 stock.add(i, newBook);
-                return;
+                return false;
             }
         }
         stock.add(newBook);
         System.out.println("Added new " + newBook);
+        return true;
     }
 
     public List<Book> searchForAuthor(String author) {

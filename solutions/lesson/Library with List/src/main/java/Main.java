@@ -17,10 +17,10 @@ public class Main {
 
 
         lib = new Library();
-        lib.sortedInsertion(b6);
-        lib.sortedInsertion(b1);
-        lib.sortedInsertion(b9);
-        lib.sortedInsertion(b5);
+        lib.insertBook(b6);
+        lib.insertBook(b1);
+        lib.insertBook(b9);
+        lib.insertBook(b5);
 
         Book b = lib.searchForIsbn("5");
         System.out.println("FOUND -> " + b);
