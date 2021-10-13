@@ -1,3 +1,5 @@
+package collections2;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -29,7 +31,7 @@ public class Library {
         return stock.stream().filter(book -> book.getAuthor().equals(author)).collect(Collectors.toList());
     }
 
-    public Map<String, Set<Book>> listStockByAuthor() {
-        return stock.stream().collect(Collectors.groupingBy(Book::getAuthor, toSet()));
+    public Collection<Book> getStock() {
+        return new TreeSet(stock);
     }
 }

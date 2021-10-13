@@ -1,3 +1,5 @@
+package collections2;
+
 public class Book implements Comparable<Book> {
 
     private String isbn;
@@ -29,13 +31,29 @@ public class Book implements Comparable<Book> {
     public String getAuthor() { return this.author; }
     public void setAuthor(String author) { this.author = author;}
 
+    @Override
+    public int hashCode() {
+        return this.isbn.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Book other = (Book) o;
+        return this.isbn.equals(other.getIsbn());
+    }
+
+    @Override
     public int compareTo(Book book){
         return this.getIsbn().compareTo(book.getIsbn());
     }
 
     @Override
     public String toString(){
-        return "Book: " + getTitle() + " Author: " + getAuthor() + " ISBN: " + getIsbn() ;
+        return getTitle() + " by " + getAuthor() + " (ISBN " + getIsbn() + ")" ;
     }
 
 
