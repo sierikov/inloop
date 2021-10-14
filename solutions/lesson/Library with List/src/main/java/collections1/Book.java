@@ -1,3 +1,5 @@
+package collections1;
+
 import java.util.Collection;
 
 public class Book implements Comparable<Book> {

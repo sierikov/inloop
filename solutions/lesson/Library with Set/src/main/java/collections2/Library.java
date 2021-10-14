@@ -7,8 +7,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toSet;
 
 public class Library {
-    private Set<Book> stock = new HashSet<>();
-    private Set<Book> found = new HashSet<>();
+    private Set<Book> stock = new TreeSet<>();
 
     public Library() {
         System.out.println("Hello, I am a library, which can store stock!");
@@ -32,6 +31,6 @@ public class Library {
     }
 
     public Collection<Book> getStock() {
-        return new TreeSet(stock);
+        return stock;
     }
 }
