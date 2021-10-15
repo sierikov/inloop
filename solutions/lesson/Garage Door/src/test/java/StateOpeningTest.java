@@ -9,25 +9,27 @@ public class StateOpeningTest extends DoorStateBaseTest {
     @Before
     public void setUp() {
         super.setUp();
-        gd.openDoor();
+        garageDoor.openDoor();
     }
 
     @Test
     public void testCloseDoor() {
-        gd.closeDoor();
-        assertEquals("Opening.closeDoor() should change the state to Closing!", classClosing, getState().getClass());
+        garageDoor.closeDoor();
+        assertEquals("Opening.closeDoor() should change the state to Closing!", "Closing",
+                getCurrentStateName());
     }
 
     @Test
     public void testStopper() {
-        gd.stopper();
-        assertEquals("Opening.stopper() should change the state to Open!", classOpen, getState().getClass());
+        garageDoor.stopper();
+        assertEquals("Opening.stopper() should change the state to Open!", "Open",
+                getCurrentStateName());
     }
 
     @Test
     public void testIllegalStateExceptions() {
         try {
-            gd.openDoor();
+            garageDoor.openDoor();
             fail("Opening.openDoor() should throw an IllegalStateException if called!");
         } catch (IllegalStateException e) {
         }
