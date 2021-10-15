@@ -3,6 +3,8 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.io.UncheckedIOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,7 +42,7 @@ public class TaxiTest {
         assertEquals("Human.getName() should return the correct surname.", "Ada", h2.getName());
         assertEquals("Human.getForename() should return the correct forename.", "Franzi", h2.getForename());
         assertEquals("Human.toString() should return the complete name as a String, containing forename and surname, " +
-                "seperated by a space character.", "Franzi Ada", h2.toString());
+                        "seperated by a space character.", "Franzi Ada", h2.toString());
     }
 
     @Test
@@ -107,11 +109,11 @@ public class TaxiTest {
         Human[] actualPassengers = taxi.allGetOut();
 
         assertEquals("Taxi.allGetOut() should return an array of length " + passengers.length + " if the taxi had " +
-                passengers.length + " passengers!", passengers.length, actualPassengers.length);
+                        passengers.length + " passengers!", passengers.length, actualPassengers.length);
 
         for (Human actualPassenger : actualPassengers) {
             assertNotNull("Taxi.allGetOut() returned an array that contains null instead of a proper " +
-                    "Human object for one of the passengers!", actualPassenger);
+                            "Human object for one of the passengers!", actualPassenger);
             assertTrue("Taxi.allGetOut() should return an array that contains every passenger of the taxi!",
                     passengerList.contains(actualPassenger));
         }
@@ -130,8 +132,12 @@ public class TaxiTest {
         backOut = System.out;
         backErr = System.err;
 
-        System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
+        try {
+            System.setOut(new PrintStream(outContent, false, "UTF-8"));
+            System.setErr(new PrintStream(errContent, false, "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            throw new UncheckedIOException("UTF-8 is not supported.", e);
+        }
 
         try {
             taxi.add(h1);
@@ -161,8 +167,12 @@ public class TaxiTest {
 
     // A method comparing the String streamOutput with the actual streams
     private void testStreams(String message, String streamOutput) {
-        assertEquals(message, streamOutput + System.lineSeparator(), outContent.toString());
-        assertEquals("Your program should not print into the error stream (System.err)!", "", errContent.toString());
+        try {
+            assertEquals(message, streamOutput + System.lineSeparator(), outContent.toString("UTF-8"));
+            assertEquals("Your program should not print into the error stream (System.err)!", "", errContent.toString("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            throw new UncheckedIOException("UTF-8 is not supported.", e);
+        }
         outContent.reset();
         errContent.reset();
     }
