@@ -11,11 +11,8 @@ class ListElement {
     }
 
     public void setContent(String content) {
-        if (content.isEmpty()) {
+        if (content == null || content.isEmpty()) {
             throw new IllegalArgumentException("Illegal argument value");
-        }
-        else if (content == null){
-            throw new NullPointerException("The argument 'content' cannot be empty!");
         }
         else this.content = content;
     }
