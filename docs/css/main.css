@@ -176,6 +176,10 @@ pre{
 	overflow-x: auto;
 }
 
+.mt-20 {
+	margin-top: 20px;
+}
+
 .mb-10{
 	margin-bottom: 10px !important;
 }
@@ -693,7 +697,7 @@ footer .soc a:hover .ion {
 	height: 25px;
 	line-height: 22px;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 11px;
 	color: #f26b38;
 	border: 1px solid #f26b38;
 }
