@@ -7,4 +7,5 @@ public class Functions {
             return n * factorial(n-1);
         }
     }
+
 }
