@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Inloop - guide for your SWT'
+theme = 'Inloop'

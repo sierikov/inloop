@@ -2,3 +2,5 @@
 **/.idea
 .DS_Store
 solutions/**/target
+public/
+.hugo_build.lock

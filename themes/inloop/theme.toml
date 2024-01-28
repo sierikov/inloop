@@ -1,0 +1,14 @@
+
+name = "Inloop"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "Theme for coding exercises"
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "sierikov"
+  homepage = "github.com/sierikov/inloop"
+
